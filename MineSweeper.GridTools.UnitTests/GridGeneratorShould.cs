@@ -13,7 +13,7 @@ namespace MineSweeper.GridTools.UnitTests
         [SetUp]
         public void Init()
         {
-            _gridGenerator = new GridGenerator();
+            _gridGenerator = new GridBuilder();
         }
 
         [Test]

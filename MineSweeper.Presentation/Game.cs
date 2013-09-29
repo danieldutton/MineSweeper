@@ -31,7 +31,7 @@ namespace MineSweeper.Presentation
             Height = ChosenGameMode.FormSize.Y;
             Width = ChosenGameMode.FormSize.X;
 
-            var renderer = new GridProvider(new GridGenerator(), new GridMiner(new RandomNumberGenerator()));
+            var renderer = new GridProvider(new GridBuilder(), new GridMiner(new RandomNumberGenerator()));
 
             _panelGrid.Width = ChosenGameMode.GridPanelSize.X;
             _panelGrid.Height = ChosenGameMode.GridPanelSize.Y;

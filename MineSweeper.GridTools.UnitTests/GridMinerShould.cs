@@ -23,7 +23,7 @@ namespace MineSweeper.GridTools.UnitTests
         public void MineGrid_SeedABeginnerGridWithTenMines()
         {
             //put this in mother class as mock
-            var gridGenerator = new GridGenerator();
+            var gridGenerator = new GridBuilder();
             Tile[,] grid = gridGenerator.GetSquaredGrid(GridSize.Beginner);
 
             Tile[,] minedGrid = _gridMiner.MineTheGrid(grid, DifficultyLevel.Beginner, GridSize.Beginner);
@@ -39,7 +39,7 @@ namespace MineSweeper.GridTools.UnitTests
         [Test]
         public void MineGrid_SeedANormalGridWithFortyMines()
         {
-            var gridGenerator = new GridGenerator();
+            var gridGenerator = new GridBuilder();
             Tile[,] grid = gridGenerator.GetSquaredGrid(GridSize.Normal);
 
             Tile[,] minedGrid = _gridMiner.MineTheGrid(grid, DifficultyLevel.Normal, GridSize.Normal);
@@ -56,7 +56,7 @@ namespace MineSweeper.GridTools.UnitTests
         [Test]
         public void MineGrid_SeedAnAdvancedGridWithNinetyNineMines()
         {
-            var gridGenerator = new GridGenerator();
+            var gridGenerator = new GridBuilder();
             Tile[,] grid = gridGenerator.GetSquaredGrid(GridSize.Advanced);
 
             var gridMiner = new GridMiner(new RandomNumberGenerator());

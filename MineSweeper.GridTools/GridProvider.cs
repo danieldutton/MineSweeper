@@ -26,7 +26,7 @@ namespace MineSweeper.GridTools
 
             GridManager.AddControlsToGrid(minedGrid, control, gameMode.GridSize);
 
-            int formWidth = control.Width; //for border size - use panel
+            int formWidth = control.Width;
             int counter = (int)gameMode.GridSize;
             int x = 0;
             int y = 0;

@@ -6,7 +6,7 @@ using System;
 
 namespace MineSweeper.GridTools
 {
-    public class GridGenerator : IGridGenerator
+    public class GridBuilder : IGridGenerator
     {
         public Tile[,] GetSquaredGrid(GridSize gridSize)
         {

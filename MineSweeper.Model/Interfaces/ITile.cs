@@ -4,12 +4,12 @@
     {
         bool IsMined { get; set; }
         bool IsFlagged { get; set; }
-        bool HasBeenSelected { get; set; }
+        bool IsSelected { get; set; }
         int GridPositonX { get; set; }
         int GridPositionY { get; set; }
 
         void SelectTile();
-        void FlagTile();
-        void UnFlagTile();
+        void AddFlagToTile();
+        void RemoveFlagFromTile();
     }
 }

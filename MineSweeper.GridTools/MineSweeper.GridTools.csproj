@@ -36,7 +36,7 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GridGenerator.cs" />
+    <Compile Include="GridBuilder.cs" />
     <Compile Include="GridManager.cs" />
     <Compile Include="GridMiner.cs" />
     <Compile Include="GridProvider.cs" />
