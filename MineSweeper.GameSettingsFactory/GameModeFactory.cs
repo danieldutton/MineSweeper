@@ -19,6 +19,8 @@ namespace MineSweeper.GameModeFactory
 
         public IGameMode CreateInstance(string gameModeName)
         {
+            if (gameModeName == null) throw new ArgumentNullException("gameModeName");
+
             Type type = GetTypeToCreate(gameModeName);
 
             if(type == null)
