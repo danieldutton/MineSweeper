@@ -43,7 +43,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="EventArg\GameSettingsEventArgs.cs" />
-    <Compile Include="ITile.cs" />
+    <Compile Include="Interfaces\ITile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

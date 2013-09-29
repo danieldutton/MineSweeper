@@ -1,4 +1,4 @@
-﻿namespace MineSweeper.Model
+﻿namespace MineSweeper.Model.Interfaces
 {
     public interface ITile
     {

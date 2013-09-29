@@ -2,6 +2,7 @@
 using MineSweeper.Settings.Interfaces;
 using System.Drawing;
 
+
 namespace MineSweeper.GameModeFactory.GameModes
 {
     public class Beginner : IGameMode
