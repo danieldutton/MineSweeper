@@ -1,0 +1,4 @@
+C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.Settings\bin\Release\MineSweeper.Settings.dll
+C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.Settings\bin\Release\MineSweeper.Settings.pdb
+C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.Settings\obj\Release\MineSweeper.Settings.dll
+C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.Settings\obj\Release\MineSweeper.Settings.pdb

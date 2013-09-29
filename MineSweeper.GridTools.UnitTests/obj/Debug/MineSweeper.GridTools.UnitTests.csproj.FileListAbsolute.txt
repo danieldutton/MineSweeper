@@ -1,0 +1,1 @@
+E:\My Code\MineSweeper\MineSweeper\MineSweeper.GridTools.UnitTests\obj\Debug\MineSweeper.GridTools.UnitTests.csprojResolveAssemblyReference.cache

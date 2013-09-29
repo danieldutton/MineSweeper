@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MineSweeper.Model", "MineSweeper.Model\MineSweeper.Model.csproj", "{B4323D00-1027-441B-AFCE-47B6E3E9B82A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MineSweeper.Presentation", "MineSweeper.Presentation\MineSweeper.Presentation.csproj", "{0387F90C-664A-4AEA-A082-00D52DC8ABDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MineSweeper.GridTools", "MineSweeper.GridTools\MineSweeper.GridTools.csproj", "{077DD955-5052-4314-AC22-9598370067BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{36FF2226-F458-4F7D-9B1C-F71F6DC005E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MineSweeper.GridTools.UnitTests", "MineSweeper.GridTools.UnitTests\MineSweeper.GridTools.UnitTests.csproj", "{D6390C48-AA0E-4464-A765-1917A0B72BC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MineSweeper.Utilities", "MineSweeper.Utilities\MineSweeper.Utilities.csproj", "{E32DED88-4A41-4341-958A-7B54FF862408}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MineSweeper.GameModeFactory", "MineSweeper.GameSettingsFactory\MineSweeper.GameModeFactory.csproj", "{8875C6DB-5E29-4BA8-BB0B-E24F4D5F5BEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MineSweeper.Settings", "MineSweeper.Settings\MineSweeper.Settings.csproj", "{A35E50A1-982B-41B0-AEC0-355328B5838F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4323D00-1027-441B-AFCE-47B6E3E9B82A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4323D00-1027-441B-AFCE-47B6E3E9B82A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4323D00-1027-441B-AFCE-47B6E3E9B82A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4323D00-1027-441B-AFCE-47B6E3E9B82A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0387F90C-664A-4AEA-A082-00D52DC8ABDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0387F90C-664A-4AEA-A082-00D52DC8ABDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0387F90C-664A-4AEA-A082-00D52DC8ABDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0387F90C-664A-4AEA-A082-00D52DC8ABDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{077DD955-5052-4314-AC22-9598370067BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{077DD955-5052-4314-AC22-9598370067BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{077DD955-5052-4314-AC22-9598370067BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{077DD955-5052-4314-AC22-9598370067BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6390C48-AA0E-4464-A765-1917A0B72BC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6390C48-AA0E-4464-A765-1917A0B72BC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6390C48-AA0E-4464-A765-1917A0B72BC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6390C48-AA0E-4464-A765-1917A0B72BC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E32DED88-4A41-4341-958A-7B54FF862408}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E32DED88-4A41-4341-958A-7B54FF862408}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E32DED88-4A41-4341-958A-7B54FF862408}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E32DED88-4A41-4341-958A-7B54FF862408}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8875C6DB-5E29-4BA8-BB0B-E24F4D5F5BEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8875C6DB-5E29-4BA8-BB0B-E24F4D5F5BEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8875C6DB-5E29-4BA8-BB0B-E24F4D5F5BEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8875C6DB-5E29-4BA8-BB0B-E24F4D5F5BEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A35E50A1-982B-41B0-AEC0-355328B5838F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A35E50A1-982B-41B0-AEC0-355328B5838F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A35E50A1-982B-41B0-AEC0-355328B5838F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A35E50A1-982B-41B0-AEC0-355328B5838F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D6390C48-AA0E-4464-A765-1917A0B72BC1} = {36FF2226-F458-4F7D-9B1C-F71F6DC005E4}
+	EndGlobalSection
+EndGlobal
