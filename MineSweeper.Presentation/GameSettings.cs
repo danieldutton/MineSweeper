@@ -1,9 +1,9 @@
 ﻿using MineSweeper.GameModeFactory.Interfaces;
-using MineSweeper.Model.EventArg;
 using MineSweeper.Settings;
 using System;
 using System.Linq;
 using System.Windows.Forms;
+using MineSweeper.Settings.EventArg;
 using MineSweeper.Settings.Interfaces;
 
 namespace MineSweeper.Presentation
