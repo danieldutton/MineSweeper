@@ -26,7 +26,5 @@ C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.GridTools.UnitTests\bin\Re
 C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.GridTools.UnitTests\obj\Release\MineSweeper.GridTools.UnitTests.csprojResolveAssemblyReference.cache
 C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.GridTools.UnitTests\obj\Release\MineSweeper.GridTools.UnitTests.dll
 C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.GridTools.UnitTests\obj\Release\MineSweeper.GridTools.UnitTests.pdb
-C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.GridTools.UnitTests\bin\Release\MineSweeper.GameModeFactory.dll
-C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.GridTools.UnitTests\bin\Release\MineSweeper.GameModeFactory.pdb
 C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.GridTools.UnitTests\bin\Release\MineSweeper.Settings.dll
 C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.GridTools.UnitTests\bin\Release\MineSweeper.Settings.pdb

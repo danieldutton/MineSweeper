@@ -1,7 +1,6 @@
-﻿using MineSweeper.Settings;
-using System.Drawing;
+﻿using System.Drawing;
 
-namespace MineSweeper.GameModeFactory.Interfaces
+namespace MineSweeper.Settings.Interfaces
 {
     public interface IGameMode
     {

@@ -51,6 +51,10 @@
       <Project>{8875c6db-5e29-4ba8-bb0b-e24f4d5f5bef}</Project>
       <Name>MineSweeper.GameModeFactory</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MineSweeper.Settings\MineSweeper.Settings.csproj">
+      <Project>{A35E50A1-982B-41B0-AEC0-355328B5838F}</Project>
+      <Name>MineSweeper.Settings</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

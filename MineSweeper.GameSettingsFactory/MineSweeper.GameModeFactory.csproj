@@ -39,7 +39,6 @@
     <Compile Include="GameModes\Beginner.cs" />
     <Compile Include="GameModes\Normal.cs" />
     <Compile Include="GameModes\NullSettings.cs" />
-    <Compile Include="Interfaces\IGameMode.cs" />
     <Compile Include="Interfaces\IGameModeFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GameModeFactory.cs" />

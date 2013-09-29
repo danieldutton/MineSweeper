@@ -1,5 +1,5 @@
-﻿using MineSweeper.GameModeFactory.Interfaces;
-using MineSweeper.Settings;
+﻿using MineSweeper.Settings;
+using MineSweeper.Settings.Interfaces;
 using System.Drawing;
 
 namespace MineSweeper.GameModeFactory.GameModes

@@ -1,7 +1,7 @@
 ﻿using MineSweeper.Settings.Interfaces;
 using System;
 
-namespace MineSweeper.Model.EventArg
+namespace MineSweeper.Settings.EventArg
 {
     public class GameSettingsEventArgs : EventArgs
     {

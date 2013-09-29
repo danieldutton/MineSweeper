@@ -1,6 +1,7 @@
 ﻿using MineSweeper.GameModeFactory.Interfaces;
 using MineSweeper.GridTools;
 using MineSweeper.Model.EventArg;
+using MineSweeper.Settings.Interfaces;
 using MineSweeper.Utilities;
 using System.Windows.Forms;
 

@@ -1,6 +1,6 @@
-﻿using MineSweeper.GameModeFactory.Interfaces;
-using MineSweeper.GridTools.Interfaces;
+﻿using MineSweeper.GridTools.Interfaces;
 using MineSweeper.Model.Components;
+using MineSweeper.Settings.Interfaces;
 using System.Drawing;
 using System.Windows.Forms;
 

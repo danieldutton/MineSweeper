@@ -1,4 +1,6 @@
-﻿namespace MineSweeper.GameModeFactory.Interfaces
+﻿using MineSweeper.Settings.Interfaces;
+
+namespace MineSweeper.GameModeFactory.Interfaces
 {
     public interface IGameModeFactory
     {

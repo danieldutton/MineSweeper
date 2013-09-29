@@ -1,5 +1,6 @@
 ﻿using MineSweeper.GameModeFactory.GameModes;
 using MineSweeper.GameModeFactory.Interfaces;
+using MineSweeper.Settings.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
