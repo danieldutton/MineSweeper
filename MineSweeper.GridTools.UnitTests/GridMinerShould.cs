@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using MineSweeper.GridTools.Interfaces;
+﻿using MineSweeper.GridTools.Interfaces;
 using MineSweeper.Model.Components;
 using MineSweeper.Settings;
 using MineSweeper.Utilities;
 using NUnit.Framework;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace MineSweeper.GridTools.UnitTests
 {

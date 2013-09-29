@@ -1,4 +1,5 @@
 ﻿using MineSweeper.Model.Interfaces;
+using MineSweeper.Settings.EventArg;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -7,13 +8,12 @@ namespace MineSweeper.Model.Components
 {
     public class Tile : PictureBox, ITile
     {
-        public event EventHandler<EventArgs> TileSelected;
+        public event EventHandler<TileActivityEventArgs> TileSelected;
+       
+        public event EventHandler<TileActivityEventArgs> MineHit;
+      
+        public event EventHandler<TileActivityEventArgs> MineFree;       
 
-        public event EventHandler<EventArgs> MineHit;
-
-        public event EventHandler<EventArgs> MineFree;
-
-        
         public bool IsMined { get; set; }
 
         public bool IsFlagged { get; set; }
@@ -48,7 +48,11 @@ namespace MineSweeper.Model.Components
         public void SelectTile()
         {
             if (IsMined)
-                GameOver();
+            {
+                OnTileSelected(new TileActivityEventArgs(GridPositonX, GridPositionY, IsMined));           
+                GameOver();    
+            }
+                
             if (!IsFlagged && !IsSelected)
             {
                 BackColor = Color.Blue;
@@ -76,22 +80,22 @@ namespace MineSweeper.Model.Components
             }  
         }
 
-        protected virtual void OnTileSelected()
+        protected virtual void OnTileSelected(TileActivityEventArgs e)
         {
-            EventHandler<EventArgs> handler = TileSelected;
-            if (handler != null) handler(this, EventArgs.Empty);
+            EventHandler<TileActivityEventArgs> handler = TileSelected;
+            if (handler != null) handler(this, e);
         }
 
-        protected virtual void OnMineHit()
+        protected virtual void OnMineHit(TileActivityEventArgs e)
         {
-            EventHandler<EventArgs> handler = MineHit;
-            if (handler != null) handler(this, EventArgs.Empty);
+            EventHandler<TileActivityEventArgs> handler = MineHit;
+            if (handler != null) handler(this, e);
         }
 
-        protected virtual void OnMineFree()
+        protected virtual void OnMineFree(TileActivityEventArgs e)
         {
-            EventHandler<EventArgs> handler = MineFree;
-            if (handler != null) handler(this, EventArgs.Empty);
+            EventHandler<TileActivityEventArgs> handler = MineFree;
+            if (handler != null) handler(this, e);
         }
 
         private void GameOver()
