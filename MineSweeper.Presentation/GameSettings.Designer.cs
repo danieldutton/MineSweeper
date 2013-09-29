@@ -131,7 +131,7 @@
             this._btnConfirm.UseVisualStyleBackColor = true;
             this._btnConfirm.Click += new System.EventHandler(this.ConfirmGameSettings_Click);
             // 
-            // OptionsForm
+            // GameSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -139,7 +139,9 @@
             this.Controls.Add(this._btnConfirm);
             this.Controls.Add(this._panelCheckBoxes);
             this.Controls.Add(this._panelGameModeLabels);
-            this.Name = "OptionsForm";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximumSize = new System.Drawing.Size(219, 170);
+            this.Name = "GameSettings";
             this.Text = "Options";
             this._panelGameModeLabels.ResumeLayout(false);
             this._panelGameModeLabels.PerformLayout();

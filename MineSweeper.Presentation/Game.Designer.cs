@@ -99,6 +99,7 @@
             this.ClientSize = new System.Drawing.Size(343, 398);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this._panelGrid);
+            this.MaximumSize = new System.Drawing.Size(359, 436);
             this.Name = "Game";
             this.Text = "Swine Sweeper";
             this.panel2.ResumeLayout(false);
