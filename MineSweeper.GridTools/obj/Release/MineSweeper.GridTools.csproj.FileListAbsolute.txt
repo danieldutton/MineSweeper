@@ -20,3 +20,16 @@ C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.GridTools\bin\Release\Mine
 C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.GridTools\bin\Release\MineSweeper.GameModeFactory.pdb
 C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.GridTools\bin\Release\MineSweeper.Settings.dll
 C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.GridTools\bin\Release\MineSweeper.Settings.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.GridTools\bin\Release\MineSweeper.GridTools.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.GridTools\bin\Release\MineSweeper.GridTools.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.GridTools\bin\Release\MineSweeper.GameModeFactory.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.GridTools\bin\Release\MineSweeper.Model.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.GridTools\bin\Release\MineSweeper.Settings.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.GridTools\bin\Release\MineSweeper.Utilities.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.GridTools\bin\Release\MineSweeper.GameModeFactory.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.GridTools\bin\Release\MineSweeper.Model.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.GridTools\bin\Release\MineSweeper.Settings.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.GridTools\bin\Release\MineSweeper.Utilities.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.GridTools\obj\Release\MineSweeper.GridTools.csprojResolveAssemblyReference.cache
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.GridTools\obj\Release\MineSweeper.GridTools.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.GridTools\obj\Release\MineSweeper.GridTools.pdb

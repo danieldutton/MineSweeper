@@ -12,3 +12,12 @@ C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.Model\bin\Release\MineSwee
 C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.Model\bin\Release\MineSweeper.GameModeFactory.pdb
 C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.Model\bin\Release\MineSweeper.Settings.dll
 C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.Model\bin\Release\MineSweeper.Settings.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.Model\bin\Release\MineSweeper.Model.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.Model\bin\Release\MineSweeper.Model.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.Model\bin\Release\MineSweeper.GameModeFactory.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.Model\bin\Release\MineSweeper.Settings.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.Model\bin\Release\MineSweeper.GameModeFactory.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.Model\bin\Release\MineSweeper.Settings.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.Model\obj\Release\MineSweeper.Model.csprojResolveAssemblyReference.cache
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.Model\obj\Release\MineSweeper.Model.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.Model\obj\Release\MineSweeper.Model.pdb

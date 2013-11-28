@@ -8,3 +8,8 @@ C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.Utilities\bin\Release\Mine
 C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.Utilities\obj\Release\MineSweeper.Utilities.csprojResolveAssemblyReference.cache
 C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.Utilities\obj\Release\MineSweeper.Utilities.dll
 C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.Utilities\obj\Release\MineSweeper.Utilities.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.Utilities\bin\Release\MineSweeper.Utilities.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.Utilities\bin\Release\MineSweeper.Utilities.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.Utilities\obj\Release\MineSweeper.Utilities.csprojResolveAssemblyReference.cache
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.Utilities\obj\Release\MineSweeper.Utilities.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.Utilities\obj\Release\MineSweeper.Utilities.pdb

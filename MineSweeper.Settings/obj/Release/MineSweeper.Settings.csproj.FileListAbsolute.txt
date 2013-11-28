@@ -2,3 +2,9 @@ C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.Settings\bin\Release\MineS
 C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.Settings\bin\Release\MineSweeper.Settings.pdb
 C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.Settings\obj\Release\MineSweeper.Settings.dll
 C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.Settings\obj\Release\MineSweeper.Settings.pdb
+C:\Users\Dan\Documents\GitHub\MineSweeper\MineSweeper.Settings\obj\Release\MineSweeper.Settings.csprojResolveAssemblyReference.cache
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.Settings\bin\Release\MineSweeper.Settings.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.Settings\bin\Release\MineSweeper.Settings.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.Settings\obj\Release\MineSweeper.Settings.csprojResolveAssemblyReference.cache
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.Settings\obj\Release\MineSweeper.Settings.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.Settings\obj\Release\MineSweeper.Settings.pdb

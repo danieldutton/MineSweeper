@@ -3,7 +3,6 @@ using MineSweeper.Model.Components;
 using MineSweeper.Settings;
 using System;
 
-
 namespace MineSweeper.GridTools
 {
     public class GridBuilder : IGridGenerator

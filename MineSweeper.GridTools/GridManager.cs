@@ -9,8 +9,7 @@ namespace MineSweeper.GridTools
         public static Control AddControlsToGrid<T>(T[,] controlsToAdd, Control control, GridSize gridSize) 
             where T: Control
         {
-            if (!Enum.IsDefined(typeof(GridSize), gridSize))
-                gridSize = GridSize.Beginner;
+            gridSize = SetDefaultGridSizeIfGridSizeIsUndefined(gridSize);
 
             int counter = (int) gridSize;
 
@@ -23,6 +22,14 @@ namespace MineSweeper.GridTools
                 }
             }
             return control;
+        }
+
+        private static GridSize SetDefaultGridSizeIfGridSizeIsUndefined(GridSize gridSize)
+        {
+            if (!Enum.IsDefined(typeof(GridSize), gridSize))
+                gridSize = GridSize.Beginner;
+
+            return gridSize;
         }
     }
 }
