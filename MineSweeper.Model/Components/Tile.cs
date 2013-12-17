@@ -80,6 +80,7 @@ namespace MineSweeper.Model.Components
             }  
         }
 
+
         protected virtual void OnTileSelected(TileActivityEventArgs e)
         {
             EventHandler<TileActivityEventArgs> handler = TileSelected;

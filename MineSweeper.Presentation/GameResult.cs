@@ -2,9 +2,9 @@
 
 namespace MineSweeper.Presentation
 {
-    public partial class GameLost : Form
+    public partial class GameResult : Form
     {
-        public GameLost()
+        public GameResult()
         {
             InitializeComponent();
         }

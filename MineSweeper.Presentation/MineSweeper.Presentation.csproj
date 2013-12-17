@@ -50,23 +50,17 @@
     <Compile Include="Game.Designer.cs">
       <DependentUpon>Game.cs</DependentUpon>
     </Compile>
-    <Compile Include="GameLost.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GameLost.Designer.cs">
-      <DependentUpon>GameLost.cs</DependentUpon>
-    </Compile>
     <Compile Include="GameSettings.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GameSettings.Designer.cs">
       <DependentUpon>GameSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="GameWon.cs">
+    <Compile Include="GameResult.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GameWon.Designer.cs">
-      <DependentUpon>GameWon.cs</DependentUpon>
+    <Compile Include="GameResult.Designer.cs">
+      <DependentUpon>GameResult.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
