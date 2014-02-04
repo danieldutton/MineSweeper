@@ -1,0 +1,11 @@
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.GridTools\bin\Debug\MSweeper.GridTools.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.GridTools\bin\Debug\MSweeper.GridTools.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.GridTools\bin\Debug\MSweeper.Model.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.GridTools\bin\Debug\MSweeper.Settings.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.GridTools\bin\Debug\MSweeper.Utilities.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.GridTools\bin\Debug\MSweeper.Model.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.GridTools\bin\Debug\MSweeper.Settings.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.GridTools\bin\Debug\MSweeper.Utilities.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.GridTools\obj\Debug\MSweeper.GridTools.csprojResolveAssemblyReference.cache
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.GridTools\obj\Debug\MSweeper.GridTools.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.GridTools\obj\Debug\MSweeper.GridTools.pdb

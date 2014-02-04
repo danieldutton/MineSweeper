@@ -1,0 +1,17 @@
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper._UnitTests\obj\Debug\MSweeper._UnitTests.csprojResolveAssemblyReference.cache
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper._UnitTests\bin\Debug\MSweeper._UnitTests.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper._UnitTests\bin\Debug\MSweeper._UnitTests.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper._UnitTests\bin\Debug\MSweeper.GameModeFactory.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper._UnitTests\bin\Debug\MSweeper.GridTools.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper._UnitTests\bin\Debug\MSweeper.Model.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper._UnitTests\bin\Debug\MSweeper.Settings.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper._UnitTests\bin\Debug\MSweeper.Utilities.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper._UnitTests\bin\Debug\nunit.framework.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper._UnitTests\bin\Debug\MSweeper.GameModeFactory.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper._UnitTests\bin\Debug\MSweeper.GridTools.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper._UnitTests\bin\Debug\MSweeper.Model.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper._UnitTests\bin\Debug\MSweeper.Settings.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper._UnitTests\bin\Debug\MSweeper.Utilities.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper._UnitTests\bin\Debug\nunit.framework.xml
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper._UnitTests\obj\Debug\MSweeper._UnitTests.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper._UnitTests\obj\Debug\MSweeper._UnitTests.pdb
