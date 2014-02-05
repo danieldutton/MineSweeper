@@ -1,6 +1,7 @@
-﻿using MSweeper.GridTools.Interfaces;
+﻿using MSweeper.GameModeFactory.Interfaces;
+using MSweeper.GridTools.Interfaces;
 using MSweeper.Model.Components;
-using MSweeper.Settings.Interfaces;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -24,6 +25,8 @@ namespace MSweeper.GridTools
 
         public void PaintGrid(IGameMode gameMode, Control control)
         {
+            if(control == null) throw new ArgumentNullException("control");
+
             Tile[,] grid = _emptyGridBuilder.GetSquaredGrid(gameMode.GridSize);
             Tile[,] minedGrid = _gridMiner.MineTheGrid(grid, gameMode.DifficultyLevel, gameMode.GridSize);
 

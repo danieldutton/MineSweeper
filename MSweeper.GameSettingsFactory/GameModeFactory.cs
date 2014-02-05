@@ -1,6 +1,5 @@
 ﻿using MSweeper.GameModeFactory.GameModes;
 using MSweeper.GameModeFactory.Interfaces;
-using MSweeper.Settings.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Reflection;

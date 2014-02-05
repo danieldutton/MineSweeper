@@ -1,7 +1,7 @@
 ﻿using MSweeper.GridTools;
 using MSweeper.GridTools.Interfaces;
+using MSweeper.GridTools.Settings;
 using MSweeper.Model.Components;
-using MSweeper.Settings;
 using NUnit.Framework;
 
 namespace MSweeper._UnitTests.GridTools

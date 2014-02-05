@@ -1,6 +1,6 @@
-﻿using MSweeper.GridTools;
-using MSweeper.Settings.EventArg;
-using MSweeper.Settings.Interfaces;
+﻿using MSweeper.GameModeFactory.EventArg;
+using MSweeper.GameModeFactory.Interfaces;
+using MSweeper.GridTools;
 using MSweeper.Utilities;
 using System.Windows.Forms;
 
@@ -20,7 +20,7 @@ namespace MSweeper.Presentation
             optionsForm.GameSettingsConfirmed +=optionsForm_GameSettingsConfirmed;
         }
 
-        public void optionsForm_GameSettingsConfirmed(object sender, GameSettingsEventArgs e)
+        public void optionsForm_GameSettingsConfirmed(object sender, ChosenGameModeEventArgs e)
         {
             ChosenGameMode = e.GameMode;
             DrawGrid();

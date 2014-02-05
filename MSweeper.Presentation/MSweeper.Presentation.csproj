@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EventArg\TileActivityEventArgs.cs" />
     <Compile Include="Game.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,10 +102,6 @@
     <ProjectReference Include="..\MSweeper.GridTools\MSweeper.GridTools.csproj">
       <Project>{077DD955-5052-4314-AC22-9598370067BC}</Project>
       <Name>MSweeper.GridTools</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MSweeper.Settings\MSweeper.Settings.csproj">
-      <Project>{a35e50a1-982b-41b0-aec0-355328b5838f}</Project>
-      <Name>MSweeper.Settings</Name>
     </ProjectReference>
     <ProjectReference Include="..\MSweeper.Utilities\MSweeper.Utilities.csproj">
       <Project>{e32ded88-4a41-4341-958a-7b54ff862408}</Project>

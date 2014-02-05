@@ -46,13 +46,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MSweeper.GameSettingsFactory\MSweeper.GameModeFactory.csproj">
+      <Project>{8875C6DB-5E29-4BA8-BB0B-E24F4D5F5BEF}</Project>
+      <Name>MSweeper.GameModeFactory</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MSweeper.Model\MSweeper.Model.csproj">
       <Project>{b4323d00-1027-441b-afce-47b6e3e9b82a}</Project>
       <Name>MSweeper.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MSweeper.Settings\MSweeper.Settings.csproj">
-      <Project>{a35e50a1-982b-41b0-aec0-355328b5838f}</Project>
-      <Name>MSweeper.Settings</Name>
     </ProjectReference>
     <ProjectReference Include="..\MSweeper.Utilities\MSweeper.Utilities.csproj">
       <Project>{e32ded88-4a41-4341-958a-7b54ff862408}</Project>

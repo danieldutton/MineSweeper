@@ -15,3 +15,5 @@ C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper._UnitTests\bin\Debug\MSweep
 C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper._UnitTests\bin\Debug\nunit.framework.xml
 C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper._UnitTests\obj\Debug\MSweeper._UnitTests.dll
 C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper._UnitTests\obj\Debug\MSweeper._UnitTests.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper._UnitTests\bin\Debug\Moq.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper._UnitTests\bin\Debug\Moq.xml

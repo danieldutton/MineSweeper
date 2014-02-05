@@ -1,5 +1,0 @@
-C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.Settings\bin\Debug\MSweeper.Settings.dll
-C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.Settings\bin\Debug\MSweeper.Settings.pdb
-C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.Settings\obj\Debug\MSweeper.Settings.dll
-C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.Settings\obj\Debug\MSweeper.Settings.pdb
-C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.Settings\obj\Debug\MSweeper.Settings.csprojResolveAssemblyReference.cache

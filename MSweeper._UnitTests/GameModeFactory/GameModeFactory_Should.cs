@@ -1,6 +1,6 @@
 ﻿using MSweeper.GameModeFactory.GameModes;
-using MSweeper.Settings;
-using MSweeper.Settings.Interfaces;
+using MSweeper.GameModeFactory.Interfaces;
+using MSweeper.GridTools.Settings;
 using NUnit.Framework;
 using System;
 
@@ -25,7 +25,7 @@ namespace MSweeper._UnitTests.GameModeFactory
         }
 
         [Test]
-        [ExpectedException(typeof(ArgumentNullException))]
+        [ExpectedException(typeof (ArgumentNullException))]
         public void CreateInstance_ThrowAnArgumentNullException_IfGameModeNameIsNull()
         {
             const string nullGameMode = null;

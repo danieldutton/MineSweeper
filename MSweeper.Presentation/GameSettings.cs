@@ -1,7 +1,6 @@
-﻿using MSweeper.GameModeFactory.Interfaces;
-using MSweeper.Settings;
-using MSweeper.Settings.EventArg;
-using MSweeper.Settings.Interfaces;
+﻿using MSweeper.GameModeFactory.EventArg;
+using MSweeper.GameModeFactory.Interfaces;
+using MSweeper.GridTools.Settings;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -10,7 +9,7 @@ namespace MSweeper.Presentation
 {
     public partial class GameSettings : Form
     {
-        public event EventHandler<GameSettingsEventArgs> GameSettingsConfirmed;
+        public event EventHandler<ChosenGameModeEventArgs> GameSettingsConfirmed;
 
         private readonly IGameModeFactory _gameModeFactory;
 
@@ -18,6 +17,7 @@ namespace MSweeper.Presentation
         public GameSettings(IGameModeFactory gameModeFactory)
         {
             _gameModeFactory = gameModeFactory;
+
             InitializeComponent();
             InitialiseTags();
         }
@@ -35,7 +35,7 @@ namespace MSweeper.Presentation
 
             IGameMode gameMode = _gameModeFactory.CreateInstance(gameModeName);
 
-            OnGameSettingsConfirmed(new GameSettingsEventArgs(gameMode));
+            OnGameSettingsConfirmed(new ChosenGameModeEventArgs(gameMode));
 
             Dispose();
         }
@@ -43,16 +43,16 @@ namespace MSweeper.Presentation
         private string GetChosenGameMode()
         {
             RadioButton checkedButton = _panelCheckBoxes.Controls.OfType<RadioButton>()
-                                      .FirstOrDefault(cBox => cBox.Checked);
+                                                        .FirstOrDefault(cBox => cBox.Checked);
 
-            var gameMode = (DifficultyLevel)checkedButton.Tag;
+            var gameMode = (DifficultyLevel) checkedButton.Tag;
 
             return gameMode.ToString();
         }
 
-        protected virtual void OnGameSettingsConfirmed(GameSettingsEventArgs e)
+        protected virtual void OnGameSettingsConfirmed(ChosenGameModeEventArgs e)
         {
-            EventHandler<GameSettingsEventArgs> handler = GameSettingsConfirmed;
+            EventHandler<ChosenGameModeEventArgs> handler = GameSettingsConfirmed;
             if (handler != null) handler(this, e);
         }
     }

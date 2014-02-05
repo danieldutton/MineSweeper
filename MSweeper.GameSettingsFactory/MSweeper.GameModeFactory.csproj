@@ -35,19 +35,17 @@
     <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EventArg\ChosenGameModeEventArgs.cs" />
     <Compile Include="GameModes\Advanced.cs" />
     <Compile Include="GameModes\Beginner.cs" />
+    <Compile Include="Interfaces\IGameMode.cs" />
     <Compile Include="GameModes\Normal.cs" />
     <Compile Include="GameModes\NullSettings.cs" />
     <Compile Include="Interfaces\IGameModeFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GameModeFactory.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MSweeper.Settings\MSweeper.Settings.csproj">
-      <Project>{a35e50a1-982b-41b0-aec0-355328b5838f}</Project>
-      <Name>MSweeper.Settings</Name>
-    </ProjectReference>
+    <Compile Include="Settings\DifficultyLevel.cs" />
+    <Compile Include="Settings\GridSize.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

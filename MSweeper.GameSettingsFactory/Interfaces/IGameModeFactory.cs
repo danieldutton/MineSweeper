@@ -1,6 +1,4 @@
-﻿using MSweeper.Settings.Interfaces;
-
-namespace MSweeper.GameModeFactory.Interfaces
+﻿namespace MSweeper.GameModeFactory.Interfaces
 {
     public interface IGameModeFactory
     {

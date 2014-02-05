@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.2.1312.1622\lib\net40\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
@@ -61,10 +64,6 @@
     <ProjectReference Include="..\MSweeper.Model\MSweeper.Model.csproj">
       <Project>{b4323d00-1027-441b-afce-47b6e3e9b82a}</Project>
       <Name>MSweeper.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MSweeper.Settings\MSweeper.Settings.csproj">
-      <Project>{a35e50a1-982b-41b0-aec0-355328b5838f}</Project>
-      <Name>MSweeper.Settings</Name>
     </ProjectReference>
     <ProjectReference Include="..\MSweeper.Utilities\MSweeper.Utilities.csproj">
       <Project>{e32ded88-4a41-4341-958a-7b54ff862408}</Project>

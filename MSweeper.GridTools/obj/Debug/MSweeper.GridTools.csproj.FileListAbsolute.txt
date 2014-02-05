@@ -9,3 +9,5 @@ C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.GridTools\bin\Debug\MSweepe
 C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.GridTools\obj\Debug\MSweeper.GridTools.csprojResolveAssemblyReference.cache
 C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.GridTools\obj\Debug\MSweeper.GridTools.dll
 C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.GridTools\obj\Debug\MSweeper.GridTools.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.GridTools\bin\Debug\MSweeper.GameModeFactory.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.GridTools\bin\Debug\MSweeper.GameModeFactory.pdb
