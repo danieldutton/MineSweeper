@@ -44,7 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EventArg\TileActivityEventArgs.cs" />
     <Compile Include="Game.cs">
       <SubType>Form</SubType>
     </Compile>

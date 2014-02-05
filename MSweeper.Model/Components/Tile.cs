@@ -1,8 +1,8 @@
-﻿using MSweeper.Model.Interfaces;
+﻿using MSweeper.Model.EventArg;
+using MSweeper.Model.Interfaces;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using MSweeper.Settings.EventArg;
 
 namespace MSweeper.Model.Components
 {

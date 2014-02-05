@@ -1,8 +1,7 @@
 ﻿using MSweeper.GridTools.Interfaces;
-using MSweeper.Settings;
+using MSweeper.GridTools.Settings;
 using System;
 using System.Windows.Forms;
-using GridSize = MSweeper.GridTools.Settings.GridSize;
 
 namespace MSweeper.GridTools
 {

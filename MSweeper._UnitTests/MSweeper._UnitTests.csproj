@@ -62,7 +62,7 @@
       <Name>MSweeper.GridTools</Name>
     </ProjectReference>
     <ProjectReference Include="..\MSweeper.Model\MSweeper.Model.csproj">
-      <Project>{b4323d00-1027-441b-afce-47b6e3e9b82a}</Project>
+      <Project>{B4323D00-1027-441B-AFCE-47B6E3E9B82A}</Project>
       <Name>MSweeper.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\MSweeper.Utilities\MSweeper.Utilities.csproj">

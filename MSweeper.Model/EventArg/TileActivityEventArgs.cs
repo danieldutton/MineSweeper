@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MSweeper.Presentation.EventArg
+namespace MSweeper.Model.EventArg
 {
     public class TileActivityEventArgs : EventArgs
     {

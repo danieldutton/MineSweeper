@@ -1,9 +1,8 @@
 ﻿using MSweeper.GridTools.Interfaces;
+using MSweeper.GridTools.Settings;
 using MSweeper.Model.Components;
-using MSweeper.Settings;
 using MSweeper.Utilities.Interfaces;
-using DifficultyLevel = MSweeper.GridTools.Settings.DifficultyLevel;
-using GridSize = MSweeper.GridTools.Settings.GridSize;
+
 
 namespace MSweeper.GridTools
 {
