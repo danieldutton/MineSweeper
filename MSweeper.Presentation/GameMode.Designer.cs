@@ -1,6 +1,6 @@
 ﻿namespace MSweeper.Presentation
 {
-    partial class GameSettings
+    partial class GameMode
     {
         /// <summary>
         /// Required designer variable.

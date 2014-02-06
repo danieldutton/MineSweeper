@@ -15,10 +15,10 @@ namespace MSweeper.Presentation
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            var form1 = new Game();
+            var form1 = new GameBoard();
 
             IGameModeFactory gameModeFactory = new GameModeFactory.GameModeFactory();
-            var optionsForm = new GameSettings(gameModeFactory);
+            var optionsForm = new GameMode(gameModeFactory);
             
             form1.SubscribeToGameSettingsEvent(optionsForm);
 

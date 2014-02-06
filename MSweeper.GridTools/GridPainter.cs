@@ -1,5 +1,6 @@
 ﻿using MSweeper.GameModeFactory.Interfaces;
 using MSweeper.GridTools.Interfaces;
+using MSweeper.GridTools.Properties;
 using MSweeper.Model.Components;
 using System;
 using System.Drawing;
@@ -54,6 +55,10 @@ namespace MSweeper.GridTools
                         x = 0;
                     }
                     minedGrid[i, j] = grid[i, j];
+
+                    if (minedGrid[i, j].IsMined)
+                        minedGrid[i, j].Image = Resources.mine_jpg;
+
                 }
             }
         }

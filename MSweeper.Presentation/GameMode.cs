@@ -7,22 +7,22 @@ using System.Windows.Forms;
 
 namespace MSweeper.Presentation
 {
-    public partial class GameSettings : Form
+    public partial class GameMode : Form
     {
         public event EventHandler<ChosenGameModeEventArgs> GameSettingsConfirmed;
 
         private readonly IGameModeFactory _gameModeFactory;
 
 
-        public GameSettings(IGameModeFactory gameModeFactory)
+        public GameMode(IGameModeFactory gameModeFactory)
         {
             _gameModeFactory = gameModeFactory;
 
             InitializeComponent();
-            InitialiseTags();
+            InitGameModeValues();
         }
 
-        private void InitialiseTags()
+        private void InitGameModeValues()
         {
             _radioBtnBeginner.Tag = DifficultyLevel.Beginner;
             _radioBtnNormal.Tag = DifficultyLevel.Normal;

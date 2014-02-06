@@ -6,18 +6,18 @@ using System.Windows.Forms;
 
 namespace MSweeper.Presentation
 {
-    public partial class Game : Form
+    public partial class GameBoard : Form
     {
         public IGameMode ChosenGameMode { get; private set; }
 
-        public Game()
-        {            
-            InitializeComponent();          
+        public GameBoard()
+        {
+            InitializeComponent();
         }
 
-        public void SubscribeToGameSettingsEvent(GameSettings optionsForm)
+        public void SubscribeToGameSettingsEvent(GameMode optionsForm)
         {
-            optionsForm.GameSettingsConfirmed +=optionsForm_GameSettingsConfirmed;
+            optionsForm.GameSettingsConfirmed += optionsForm_GameSettingsConfirmed;
         }
 
         public void optionsForm_GameSettingsConfirmed(object sender, ChosenGameModeEventArgs e)
@@ -31,7 +31,8 @@ namespace MSweeper.Presentation
             Height = ChosenGameMode.FormSize.Y;
             Width = ChosenGameMode.FormSize.X;
 
-            var painter = new GridPainter(new EmptyGridBuilder(), new GridControlBuilder(), new GridMiner(new RandomNumberGenerator()));
+            var painter = new GridPainter(new EmptyGridBuilder(), new GridControlBuilder(),
+                                          new GridMiner(new RandomNumberGenerator()));
 
             _panelGrid.Width = ChosenGameMode.GridPanelSize.X;
             _panelGrid.Height = ChosenGameMode.GridPanelSize.Y;
