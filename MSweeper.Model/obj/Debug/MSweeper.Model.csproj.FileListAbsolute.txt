@@ -2,3 +2,4 @@ C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.Model\bin\Debug\MSweeper.Mo
 C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.Model\bin\Debug\MSweeper.Model.pdb
 C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.Model\obj\Debug\MSweeper.Model.dll
 C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.Model\obj\Debug\MSweeper.Model.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.Model\obj\Debug\MSweeper.Model.csprojResolveAssemblyReference.cache

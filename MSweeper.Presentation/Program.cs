@@ -1,6 +1,6 @@
-﻿using System;
+﻿using MSweeper.GameModeFactory.Interfaces;
+using System;
 using System.Windows.Forms;
-using MSweeper.GameModeFactory.Interfaces;
 
 namespace MSweeper.Presentation
 {

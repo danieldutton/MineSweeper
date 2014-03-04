@@ -1,4 +1,4 @@
-﻿using MSweeper.GridTools.Settings;
+﻿using MSweeper.GameModeFactory.Settings;
 using System.Windows.Forms;
 
 namespace MSweeper.GridTools.Interfaces

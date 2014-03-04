@@ -1,6 +1,6 @@
-﻿using MSweeper.GridTools.Interfaces;
-using MSweeper.GridTools.Settings;
-using MSweeper.Model.Components;
+﻿using MSweeper.GameModeFactory.Settings;
+using MSweeper.GridTools.Interfaces;
+using MSweeper.Model;
 using MSweeper.Utilities.Interfaces;
 
 
@@ -19,23 +19,25 @@ namespace MSweeper.GridTools
         {
             for (int i = 0; i < (int)gameMode; i++)
             {
-                Tile tile = ExtractAMineFreeTile(grid, gridSize);
-                tile.IsMined = true;     
+                ExtractAMineFreeTile(grid, gridSize);
+                     
             }
             return grid;
         }
 
-        private Tile ExtractAMineFreeTile(Tile[,] grid, GridSize gridSize)
+        private void ExtractAMineFreeTile(Tile[,] grid, GridSize gridSize)
         {         
-            int xIndex = _randomNumberGenerator.GetRandomNumber(1, (int)gridSize);
-            int yIndex = _randomNumberGenerator.GetRandomNumber(1, (int)gridSize);
+            int xIndex = _randomNumberGenerator.GetRandomNumber(0, (int)gridSize);
+            int yIndex = _randomNumberGenerator.GetRandomNumber(0, (int)gridSize);
 
             Tile tile = grid[xIndex, yIndex];
 
             if (tile.IsMined)
                 ExtractAMineFreeTile(grid, gridSize);
-            
-            return tile;
+            else
+            {
+                tile.IsMined = true;
+            }
         }
     }
 }

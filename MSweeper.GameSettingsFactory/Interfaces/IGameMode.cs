@@ -1,5 +1,5 @@
-﻿using System.Drawing;
-using MSweeper.GridTools.Settings;
+﻿using MSweeper.GameModeFactory.Settings;
+using System.Drawing;
 
 namespace MSweeper.GameModeFactory.Interfaces
 {

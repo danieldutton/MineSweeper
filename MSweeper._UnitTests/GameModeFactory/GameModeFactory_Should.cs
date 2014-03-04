@@ -1,6 +1,6 @@
 ﻿using MSweeper.GameModeFactory.GameModes;
 using MSweeper.GameModeFactory.Interfaces;
-using MSweeper.GridTools.Settings;
+using MSweeper.GameModeFactory.Settings;
 using NUnit.Framework;
 using System;
 

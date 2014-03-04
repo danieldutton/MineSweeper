@@ -1,4 +1,4 @@
-﻿namespace MSweeper.GridTools.Settings
+﻿namespace MSweeper.GameModeFactory.Settings
 {
     public enum DifficultyLevel
     {

@@ -4,7 +4,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace MSweeper.Model.Components
+namespace MSweeper.Model
 {
     public class Tile : PictureBox, ITile
     {
@@ -49,6 +49,7 @@ namespace MSweeper.Model.Components
         {
             if (IsMined)
             {
+                //only if a tile is confirmed selected do we pass details of the grid to calculate etc
                 OnTileSelected(new TileActivityEventArgs(GridPositonX, GridPositionY, IsMined));           
                 GameOver();    
             }

@@ -1,7 +1,7 @@
 ﻿using MSweeper.GameModeFactory.Interfaces;
 using MSweeper.GridTools.Interfaces;
 using MSweeper.GridTools.Properties;
-using MSweeper.Model.Components;
+using MSweeper.Model;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -58,6 +58,11 @@ namespace MSweeper.GridTools
 
                     if (minedGrid[i, j].IsMined)
                         minedGrid[i, j].Image = Resources.mine_jpg;
+
+                    if (!minedGrid[i, j].IsMined)
+                    {
+                        //add mine counting here   
+                    }
 
                 }
             }

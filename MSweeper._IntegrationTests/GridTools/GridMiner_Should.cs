@@ -1,31 +1,33 @@
-﻿using MSweeper.GridTools;
+﻿using MSweeper.GameModeFactory.Settings;
+using MSweeper.GridTools;
 using MSweeper.GridTools.Interfaces;
-using MSweeper.GridTools.Settings;
-using MSweeper.Model.Components;
+using MSweeper.Model;
 using MSweeper.Utilities;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MSweeper._UnitTests.GridTools
+namespace MSweeper._IntegrationTests.GridTools
 {
     [TestFixture]
-    public class GridMinerShould
+    public class GridMiner_Should
     {
         private IGridMiner _gridMiner;
+
+        private EmptyGridBuilder _emptyGridBuilder;
+
 
         [SetUp]
         public void Init()
         {
             _gridMiner = new GridMiner(new RandomNumberGenerator());
+            _emptyGridBuilder = new EmptyGridBuilder();
         }
 
         [Test]
         public void MineGrid_SeedABeginnerGridWithTenMines()
         {
-            //put this in mother class as mock
-            var gridGenerator = new EmptyGridBuilder();
-            Tile[,] grid = gridGenerator.GetSquaredGrid(GridSize.Beginner);
+            Tile[,] grid = _emptyGridBuilder.GetSquaredGrid(GridSize.Beginner);
 
             Tile[,] minedGrid = _gridMiner.MineTheGrid(grid, DifficultyLevel.Beginner, GridSize.Beginner);
 
@@ -36,12 +38,11 @@ namespace MSweeper._UnitTests.GridTools
 
             Assert.AreEqual(expected, actual);
         }
-        //60 mines
+
         [Test]
         public void MineGrid_SeedANormalGridWithFortyMines()
         {
-            var gridGenerator = new EmptyGridBuilder();
-            Tile[,] grid = gridGenerator.GetSquaredGrid(GridSize.Normal);
+            Tile[,] grid = _emptyGridBuilder.GetSquaredGrid(GridSize.Normal);
 
             Tile[,] minedGrid = _gridMiner.MineTheGrid(grid, DifficultyLevel.Normal, GridSize.Normal);
 
@@ -53,15 +54,13 @@ namespace MSweeper._UnitTests.GridTools
             Assert.AreEqual(expected, actual);
                 
         }
-        //99 mines
+
         [Test]
         public void MineGrid_SeedAnAdvancedGridWithNinetyNineMines()
         {
-            var gridGenerator = new EmptyGridBuilder();
-            Tile[,] grid = gridGenerator.GetSquaredGrid(GridSize.Advanced);
+            Tile[,] grid = _emptyGridBuilder.GetSquaredGrid(GridSize.Advanced);
 
-            var gridMiner = new GridMiner(new RandomNumberGenerator());
-            Tile[,] minedGrid = gridMiner.MineTheGrid(grid, DifficultyLevel.Advanced, GridSize.Advanced);
+            Tile[,] minedGrid = _gridMiner.MineTheGrid(grid, DifficultyLevel.Advanced, GridSize.Advanced);
 
             List<Tile> flattenedGrid = minedGrid.Cast<Tile>().ToList();
 

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSweeper.Utilities", "MSwee
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSweeper.Model", "MSweeper.Model\MSweeper.Model.csproj", "{B4323D00-1027-441B-AFCE-47B6E3E9B82A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSweeper._IntegrationTests", "MSweeper._IntegrationTests\MSweeper._IntegrationTests.csproj", "{4381BFFF-C37B-49CF-BA9F-7BCC23B9D2B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{B4323D00-1027-441B-AFCE-47B6E3E9B82A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4323D00-1027-441B-AFCE-47B6E3E9B82A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4323D00-1027-441B-AFCE-47B6E3E9B82A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4381BFFF-C37B-49CF-BA9F-7BCC23B9D2B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4381BFFF-C37B-49CF-BA9F-7BCC23B9D2B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4381BFFF-C37B-49CF-BA9F-7BCC23B9D2B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4381BFFF-C37B-49CF-BA9F-7BCC23B9D2B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

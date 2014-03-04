@@ -1,6 +1,6 @@
 ﻿using MSweeper.GameModeFactory.EventArg;
 using MSweeper.GameModeFactory.Interfaces;
-using MSweeper.GridTools.Settings;
+using MSweeper.GameModeFactory.Settings;
 using System;
 using System.Linq;
 using System.Windows.Forms;
