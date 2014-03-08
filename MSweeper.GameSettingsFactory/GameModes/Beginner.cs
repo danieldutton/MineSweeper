@@ -4,7 +4,7 @@ using System.Drawing;
 
 namespace MSweeper.GameModeFactory.GameModes
 {
-    public class Beginner : IGameMode
+    public sealed class Beginner : IGameMode
     {
         public Point FormSize { get; private set; }
 

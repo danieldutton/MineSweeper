@@ -59,23 +59,27 @@ namespace MSweeper.GridTools
                     if (minedGrid[i, j].IsMined)
                         minedGrid[i, j].Image = Resources.mine_jpg;
 
-                    if (!minedGrid[i, j].IsMined && minedGrid[i, j].GridPositonX > 1 && minedGrid[i, j].GridPositionY > 1 && minedGrid[i, j].GridPositonX < 8 && minedGrid[i, j].GridPositonX < 8)
+                    //srp this out to mine
+
+                    if (!minedGrid[i, j].IsMined)
                     {
-                        int c = 0;
-                        if (minedGrid[i - 1, j - 1].IsMined) c++;
-                        if (minedGrid[i - 0, j - 1].IsMined) c++;
-                        if (minedGrid[i + 1, j - 1].IsMined) c++;
-                        if (minedGrid[i - 1, j - 0].IsMined) c++;
-                        if (minedGrid[i - 0, j - 0].IsMined) c++;
-                        if (minedGrid[i + 1, j - 0].IsMined) c++;
-                        //if (!minedGrid[i - 1, j + 1].IsMined) c++;
-                        //if (!minedGrid[i - 0, j + 1].IsMined) c++;
-                        //if (!minedGrid[i + 1, j + 1].IsMined) c++;
+                        int count = 0;
+
+                        for (int p = i - 1; p <= i + 1; p++)
+                        {
+                            for (int q = j - 1; q <= j + 1; q++)
+                            {
+                                if (0 <= p && p < minedGrid.GetLength(0) && 0 <= q && q < minedGrid.GetLength(0))
+                                {
+                                    if (minedGrid[p, q].IsMined)
+                                        ++count;
+                                }
+                            }
+                        }
+
                         minedGrid[i, j].Paint +=
                             (sender, args) =>
-                            args.Graphics.DrawString(c.ToString(), new Font("Arial", 10), new SolidBrush(Color.White), 0, 0);
-                        
-                        //paint here
+                            args.Graphics.DrawString(count.ToString(), new Font("Arial", 10), new SolidBrush(Color.White), 0, 0);
                     }
                 }
             }

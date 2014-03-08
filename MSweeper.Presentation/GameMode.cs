@@ -9,7 +9,7 @@ namespace MSweeper.Presentation
 {
     public partial class GameMode : Form
     {
-        public event EventHandler<ChosenGameModeEventArgs> GameSettingsConfirmed;
+        public event EventHandler<SelectedGameModeEventArgs> GameSettingsConfirmed;
 
         private readonly IGameModeFactory _gameModeFactory;
 
@@ -35,7 +35,7 @@ namespace MSweeper.Presentation
 
             IGameMode gameMode = _gameModeFactory.CreateInstance(gameModeName);
 
-            OnGameSettingsConfirmed(new ChosenGameModeEventArgs(gameMode));
+            OnGameSettingsConfirmed(new SelectedGameModeEventArgs(gameMode));
 
             Dispose();
         }
@@ -50,9 +50,9 @@ namespace MSweeper.Presentation
             return gameMode.ToString();
         }
 
-        protected virtual void OnGameSettingsConfirmed(ChosenGameModeEventArgs e)
+        protected virtual void OnGameSettingsConfirmed(SelectedGameModeEventArgs e)
         {
-            EventHandler<ChosenGameModeEventArgs> handler = GameSettingsConfirmed;
+            EventHandler<SelectedGameModeEventArgs> handler = GameSettingsConfirmed;
             if (handler != null) handler(this, e);
         }
     }

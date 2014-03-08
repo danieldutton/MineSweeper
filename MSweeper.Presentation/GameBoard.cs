@@ -20,7 +20,7 @@ namespace MSweeper.Presentation
             optionsForm.GameSettingsConfirmed += optionsForm_GameSettingsConfirmed;
         }
 
-        public void optionsForm_GameSettingsConfirmed(object sender, ChosenGameModeEventArgs e)
+        public void optionsForm_GameSettingsConfirmed(object sender, SelectedGameModeEventArgs e)
         {
             ChosenGameMode = e.GameMode;
             DrawGrid();

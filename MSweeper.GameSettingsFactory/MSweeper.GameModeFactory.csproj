@@ -35,7 +35,7 @@
     <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EventArg\ChosenGameModeEventArgs.cs" />
+    <Compile Include="EventArg\SelectedGameModeEventArgs.cs" />
     <Compile Include="GameModes\Advanced.cs" />
     <Compile Include="GameModes\Beginner.cs" />
     <Compile Include="Interfaces\IGameMode.cs" />

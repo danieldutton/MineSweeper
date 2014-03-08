@@ -3,11 +3,11 @@ using System;
 
 namespace MSweeper.GameModeFactory.EventArg
 {
-    public class ChosenGameModeEventArgs : EventArgs
+    public class SelectedGameModeEventArgs : EventArgs
     {
         public IGameMode GameMode { get; private set; }
 
-        public ChosenGameModeEventArgs(IGameMode gameMode)
+        public SelectedGameModeEventArgs(IGameMode gameMode)
         {
             GameMode = gameMode;
         }
