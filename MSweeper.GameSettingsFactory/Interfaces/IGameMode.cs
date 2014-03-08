@@ -5,12 +5,12 @@ namespace MSweeper.GameModeFactory.Interfaces
 {
     public interface IGameMode
     {
-        Point FormSize { get; set; }
+        Point FormSize { get; }
 
-        Point GridPanelSize { get; set; }
+        Point GridPanelSize { get; }
 
-        DifficultyLevel DifficultyLevel { get; set; }
+        DifficultyLevel DifficultyLevel { get; }
 
-        GridSize GridSize { get; set; }
+        GridSize GridSize { get; }
     }
 }

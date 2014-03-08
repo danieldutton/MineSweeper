@@ -5,7 +5,7 @@ namespace MSweeper.GameModeFactory.EventArg
 {
     public class ChosenGameModeEventArgs : EventArgs
     {
-        public IGameMode GameMode { get; set; }
+        public IGameMode GameMode { get; private set; }
 
         public ChosenGameModeEventArgs(IGameMode gameMode)
         {

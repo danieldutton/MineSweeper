@@ -6,13 +6,13 @@ namespace MSweeper.GameModeFactory.GameModes
 {
     public class Advanced : IGameMode
     {
-        public Point FormSize { get; set; }
+        public Point FormSize { get; private set; }
         
-        public Point GridPanelSize { get; set; }
+        public Point GridPanelSize { get; private set; }
 
-        public DifficultyLevel DifficultyLevel { get; set; }
+        public DifficultyLevel DifficultyLevel { get; private set; }
 
-        public GridSize GridSize { get; set; }
+        public GridSize GridSize { get; private set; }
 
 
         public Advanced()

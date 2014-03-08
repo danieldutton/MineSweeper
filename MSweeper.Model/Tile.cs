@@ -26,6 +26,8 @@ namespace MSweeper.Model
 
         private int _rightClickCount = 1;
 
+        public Label MineCount = new Label();
+
 
         protected override void OnClick(EventArgs e)
         {

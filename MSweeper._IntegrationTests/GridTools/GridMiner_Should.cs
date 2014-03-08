@@ -25,7 +25,7 @@ namespace MSweeper._IntegrationTests.GridTools
         }
 
         [Test]
-        public void MineGrid_SeedABeginnerGridWithTenMines()
+        public void MineGrid_SeedABeginnerGridWith_10_Mines()
         {
             Tile[,] grid = _emptyGridBuilder.GetSquaredGrid(GridSize.Beginner);
 
@@ -40,7 +40,7 @@ namespace MSweeper._IntegrationTests.GridTools
         }
 
         [Test]
-        public void MineGrid_SeedANormalGridWithFortyMines()
+        public void MineGrid_SeedANormalGridWith_40_Mines()
         {
             Tile[,] grid = _emptyGridBuilder.GetSquaredGrid(GridSize.Normal);
 
@@ -56,7 +56,7 @@ namespace MSweeper._IntegrationTests.GridTools
         }
 
         [Test]
-        public void MineGrid_SeedAnAdvancedGridWithNinetyNineMines()
+        public void MineGrid_SeedAnAdvancedGridWith_99_Mines()
         {
             Tile[,] grid = _emptyGridBuilder.GetSquaredGrid(GridSize.Advanced);
 
@@ -74,6 +74,7 @@ namespace MSweeper._IntegrationTests.GridTools
         public void TearDown()
         {
             _gridMiner = null;
+            _emptyGridBuilder = null;
         }
     }
 }
