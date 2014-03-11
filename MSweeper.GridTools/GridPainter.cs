@@ -59,8 +59,7 @@ namespace MSweeper.GridTools
                     if (minedGrid[i, j].IsMined)
                         minedGrid[i, j].Image = Resources.mine_jpg;
 
-                    //srp this out to mine
-
+                    //srp this out to mine counter class
                     if (!minedGrid[i, j].IsMined)
                     {
                         int count = 0;
@@ -80,6 +79,8 @@ namespace MSweeper.GridTools
                         minedGrid[i, j].Paint +=
                             (sender, args) =>
                             args.Graphics.DrawString(count.ToString(), new Font("Arial", 10), new SolidBrush(Color.White), 0, 0);
+
+                        minedGrid[i, j].MineCount.Text = count.ToString();
                     }
                 }
             }

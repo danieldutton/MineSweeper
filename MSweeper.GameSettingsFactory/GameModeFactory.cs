@@ -1,5 +1,6 @@
 ﻿using MSweeper.GameModeFactory.GameModes;
 using MSweeper.GameModeFactory.Interfaces;
+using MSweeper.Utilities.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
@@ -8,23 +9,28 @@ namespace MSweeper.GameModeFactory
 {
     public class GameModeFactory : IGameModeFactory
     {
+        private readonly ITypeCreator _typeCreator;
+        
         private Dictionary<string, Type> _gameModes;
 
-        public GameModeFactory()
+        
+        public GameModeFactory(ITypeCreator typeCreator)
         {
+            _typeCreator = typeCreator;
+            
             LoadTypesICanReturn();
         }
 
         public IGameMode CreateInstance(string gameModeName)
         {
-            if (gameModeName == null) throw new ArgumentNullException("gameModeName");
+            if(string.IsNullOrEmpty(gameModeName)) throw new ArgumentException("gameModeName");
 
             Type type = GetTypeToCreate(gameModeName);
 
             if(type == null)
-                return new NullSettings();
+                return new Null();
 
-            return Activator.CreateInstance(type) as IGameMode;
+            return _typeCreator.GetTypeInstance(type) as IGameMode;
         }
 
         private Type GetTypeToCreate(string gameModeName)

@@ -34,6 +34,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\ITypeCreator.cs" />
+    <Compile Include="TypeCreator.cs" />
     <Compile Include="RandomNumberGenerator.cs" />
     <Compile Include="Interfaces\IRandomNumberGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

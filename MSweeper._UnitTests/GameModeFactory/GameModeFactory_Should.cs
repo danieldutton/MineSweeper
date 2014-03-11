@@ -1,6 +1,7 @@
-﻿using MSweeper.GameModeFactory.GameModes;
+﻿using Moq;
+using MSweeper.GameModeFactory.GameModes;
 using MSweeper.GameModeFactory.Interfaces;
-using MSweeper.GameModeFactory.Settings;
+using MSweeper.Utilities.Interfaces;
 using NUnit.Framework;
 using System;
 
@@ -9,169 +10,51 @@ namespace MSweeper._UnitTests.GameModeFactory
     [TestFixture]
     public class GameModeFactory_Should
     {
+        private Mock<ITypeCreator> _faketypeCreator;
+
         private MSweeper.GameModeFactory.GameModeFactory _sut;
-
-        private const string Beginner = "Beginner";
-
-        private const string Normal = "Normal";
-
-        private const string Advanced = "Advanced";
-
 
         [SetUp]
         public void Init()
         {
-            _sut = new MSweeper.GameModeFactory.GameModeFactory();
+            _faketypeCreator = new Mock<ITypeCreator>();
+            _sut = new MSweeper.GameModeFactory.GameModeFactory(_faketypeCreator.Object);
         }
 
         [Test]
-        [ExpectedException(typeof (ArgumentNullException))]
-        public void CreateInstance_ThrowAnArgumentNullException_IfGameModeNameIsNull()
+        [ExpectedException(typeof (ArgumentException))]
+        public void CreateInstance_ThrowAnArgumentException_IfGameModeNameParamIsNull()
         {
-            const string nullGameMode = null;
-
-            _sut.CreateInstance(nullGameMode);
+            _sut.CreateInstance(null);
         }
 
         [Test]
-        public void CreateInstance_ReturnNullSettingsType_IfTypeDoesNotExist()
+        [ExpectedException(typeof (ArgumentException))]
+        public void CreateInstance_ThrowAnArgumentException_IfGameModeNameParamIsAnEmptyString()
         {
-            const string invalidGameModeName = "nonExistantMode";
-
-            IGameMode result = _sut.CreateInstance(invalidGameModeName);
-
-            Assert.IsInstanceOf<NullSettings>(result);
+            _sut.CreateInstance(string.Empty);
         }
 
         [Test]
-        public void CreateInstance_ReturnBeginnerType_IfBeginnerTypeExists()
+        public void CreateInstance_ReturnANullSettingObject_IfTypeReturnedIsNull()
         {
-            IGameMode result = _sut.CreateInstance(Beginner);
+            IGameMode result = _sut.CreateInstance("NonExistantGameMode");
 
-            Assert.IsInstanceOf<Beginner>(result);
+            Assert.IsInstanceOf<Null>(result);
         }
 
         [Test]
-        public void CreateInstance_ReturnCorrectFormSizeForBeginnerType()
+        public void CreateInstance_CallMethodGetTypeInstance_ExactlyOnce()
         {
-            IGameMode result = _sut.CreateInstance(Beginner);
+            _sut.CreateInstance("Beginner");
 
-            Assert.AreEqual(183, result.FormSize.X);
-            Assert.AreEqual(225, result.FormSize.Y);
-        }
-
-        [Test]
-        public void CreateInstance_ReturnCorrectGridPanelSizeForBeginnerType()
-        {
-            IGameMode result = _sut.CreateInstance(Beginner);
-
-            Assert.AreEqual(140, result.GridPanelSize.X);
-            Assert.AreEqual(100, result.GridPanelSize.Y);
-        }
-
-        [Test]
-        public void CreateInstance_ReturnCorrectDifficultyLevelForBeginnerType()
-        {
-            IGameMode result = _sut.CreateInstance(Beginner);
-
-            Assert.AreEqual(GridSize.Beginner, result.GridSize);
-        }
-
-        [Test]
-        public void CreateInstance_ReturnCorrectGridSizeForBeginnerType()
-        {
-            IGameMode result = _sut.CreateInstance(Beginner);
-
-            Assert.AreEqual(DifficultyLevel.Beginner, result.DifficultyLevel);
-        }
-
-        [Test]
-        public void CreateInstance_ReturnNormalType_IfNormalTypeExists()
-        {
-            IGameMode result = _sut.CreateInstance(Normal);
-
-            Assert.IsInstanceOf<Normal>(result);
-        }
-
-        [Test]
-        public void CreateInstance_ReturnCorrectFormSizeForNormalType()
-        {
-            IGameMode result = _sut.CreateInstance(Normal);
-
-            Assert.AreEqual(295, result.FormSize.X);
-            Assert.AreEqual(340, result.FormSize.Y);
-        }
-
-        [Test]
-        public void CreateInstance_ReturnCorrectGridPanelSizeForNormalType()
-        {
-            IGameMode result = _sut.CreateInstance(Normal);
-
-            Assert.AreEqual(240, result.GridPanelSize.X);
-            Assert.AreEqual(100, result.GridPanelSize.Y);
-        }
-
-        [Test]
-        public void CreateInstance_ReturnCorrectDifficultyLevelForNormalType()
-        {
-            IGameMode result = _sut.CreateInstance(Normal);
-
-            Assert.AreEqual(DifficultyLevel.Normal, result.DifficultyLevel);
-        }
-
-        [Test]
-        public void CreateInstance_ReturnCorrectGridSizeForNormalType()
-        {
-            IGameMode result = _sut.CreateInstance(Normal);
-
-            Assert.AreEqual(GridSize.Normal, result.GridSize);
-        }
-
-        [Test]
-        public void CreateInstance_ReturnAdvancedType_IfAdvancedTypeExists()
-        {
-            IGameMode result = _sut.CreateInstance(Advanced);
-
-            Assert.IsInstanceOf<Advanced>(result);
-        }
-
-        [Test]
-        public void CreateInstance_ReturnCorrectFormSizeForAdvancedType()
-        {
-            IGameMode result = _sut.CreateInstance(Advanced);
-
-            Assert.AreEqual(359, result.FormSize.X);
-            Assert.AreEqual(436, result.FormSize.Y);
-        }
-
-        [Test]
-        public void CreateInstance_ReturnCorrectGridPanelSizeForAdvancedType()
-        {
-            IGameMode result = _sut.CreateInstance(Advanced);
-
-            Assert.AreEqual(314, result.GridPanelSize.X);
-            Assert.AreEqual(329, result.GridPanelSize.Y);
-        }
-
-        [Test]
-        public void CreateInstance_ReturnCorrectDifficultyLevelForAdvancedType()
-        {
-            IGameMode result = _sut.CreateInstance(Advanced);
-
-            Assert.AreEqual(DifficultyLevel.Advanced, result.DifficultyLevel);
-        }
-
-        [Test]
-        public void CreateInstance_ReturnCorrectGridSizeForAdvancedType()
-        {
-            IGameMode result = _sut.CreateInstance(Advanced);
-
-            Assert.AreEqual(GridSize.Advanced, result.GridSize);
+            _faketypeCreator.Verify(x => x.GetTypeInstance(It.IsAny<Type>()), Times.Once());
         }
 
         [TearDown]
         public void TearDown()
         {
+            _faketypeCreator = null;
             _sut = null;
         }
     }

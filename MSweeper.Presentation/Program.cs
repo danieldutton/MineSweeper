@@ -1,6 +1,8 @@
 ﻿using MSweeper.GameModeFactory.Interfaces;
 using System;
 using System.Windows.Forms;
+using MSweeper.Utilities;
+using MSweeper.Utilities.Interfaces;
 
 namespace MSweeper.Presentation
 {
@@ -17,7 +19,8 @@ namespace MSweeper.Presentation
 
             var form1 = new GameBoard();
 
-            IGameModeFactory gameModeFactory = new GameModeFactory.GameModeFactory();
+            ITypeCreator typeCreator = new TypeCreator();
+            IGameModeFactory gameModeFactory = new GameModeFactory.GameModeFactory(typeCreator);
             var optionsForm = new GameMode(gameModeFactory);
             
             form1.SubscribeToGameSettingsEvent(optionsForm);
