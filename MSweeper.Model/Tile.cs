@@ -29,6 +29,11 @@ namespace MSweeper.Model
         public Label MineCount = new Label();
 
 
+        public Tile()
+        {
+            
+        }
+
         protected override void OnClick(EventArgs e)
         {
             var mouseEvent = e as MouseEventArgs;
@@ -58,9 +63,19 @@ namespace MSweeper.Model
                 
             if (!IsFlagged && !IsSelected)
             {
-                BackColor = Color.Blue;
-                IsSelected = true;         
+                RemoveTile();
             }
+        }
+
+        public void RemoveTile()
+        {
+            BackColor = Color.Blue;
+            IsSelected = true;
+            MineCount.Location = new Point(0, 0);
+            MineCount.Visible = true;
+            MineCount.ForeColor = Color.White;
+            MineCount.BackColor = Color.Transparent;
+            this.Controls.Add(MineCount);
         }
 
         public void AddFlagToTile()
@@ -82,7 +97,6 @@ namespace MSweeper.Model
                 IsFlagged = false;   
             }  
         }
-
 
         protected virtual void OnTileSelected(TileActivityEventArgs e)
         {

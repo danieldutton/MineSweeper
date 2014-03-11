@@ -76,9 +76,11 @@ namespace MSweeper.GridTools
                             }
                         }
 
-                        minedGrid[i, j].Paint +=
-                            (sender, args) =>
-                            args.Graphics.DrawString(count.ToString(), new Font("Arial", 10), new SolidBrush(Color.White), 0, 0);
+                        //minedGrid[i, j].Paint +=
+                        //    (sender, args) =>
+                        //    args.Graphics.DrawString(count.ToString(), new Font("Arial", 10), new SolidBrush(Color.White), 0, 0);
+
+                        //minedGrid[i, j].MineCount.Text = count.ToString();
 
                         minedGrid[i, j].MineCount.Text = count.ToString();
                     }
