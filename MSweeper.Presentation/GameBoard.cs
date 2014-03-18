@@ -2,6 +2,7 @@
 using MSweeper.GameModeFactory.Interfaces;
 using MSweeper.GridTools;
 using MSweeper.Utilities;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace MSweeper.Presentation
@@ -38,6 +39,19 @@ namespace MSweeper.Presentation
             _panelGrid.Height = ChosenGameMode.GridPanelSize.Y;
 
             painter.PaintGrid(ChosenGameMode, _panelGrid);
+
+            DrawStatsPanel();
+        }
+
+        private void DrawStatsPanel()
+        {
+            _panelGameStats.Size = new Size(ChosenGameMode.FormSize.X - 70, 30);
+
+            _panelGameStats.BackColor = Color.Teal;
+            _lblFlags.Location = new Point(_panelGameStats.Width / 2, _panelGameStats.Height + 80);
+
+            _panelGameStats.Location = new Point(25, ChosenGameMode.FormSize.Y);
+            _lblFlagsValue.Location = new Point(ChosenGameMode.FormSize.X - 90, _panelGameStats.Height - 20); 
         }
     }
 }

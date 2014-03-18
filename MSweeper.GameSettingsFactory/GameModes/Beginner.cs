@@ -17,7 +17,7 @@ namespace MSweeper.GameModeFactory.GameModes
 
         public Beginner()
         {
-            FormSize = new Point(183, 225);
+            FormSize = new Point(183, 240);
             GridPanelSize = new Point(140, 100);
             DifficultyLevel = DifficultyLevel.Beginner;
             GridSize = GridSize.Beginner;

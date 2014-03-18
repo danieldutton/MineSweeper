@@ -25,6 +25,10 @@ namespace MSweeper.Presentation
             
             form1.SubscribeToGameSettingsEvent(optionsForm);
 
+            //subscribe to game over event
+            var gameResult = new GameResult();
+
+
             optionsForm.ShowDialog();
             
             Application.Run(form1);

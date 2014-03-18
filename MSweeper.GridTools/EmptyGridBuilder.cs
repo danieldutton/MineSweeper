@@ -22,6 +22,7 @@ namespace MSweeper.GridTools
                 {
                     var tile = new Tile
                         {
+                            Grid = tileGrid,
                             GridPositonX = i,
                             GridPositionY = j,
                         };

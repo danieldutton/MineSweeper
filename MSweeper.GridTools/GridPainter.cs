@@ -1,6 +1,5 @@
 ﻿using MSweeper.GameModeFactory.Interfaces;
 using MSweeper.GridTools.Interfaces;
-using MSweeper.GridTools.Properties;
 using MSweeper.Model;
 using System;
 using System.Drawing;
@@ -42,7 +41,7 @@ namespace MSweeper.GridTools
             {
                 for (int j = 0; j < counter; j++)
                 {
-                    minedGrid[i, j].BackColor = Color.IndianRed;
+                    minedGrid[i, j].BackColor = Color.Black;
                     minedGrid[i, j].Width = 15;
                     minedGrid[i, j].Height = 15;
                     minedGrid[i, j].Location = new Point(x, y);
@@ -56,9 +55,9 @@ namespace MSweeper.GridTools
                     }
                     minedGrid[i, j] = grid[i, j];
 
-                    if (minedGrid[i, j].IsMined)
-                        minedGrid[i, j].Image = Resources.mine_jpg;
-
+                    //if (minedGrid[i, j].IsMined)
+                    //    minedGrid[i, j].Image = Resources.mine_jpg;
+                        
                     //srp this out to mine counter class
                     if (!minedGrid[i, j].IsMined)
                     {
