@@ -56,7 +56,7 @@ namespace MSweeper.Model
             }         
             base.OnClick(e);
 
-            if (CorrectFlagCount == MineCount)
+            if (CorrectFlagCount == MineCount && TileCount == MineCount)
                 MessageBox.Show("Game Won");
         }
 
@@ -88,7 +88,7 @@ namespace MSweeper.Model
             BackColor = Color.Red;
             IsFlagged = true;
             FlagCount--;
-            
+
             if (IsMined)
                 CorrectFlagCount++;
         }
@@ -106,6 +106,9 @@ namespace MSweeper.Model
                 BackColor = Color.Teal;              
                 IsFlagged = false;
                 FlagCount++;
+
+                if(IsMined)
+                CorrectFlagCount--;
             }  
         }
 
