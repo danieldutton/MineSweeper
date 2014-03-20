@@ -73,7 +73,7 @@ namespace MSweeper.Model
         {
             BackColor = Color.White;
             IsCleared = true;
-            GridCascader.FloodFill(Grid, GridPositonX, GridPositionY);
+            TileCascader.FloodFill(Grid, GridPositonX, GridPositionY);
             TileCount--;
         }
 

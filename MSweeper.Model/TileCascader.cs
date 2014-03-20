@@ -2,7 +2,7 @@
 
 namespace MSweeper.Model
 {
-    public class GridCascader
+    public class TileCascader
     {
         public static void FloodFill(Tile[,] grid, int x, int y)
         {

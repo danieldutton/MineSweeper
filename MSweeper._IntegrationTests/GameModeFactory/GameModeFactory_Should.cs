@@ -28,7 +28,6 @@ namespace MSweeper._IntegrationTests.GameModeFactory
             _sut = new MSweeper.GameModeFactory.GameModeFactory(_typeCreator);
         }
 
-
         [Test]
         public void CreateInstance_ReturnNullObject_IfTypeDoesNotExist()
         {

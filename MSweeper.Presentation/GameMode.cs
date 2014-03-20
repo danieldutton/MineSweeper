@@ -44,7 +44,7 @@ namespace MSweeper.Presentation
             OnGameModeConfirmed(new ChosenGameModeEventArgs(gameMode));
 
             Dispose();
-        }
+        }   
 
         private string FetchChosenGameMode()
         {
@@ -66,6 +66,6 @@ namespace MSweeper.Presentation
         {
             if (e.CloseReason == CloseReason.UserClosing)
                 Application.Exit();
-        }        
+        }             
     }
 }
