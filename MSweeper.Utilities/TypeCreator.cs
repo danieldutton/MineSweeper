@@ -1,5 +1,5 @@
-﻿using System;
-using MSweeper.Utilities.Interfaces;
+﻿using MSweeper.Utilities.Interfaces;
+using System;
 
 namespace MSweeper.Utilities
 {

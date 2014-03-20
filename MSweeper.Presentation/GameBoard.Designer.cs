@@ -33,22 +33,22 @@
             this._lblTimeValue = new System.Windows.Forms.Label();
             this._lblFlags = new System.Windows.Forms.Label();
             this._lblFlagsValue = new System.Windows.Forms.Label();
-            this._panelGameStats = new System.Windows.Forms.Panel();
-            this._panelGameStats.SuspendLayout();
+            this._panelTimer = new System.Windows.Forms.Panel();
+            this._panelTimer.SuspendLayout();
             this.SuspendLayout();
             // 
             // _panelGrid
             // 
             this._panelGrid.AutoSize = true;
-            this._panelGrid.Location = new System.Drawing.Point(12, 27);
+            this._panelGrid.Location = new System.Drawing.Point(12, 37);
             this._panelGrid.Name = "_panelGrid";
-            this._panelGrid.Size = new System.Drawing.Size(314, 329);
+            this._panelGrid.Size = new System.Drawing.Size(314, 319);
             this._panelGrid.TabIndex = 1;
             // 
             // _lblTime
             // 
             this._lblTime.AutoSize = true;
-            this._lblTime.Location = new System.Drawing.Point(3, 14);
+            this._lblTime.Location = new System.Drawing.Point(3, 3);
             this._lblTime.Name = "_lblTime";
             this._lblTime.Size = new System.Drawing.Size(30, 13);
             this._lblTime.TabIndex = 2;
@@ -57,7 +57,7 @@
             // _lblTimeValue
             // 
             this._lblTimeValue.AutoSize = true;
-            this._lblTimeValue.Location = new System.Drawing.Point(40, 14);
+            this._lblTimeValue.Location = new System.Drawing.Point(40, 3);
             this._lblTimeValue.Name = "_lblTimeValue";
             this._lblTimeValue.Size = new System.Drawing.Size(13, 13);
             this._lblTimeValue.TabIndex = 3;
@@ -66,7 +66,7 @@
             // _lblFlags
             // 
             this._lblFlags.AutoSize = true;
-            this._lblFlags.Location = new System.Drawing.Point(230, 14);
+            this._lblFlags.Location = new System.Drawing.Point(230, 3);
             this._lblFlags.Name = "_lblFlags";
             this._lblFlags.Size = new System.Drawing.Size(35, 13);
             this._lblFlags.TabIndex = 4;
@@ -75,34 +75,34 @@
             // _lblFlagsValue
             // 
             this._lblFlagsValue.AutoSize = true;
-            this._lblFlagsValue.Location = new System.Drawing.Point(272, 14);
+            this._lblFlagsValue.Location = new System.Drawing.Point(272, 3);
             this._lblFlagsValue.Name = "_lblFlagsValue";
             this._lblFlagsValue.Size = new System.Drawing.Size(13, 13);
             this._lblFlagsValue.TabIndex = 5;
             this._lblFlagsValue.Text = "0";
             // 
-            // _panelGameStats
+            // _panelTimer
             // 
-            this._panelGameStats.Controls.Add(this._lblTime);
-            this._panelGameStats.Controls.Add(this._lblFlagsValue);
-            this._panelGameStats.Controls.Add(this._lblTimeValue);
-            this._panelGameStats.Controls.Add(this._lblFlags);
-            this._panelGameStats.Location = new System.Drawing.Point(12, 362);
-            this._panelGameStats.Name = "_panelGameStats";
-            this._panelGameStats.Size = new System.Drawing.Size(314, 31);
-            this._panelGameStats.TabIndex = 6;
+            this._panelTimer.Controls.Add(this._lblTime);
+            this._panelTimer.Controls.Add(this._lblFlagsValue);
+            this._panelTimer.Controls.Add(this._lblTimeValue);
+            this._panelTimer.Controls.Add(this._lblFlags);
+            this._panelTimer.Location = new System.Drawing.Point(12, 9);
+            this._panelTimer.Name = "_panelTimer";
+            this._panelTimer.Size = new System.Drawing.Size(314, 24);
+            this._panelTimer.TabIndex = 6;
             // 
             // GameBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(340, 404);
-            this.Controls.Add(this._panelGameStats);
+            this.ClientSize = new System.Drawing.Size(340, 365);
+            this.Controls.Add(this._panelTimer);
             this.Controls.Add(this._panelGrid);
             this.Name = "GameBoard";
             this.Text = "Swine Sweeper";
-            this._panelGameStats.ResumeLayout(false);
-            this._panelGameStats.PerformLayout();
+            this._panelTimer.ResumeLayout(false);
+            this._panelTimer.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,7 +115,7 @@
         private System.Windows.Forms.Label _lblTimeValue;
         private System.Windows.Forms.Label _lblFlags;
         private System.Windows.Forms.Label _lblFlagsValue;
-        private System.Windows.Forms.Panel _panelGameStats;
+        private System.Windows.Forms.Panel _panelTimer;
 
     }
 }

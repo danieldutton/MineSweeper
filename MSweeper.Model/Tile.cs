@@ -49,9 +49,9 @@ namespace MSweeper.Model
             
             if (mouseEvent.Button == MouseButtons.Right)
             {              
-                if(_rightClickCount == 1)
+                if(_rightClickCount == 1 && !IsFlagged)
                     AddFlagToTile();
-                else if(_rightClickCount == 2)
+                else if(_rightClickCount == 2 && IsFlagged)
                     RemoveFlagFromTile();
             }         
             base.OnClick(e);
@@ -75,7 +75,6 @@ namespace MSweeper.Model
             IsCleared = true;
             GridCascader.FloodFill(Grid, GridPositonX, GridPositionY);
             TileCount--;
-
         }
 
         public void AddFlagToTile()

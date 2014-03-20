@@ -1,8 +1,8 @@
-﻿using System.Drawing;
-using MSweeper.GameModeFactory.EventArg;
+﻿using MSweeper.GameModeFactory.EventArg;
 using MSweeper.GameModeFactory.Interfaces;
 using MSweeper.GameModeFactory.Settings;
 using System;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -13,7 +13,6 @@ namespace MSweeper.Presentation
         public event EventHandler<ChosenGameModeEventArgs> GameModeConfirmed;
 
         private readonly IGameModeFactory _gameModeFactory;
-
 
         public GameMode(IGameModeFactory gameModeFactory)
         {
