@@ -63,7 +63,7 @@ namespace MSweeper.Model
         public void SelectTile()
         {
             if (IsMined)
-                DsplayResultsForm();    
+                ConfirmGameOver();    
                 
             if (!IsFlagged && !IsCleared)
                 RemoveTile();    
@@ -112,6 +112,11 @@ namespace MSweeper.Model
         private void DsplayResultsForm()
         {
             
+        }
+
+        private void ConfirmGameOver()
+        {
+            MessageBox.Show("Game Over");
         }
 
         protected virtual void OnTileSelected(TileActivityEventArgs e)
