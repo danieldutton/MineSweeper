@@ -16,3 +16,4 @@ C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.Presentation\obj\Debug\MSwe
 C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.Presentation\obj\Debug\MSweeper.Presentation.pdb
 C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.Presentation\obj\Debug\MSweeper.Presentation.GameMode.resources
 C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.Presentation\obj\Debug\MSweeper.Presentation.GameBoard.resources
+C:\Users\Danny\Documents\GitHub\MineSweeper\MSweeper.Presentation\obj\Debug\MSweeper.Presentation.GameResult.resources

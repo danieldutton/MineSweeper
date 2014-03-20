@@ -8,21 +8,23 @@ namespace MSweeper.Model
 {
     public class Tile : PictureBox, ITile
     {
-        public Tile[,] Grid { get; set; }
+        #region Events
 
         public event EventHandler<TileActivityEventArgs> TileSelected;
        
         public event EventHandler<TileActivityEventArgs> MineHit;
       
-        public event EventHandler<TileActivityEventArgs> MineFree;       
+        public event EventHandler<TileActivityEventArgs> MineFree;
+
+        #endregion
+
+        public Tile[,] Grid { get; set; }
 
         public bool IsMined { get; set; }
 
         public bool IsFlagged { get; set; }
 
-        public bool IsSelected { get; set; }
-
-        public bool IsOpen { get; set; }
+        public bool IsCleared { get; set; }
 
         public int GridPositonX { get; set; }
 
@@ -31,6 +33,10 @@ namespace MSweeper.Model
         private int _rightClickCount = 1;
 
         public Label MineCount = new Label();
+
+        public static int FlagCount { get; set; }
+
+        public static int TileCount { get; set; }
 
 
         protected override void OnClick(EventArgs e)
@@ -56,32 +62,30 @@ namespace MSweeper.Model
             if (IsMined)
             {
                 //only if a tile is confirmed selected do we pass details of the grid to calculate etc
-                OnTileSelected(new TileActivityEventArgs(GridPositonX, GridPositionY, IsMined));
+
+                OnMineHit(new TileActivityEventArgs(GridPositonX, GridPositionY, IsMined));
                 ConfirmGameOver();    
             }
                 
-            if (!IsFlagged && !IsSelected)
+            if (!IsFlagged && !IsCleared)
             {
                 RemoveTile(); 
-                GridCascader.FloodFill(Grid, GridPositonX, GridPositionY);
-            }
                 
+            }               
         }
 
         public void RemoveTile()
         {
             BackColor = Color.White;
-            IsSelected = true;
-            MineCount.Location = new Point(0, 0);
-            MineCount.Visible = true;
-            MineCount.ForeColor = Color.DarkGreen;
-            MineCount.BackColor = Color.Transparent;
-            Controls.Add(MineCount);
+            IsCleared = true;
+            GridCascader.FloodFill(Grid, GridPositonX, GridPositionY);
+            TileCount++;
+
         }
 
         public void AddFlagToTile()
         {
-            if (IsSelected || IsFlagged) return;
+            if (IsCleared || IsFlagged) return;
             
             _rightClickCount = 2;
             
@@ -89,20 +93,26 @@ namespace MSweeper.Model
             IsFlagged = true;
         }
 
+        public bool IsGameWon()
+        {
+            return true;
+        }
+
         public void RemoveFlagFromTile()
         {
-            if (IsSelected == false && IsFlagged)
+            if (IsCleared == false && IsFlagged)
             {
                 _rightClickCount = 1;
-                BackColor = Color.Black;              
+                BackColor = Color.Teal;              
                 IsFlagged = false;   
             }  
         }
 
         private void ConfirmGameOver()
         {
-            MessageBox.Show("Game Over");
         }
+
+        #region Event Invocators
 
         protected virtual void OnTileSelected(TileActivityEventArgs e)
         {
@@ -121,6 +131,8 @@ namespace MSweeper.Model
             EventHandler<TileActivityEventArgs> handler = MineFree;
             if (handler != null) handler(this, e);
         }
-        
+
+        #endregion
+
     }
 }

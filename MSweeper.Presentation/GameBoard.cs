@@ -16,15 +16,16 @@ namespace MSweeper.Presentation
             InitializeComponent();
         }
 
-        public void SubscribeToGameSettingsEvent(GameMode optionsForm)
+        public void SubscribeToGameModeConfirmedEvent(GameMode optionsForm)
         {
-            optionsForm.GameSettingsConfirmed += optionsForm_GameSettingsConfirmed;
+            optionsForm.GameModeConfirmed += OptionsFormGameModeConfirmed;
         }
 
-        public void optionsForm_GameSettingsConfirmed(object sender, SelectedGameModeEventArgs e)
+        public void OptionsFormGameModeConfirmed(object sender, ChosenGameModeEventArgs e)
         {
             ChosenGameMode = e.GameMode;
             DrawGrid();
+            DrawGameStatsPanel();
         }
 
         private void DrawGrid()
@@ -38,12 +39,10 @@ namespace MSweeper.Presentation
             _panelGrid.Width = ChosenGameMode.GridPanelSize.X;
             _panelGrid.Height = ChosenGameMode.GridPanelSize.Y;
 
-            painter.PaintGrid(ChosenGameMode, _panelGrid);
-
-            DrawStatsPanel();
+            painter.PaintGrid(ChosenGameMode, _panelGrid);   
         }
 
-        private void DrawStatsPanel()
+        private void DrawGameStatsPanel()
         {
             _panelGameStats.Size = new Size(ChosenGameMode.FormSize.X - 70, 30);
 

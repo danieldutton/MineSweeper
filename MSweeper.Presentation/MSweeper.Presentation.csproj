@@ -70,6 +70,9 @@
     <EmbeddedResource Include="GameMode.resx">
       <DependentUpon>GameMode.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GameResult.resx">
+      <DependentUpon>GameResult.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -107,9 +110,7 @@
       <Name>MSweeper.Utilities</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="EventArg\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

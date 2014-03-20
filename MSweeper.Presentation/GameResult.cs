@@ -8,5 +8,11 @@ namespace MSweeper.Presentation
         {
             InitializeComponent();
         }
+
+        private void GameResult_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+                Application.Exit();
+        }
     }
 }

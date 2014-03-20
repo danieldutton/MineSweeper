@@ -7,12 +7,15 @@ namespace MSweeper.GridTools
 {
     public class EmptyGridBuilder : IGridBuilder
     {
-        public Tile[,] GetSquaredGrid(GridSize gridSize)
+        public Tile[,] GetSquaredGrid(GridSize gridSize, DifficultyLevel difficultyLevel)
         {
             if(!Enum.IsDefined(typeof(GridSize), gridSize))
                 gridSize = GridSize.Beginner;
            
             var tileGrid = new Tile[(int) gridSize, (int)gridSize];
+
+            Tile.FlagCount = (int) difficultyLevel;
+            Tile.TileCount = (int)gridSize * (int) gridSize;
 
             int counter = tileGrid.Length / (int)gridSize;
 
@@ -22,11 +25,10 @@ namespace MSweeper.GridTools
                 {
                     var tile = new Tile
                         {
-                            Grid = tileGrid,
+                            Grid = tileGrid,    //stop this bloat make it static
                             GridPositonX = i,
                             GridPositionY = j,
                         };
-
                     tileGrid[i, j] = tile;
                 }
             }

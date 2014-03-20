@@ -5,6 +5,6 @@ namespace MSweeper.GridTools.Interfaces
 {
     public interface IGridBuilder
     {
-        Tile[,] GetSquaredGrid(GridSize gridSize);
+        Tile[,] GetSquaredGrid(GridSize gridSize, DifficultyLevel difficultyLevel);
     }
 }

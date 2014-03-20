@@ -4,7 +4,7 @@
     {
         bool IsMined { get; set; }
         bool IsFlagged { get; set; }
-        bool IsSelected { get; set; }
+        bool IsCleared { get; set; }
         int GridPositonX { get; set; }
         int GridPositionY { get; set; }
 

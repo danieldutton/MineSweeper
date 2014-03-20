@@ -16,22 +16,20 @@ namespace MSweeper.Presentation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            var form1 = new GameBoard();
-
+            
+            //game settings
             ITypeCreator typeCreator = new TypeCreator();
             IGameModeFactory gameModeFactory = new GameModeFactory.GameModeFactory(typeCreator);
+            
+            //gameboards
+            var gameBoard = new GameBoard();
             var optionsForm = new GameMode(gameModeFactory);
             
-            form1.SubscribeToGameSettingsEvent(optionsForm);
-
-            //subscribe to game over event
-            var gameResult = new GameResult();
-
+            gameBoard.SubscribeToGameModeConfirmedEvent(optionsForm);
 
             optionsForm.ShowDialog();
             
-            Application.Run(form1);
+            Application.Run(gameBoard);
         }
 
     }

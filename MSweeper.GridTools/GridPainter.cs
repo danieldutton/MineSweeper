@@ -27,7 +27,7 @@ namespace MSweeper.GridTools
         {
             if(control == null) throw new ArgumentNullException("control");
 
-            Tile[,] grid = _emptyGridBuilder.GetSquaredGrid(gameMode.GridSize);
+            Tile[,] grid = _emptyGridBuilder.GetSquaredGrid(gameMode.GridSize, gameMode.DifficultyLevel);
             Tile[,] minedGrid = _gridMiner.MineTheGrid(grid, gameMode.DifficultyLevel, gameMode.GridSize);
 
             _gridControlBuilder.AddControlsToGrid(minedGrid, control, gameMode.GridSize);
@@ -41,7 +41,7 @@ namespace MSweeper.GridTools
             {
                 for (int j = 0; j < counter; j++)
                 {
-                    minedGrid[i, j].BackColor = Color.Black;
+                    minedGrid[i, j].BackColor = Color.Teal;
                     minedGrid[i, j].Width = 15;
                     minedGrid[i, j].Height = 15;
                     minedGrid[i, j].Location = new Point(x, y);
@@ -74,12 +74,6 @@ namespace MSweeper.GridTools
                                 }
                             }
                         }
-
-                        //minedGrid[i, j].Paint +=
-                        //    (sender, args) =>
-                        //    args.Graphics.DrawString(count.ToString(), new Font("Arial", 10), new SolidBrush(Color.White), 0, 0);
-
-                        //minedGrid[i, j].MineCount.Text = count.ToString();
 
                         minedGrid[i, j].MineCount.Text = count.ToString();
                     }
