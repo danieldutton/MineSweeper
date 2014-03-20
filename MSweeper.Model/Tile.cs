@@ -8,15 +8,11 @@ namespace MSweeper.Model
 {
     public class Tile : PictureBox, ITile
     {
-        #region Events
-
         public event EventHandler<TileActivityEventArgs> TileSelected;
        
         public event EventHandler<TileActivityEventArgs> MineHit;
       
         public event EventHandler<TileActivityEventArgs> MineFree;
-
-        #endregion
 
         public Tile[,] Grid { get; set; }
 
@@ -67,7 +63,7 @@ namespace MSweeper.Model
         public void SelectTile()
         {
             if (IsMined)
-                ConfirmGameOver();    
+                DsplayResultsForm();    
                 
             if (!IsFlagged && !IsCleared)
                 RemoveTile();    
@@ -85,12 +81,14 @@ namespace MSweeper.Model
         public void AddFlagToTile()
         {
             if (IsCleared || IsFlagged) return;
+            if (FlagCount == 0) return;
             
             _rightClickCount = 2;
             
             BackColor = Color.Red;
             IsFlagged = true;
             FlagCount--;
+            
             if (IsMined)
                 CorrectFlagCount++;
         }
@@ -111,12 +109,10 @@ namespace MSweeper.Model
             }  
         }
 
-        private void ConfirmGameOver()
+        private void DsplayResultsForm()
         {
             
         }
-
-        #region Event Invocators
 
         protected virtual void OnTileSelected(TileActivityEventArgs e)
         {
@@ -135,8 +131,5 @@ namespace MSweeper.Model
             EventHandler<TileActivityEventArgs> handler = MineFree;
             if (handler != null) handler(this, e);
         }
-
-        #endregion
-
     }
 }
