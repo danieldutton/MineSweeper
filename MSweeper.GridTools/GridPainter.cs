@@ -75,7 +75,7 @@ namespace MSweeper.GridTools
                             }
                         }
 
-                        minedGrid[i, j].MineCount.Text = count.ToString();
+                        minedGrid[i, j].LblMineCOunt.Text = count.ToString();
                     }
                 }
             }

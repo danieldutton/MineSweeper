@@ -32,11 +32,15 @@ namespace MSweeper.Model
 
         private int _rightClickCount = 1;
 
-        public Label MineCount = new Label();
+        public Label LblMineCOunt = new Label();
 
         public static int FlagCount { get; set; }
 
+        public static int MineCount { get; set; }
+
         public static int TileCount { get; set; }
+
+        public static int CorrectFlagCount { get; set; }
 
 
         protected override void OnClick(EventArgs e)
@@ -55,23 +59,18 @@ namespace MSweeper.Model
                     RemoveFlagFromTile();
             }         
             base.OnClick(e);
+
+            if (CorrectFlagCount == MineCount)
+                MessageBox.Show("Game Won");
         }
 
         public void SelectTile()
         {
             if (IsMined)
-            {
-                //only if a tile is confirmed selected do we pass details of the grid to calculate etc
-
-                OnMineHit(new TileActivityEventArgs(GridPositonX, GridPositionY, IsMined));
                 ConfirmGameOver();    
-            }
                 
             if (!IsFlagged && !IsCleared)
-            {
-                RemoveTile(); 
-                
-            }               
+                RemoveTile();    
         }
 
         public void RemoveTile()
@@ -79,7 +78,7 @@ namespace MSweeper.Model
             BackColor = Color.White;
             IsCleared = true;
             GridCascader.FloodFill(Grid, GridPositonX, GridPositionY);
-            TileCount++;
+            TileCount--;
 
         }
 
@@ -91,6 +90,9 @@ namespace MSweeper.Model
             
             BackColor = Color.Red;
             IsFlagged = true;
+            FlagCount--;
+            if (IsMined)
+                CorrectFlagCount++;
         }
 
         public bool IsGameWon()
@@ -104,12 +106,14 @@ namespace MSweeper.Model
             {
                 _rightClickCount = 1;
                 BackColor = Color.Teal;              
-                IsFlagged = false;   
+                IsFlagged = false;
+                FlagCount++;
             }  
         }
 
         private void ConfirmGameOver()
         {
+            
         }
 
         #region Event Invocators

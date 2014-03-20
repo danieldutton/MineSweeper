@@ -15,7 +15,8 @@ namespace MSweeper.GridTools
             var tileGrid = new Tile[(int) gridSize, (int)gridSize];
 
             Tile.FlagCount = (int) difficultyLevel;
-            Tile.TileCount = (int)gridSize * (int) gridSize;
+            Tile.MineCount = (int) difficultyLevel;
+            Tile.TileCount = ((int) gridSize*(int) gridSize);
 
             int counter = tileGrid.Length / (int)gridSize;
 
