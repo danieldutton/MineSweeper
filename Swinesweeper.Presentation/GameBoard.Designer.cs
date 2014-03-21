@@ -32,8 +32,6 @@
             this._panelGrid = new System.Windows.Forms.Panel();
             this._lblTime = new System.Windows.Forms.Label();
             this._lblTimeValue = new System.Windows.Forms.Label();
-            this._lblFlags = new System.Windows.Forms.Label();
-            this._lblFlagsValue = new System.Windows.Forms.Label();
             this._panelTimer = new System.Windows.Forms.Panel();
             this._panelTimer.SuspendLayout();
             this.SuspendLayout();
@@ -64,30 +62,10 @@
             this._lblTimeValue.TabIndex = 3;
             this._lblTimeValue.Text = "0";
             // 
-            // _lblFlags
-            // 
-            this._lblFlags.AutoSize = true;
-            this._lblFlags.Location = new System.Drawing.Point(230, 3);
-            this._lblFlags.Name = "_lblFlags";
-            this._lblFlags.Size = new System.Drawing.Size(35, 13);
-            this._lblFlags.TabIndex = 4;
-            this._lblFlags.Text = "label1";
-            // 
-            // _lblFlagsValue
-            // 
-            this._lblFlagsValue.AutoSize = true;
-            this._lblFlagsValue.Location = new System.Drawing.Point(272, 3);
-            this._lblFlagsValue.Name = "_lblFlagsValue";
-            this._lblFlagsValue.Size = new System.Drawing.Size(13, 13);
-            this._lblFlagsValue.TabIndex = 5;
-            this._lblFlagsValue.Text = "0";
-            // 
             // _panelTimer
             // 
             this._panelTimer.Controls.Add(this._lblTime);
-            this._panelTimer.Controls.Add(this._lblFlagsValue);
             this._panelTimer.Controls.Add(this._lblTimeValue);
-            this._panelTimer.Controls.Add(this._lblFlags);
             this._panelTimer.Location = new System.Drawing.Point(12, 9);
             this._panelTimer.Name = "_panelTimer";
             this._panelTimer.Size = new System.Drawing.Size(314, 24);
@@ -115,8 +93,6 @@
         private System.Windows.Forms.Panel _panelGrid;
         private System.Windows.Forms.Label _lblTime;
         private System.Windows.Forms.Label _lblTimeValue;
-        private System.Windows.Forms.Label _lblFlags;
-        private System.Windows.Forms.Label _lblFlagsValue;
         private System.Windows.Forms.Panel _panelTimer;
 
     }

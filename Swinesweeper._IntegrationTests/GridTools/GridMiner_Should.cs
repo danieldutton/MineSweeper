@@ -27,7 +27,7 @@ namespace Swinesweeper._IntegrationTests.GridTools
         [Test]
         public void MineGrid_SeedABeginnerGridWith_10_Mines()
         {
-            Tile[,] grid = _emptyGridBuilder.GetSquaredGrid(GridSize.Beginner);
+            Tile[,] grid = _emptyGridBuilder.GetSquaredGrid(GridSize.Beginner, DifficultyLevel.Beginner);
 
             Tile[,] minedGrid = _gridMiner.MineTheGrid(grid, DifficultyLevel.Beginner, GridSize.Beginner);
 
@@ -42,7 +42,7 @@ namespace Swinesweeper._IntegrationTests.GridTools
         [Test]
         public void MineGrid_SeedANormalGridWith_40_Mines()
         {
-            Tile[,] grid = _emptyGridBuilder.GetSquaredGrid(GridSize.Normal);
+            Tile[,] grid = _emptyGridBuilder.GetSquaredGrid(GridSize.Normal, DifficultyLevel.Normal);
 
             Tile[,] minedGrid = _gridMiner.MineTheGrid(grid, DifficultyLevel.Normal, GridSize.Normal);
 
@@ -58,7 +58,7 @@ namespace Swinesweeper._IntegrationTests.GridTools
         [Test]
         public void MineGrid_SeedAnAdvancedGridWith_99_Mines()
         {
-            Tile[,] grid = _emptyGridBuilder.GetSquaredGrid(GridSize.Advanced);
+            Tile[,] grid = _emptyGridBuilder.GetSquaredGrid(GridSize.Advanced, DifficultyLevel.Normal);
 
             Tile[,] minedGrid = _gridMiner.MineTheGrid(grid, DifficultyLevel.Advanced, GridSize.Advanced);
 

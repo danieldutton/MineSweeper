@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Drawing;
+using System.IO;
+using System.Media;
 using System.Windows.Forms;
 using Swinesweeper.Model.EventArg;
 using Swinesweeper.Model.Interfaces;
@@ -62,7 +64,7 @@ namespace Swinesweeper.Model
 
         public void SelectTile()
         {
-            if (IsMined)
+            if (IsMined && !IsFlagged)
                 ConfirmGameOver();    
                 
             if (!IsFlagged && !IsCleared)
@@ -118,9 +120,17 @@ namespace Swinesweeper.Model
 
         private void ConfirmGameOver()
         {
-            MessageBox.Show("Game Over");
+            PlayOink();            
             Image = Properties.Resources.pig_mine;
             TileCascader.CascadeAll(Grid);
+            MessageBox.Show("Game Over");
+        }
+
+        private void PlayOink()
+        {
+            Stream str = Properties.Resources.Pig_Oinking_Twice;
+            var snd = new SoundPlayer(str);
+            snd.Play(); 
         }
 
         protected virtual void OnTileSelected(TileActivityEventArgs e)
