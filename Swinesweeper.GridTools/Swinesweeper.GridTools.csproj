@@ -43,6 +43,8 @@
     <Compile Include="Interfaces\IGridBuilder.cs" />
     <Compile Include="Interfaces\IGridControlBuilder.cs" />
     <Compile Include="Interfaces\IGridMiner.cs" />
+    <Compile Include="Interfaces\IPigCounter.cs" />
+    <Compile Include="PigCounter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

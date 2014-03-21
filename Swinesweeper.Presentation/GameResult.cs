@@ -14,5 +14,15 @@ namespace Swinesweeper.Presentation
             if (e.CloseReason == CloseReason.UserClosing)
                 Application.Exit();
         }
+
+        private void ExitGame_Click(object sender, System.EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void PlayAgain_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

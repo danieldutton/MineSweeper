@@ -36,7 +36,7 @@ namespace Swinesweeper.Presentation
             MinimumSize = new Size(Width, Height);
 
             var painter = new GridPainter(new EmptyGridBuilder(), new GridControlBuilder(),
-                                          new GridMiner(new RandomNumberGenerator()));
+                                          new GridMiner(new RandomNumberGenerator()), new PigCounter());
 
             _panelGrid.Width = ChosenGameMode.GridPanelSize.X;
             _panelGrid.Height = ChosenGameMode.GridPanelSize.Y;

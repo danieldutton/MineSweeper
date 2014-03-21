@@ -1,9 +1,9 @@
-﻿using Swinesweeper.GameModeFactory.Interfaces;
-using Swinesweeper.GridTools.Interfaces;
-using Swinesweeper.Model;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using Swinesweeper.GameModeFactory.Interfaces;
+using Swinesweeper.GridTools.Interfaces;
+using Swinesweeper.Model;
 
 namespace Swinesweeper.GridTools
 {
@@ -15,17 +15,21 @@ namespace Swinesweeper.GridTools
 
         private readonly IGridMiner _gridMiner;
 
+        private readonly IPigCounter _pigCounter;
 
-        public GridPainter(IGridBuilder emptyGridBuilder, IGridControlBuilder gridControlBuilder, IGridMiner gridMiner)
+
+        public GridPainter(IGridBuilder emptyGridBuilder, IGridControlBuilder gridControlBuilder,
+                           IGridMiner gridMiner, IPigCounter pigCounter)
         {
             _emptyGridBuilder = emptyGridBuilder;
             _gridControlBuilder = gridControlBuilder;
             _gridMiner = gridMiner;
+            _pigCounter = pigCounter;
         }
 
         public void PaintGrid(IGameMode gameMode, Control control)
         {
-            if(control == null) throw new ArgumentNullException("control");
+            if (control == null) throw new ArgumentNullException("control");
 
             Tile[,] grid = _emptyGridBuilder.GetSquaredGrid(gameMode.GridSize, gameMode.DifficultyLevel);
             Tile[,] minedGrid = _gridMiner.MineTheGrid(grid, gameMode.DifficultyLevel, gameMode.GridSize);
@@ -33,7 +37,7 @@ namespace Swinesweeper.GridTools
             _gridControlBuilder.AddControlsToGrid(minedGrid, control, gameMode.GridSize);
 
             int formWidth = control.Width;
-            int counter = (int) gameMode.GridSize;
+            var counter = (int) gameMode.GridSize;
             int x = 0;
             int y = 0;
 
@@ -54,31 +58,9 @@ namespace Swinesweeper.GridTools
                         x = 0;
                     }
                     minedGrid[i, j] = grid[i, j];
-
-                    //if (minedGrid[i, j].IsMined)
-                    //    minedGrid[i, j].Image = Resources.mine_jpg;
-                        
-                    //srp this out to mine counter class
-                    if (!minedGrid[i, j].IsMined)
-                    {
-                        int count = 0;
-
-                        for (int p = i - 1; p <= i + 1; p++)
-                        {
-                            for (int q = j - 1; q <= j + 1; q++)
-                            {
-                                if (0 <= p && p < minedGrid.GetLength(0) && 0 <= q && q < minedGrid.GetLength(0))
-                                {
-                                    if (minedGrid[p, q].IsMined)
-                                        ++count;
-                                }
-                            }
-                        }
-
-                        minedGrid[i, j].LblMineCOunt.Text = count.ToString();
-                    }
                 }
             }
+            _pigCounter.CountPigs(grid);
         }
     }
 }
