@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MSweeper.Presentation.Properties {
+namespace MSweeper.Model.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace MSweeper.Presentation.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MSweeper.Presentation.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MSweeper.Model.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,11 +61,12 @@ namespace MSweeper.Presentation.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Pig_Oinking_Twice {
+        internal static System.Drawing.Bitmap pig_mine {
             get {
-                return ResourceManager.GetStream("Pig_Oinking_Twice", resourceCulture);
+                object obj = ResourceManager.GetObject("pig_mine", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

@@ -35,12 +35,25 @@ namespace MSweeper.Model
 
         public static void DisplayMineCount(Tile[,] grid, int x, int y)
         {
-            grid[x, y].BackColor = Color.LightGray;
+            grid[x, y].BackColor = Color.Gray;
             grid[x, y].LblMineCOunt.Location = new Point(0, 0);
             grid[x, y].LblMineCOunt.Visible = true;
             grid[x, y].LblMineCOunt.ForeColor = Color.White;
             grid[x, y].LblMineCOunt.BackColor = Color.Transparent;
             grid[x, y].Controls.Add(grid[x, y].LblMineCOunt);   
+        }
+
+        public static void CascadeAll(Tile[,] grid)
+        {
+            for (int i = 0; i < grid.GetLength(0); i++)
+            {
+                for (int j = 0; j < grid.GetLength(1); j++)
+                {
+                    if (grid[i, j].IsMined)
+                        grid[i, j].Image = Properties.Resources.pig_mine;
+                    DisplayMineCount(grid, i, j);
+                }
+            }
         }
     }
 }

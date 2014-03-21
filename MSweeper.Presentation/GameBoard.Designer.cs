@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameBoard));
             this._panelGrid = new System.Windows.Forms.Panel();
             this._lblTime = new System.Windows.Forms.Label();
             this._lblTimeValue = new System.Windows.Forms.Label();
@@ -99,6 +100,7 @@
             this.ClientSize = new System.Drawing.Size(340, 365);
             this.Controls.Add(this._panelTimer);
             this.Controls.Add(this._panelGrid);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GameBoard";
             this.Text = "Swine Sweeper";
             this._panelTimer.ResumeLayout(false);

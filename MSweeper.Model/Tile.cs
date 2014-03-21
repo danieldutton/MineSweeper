@@ -1,4 +1,6 @@
-﻿using MSweeper.Model.EventArg;
+﻿using System.IO;
+using System.Media;
+using MSweeper.Model.EventArg;
 using MSweeper.Model.Interfaces;
 using System;
 using System.Drawing;
@@ -119,6 +121,8 @@ namespace MSweeper.Model
         private void ConfirmGameOver()
         {
             MessageBox.Show("Game Over");
+            Image = Properties.Resources.pig_mine;
+            TileCascader.CascadeAll(Grid);
         }
 
         protected virtual void OnTileSelected(TileActivityEventArgs e)
@@ -139,4 +143,6 @@ namespace MSweeper.Model
             if (handler != null) handler(this, e);
         }
     }
+
+    
 }
