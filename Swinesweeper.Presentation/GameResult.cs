@@ -22,7 +22,7 @@ namespace Swinesweeper.Presentation
 
         private void PlayAgain_Click(object sender, System.EventArgs e)
         {
-
+            Application.Restart();
         }
     }
 }

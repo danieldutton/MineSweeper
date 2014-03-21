@@ -1,0 +1,2 @@
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.Model\obj\Debug\Swinesweeper.Model.Properties.Resources.resources
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.Model\obj\Debug\Swinesweeper.Model.csproj.GenerateResource.Cache

@@ -97,13 +97,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Swinesweeper.GamePlay\Swinesweeper.GamePlay.csproj">
+      <Project>{B4323D00-1027-441B-AFCE-47B6E3E9B82A}</Project>
+      <Name>Swinesweeper.GamePlay</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Swinesweeper.GameSettingsFactory\Swinesweeper.GameModeFactory.csproj">
       <Project>{8875c6db-5e29-4ba8-bb0b-e24f4d5f5bef}</Project>
       <Name>Swinesweeper.GameModeFactory</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Swinesweeper.GridTools\Swinesweeper.GridTools.csproj">
-      <Project>{077dd955-5052-4314-ac22-9598370067bc}</Project>
-      <Name>Swinesweeper.GridTools</Name>
+    <ProjectReference Include="..\Swinesweeper.GridBuilder\Swinesweeper.GridBuilder.csproj">
+      <Project>{077DD955-5052-4314-AC22-9598370067BC}</Project>
+      <Name>Swinesweeper.GridBuilder</Name>
     </ProjectReference>
     <ProjectReference Include="..\Swinesweeper.Utilities\Swinesweeper.Utilities.csproj">
       <Project>{e32ded88-4a41-4341-958a-7b54ff862408}</Project>

@@ -1,19 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swinesweeper._IntegrationTests", "Swinesweeper._IntegrationTests\Swinesweeper._IntegrationTests.csproj", "{4381BFFF-C37B-49CF-BA9F-7BCC23B9D2B9}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swinesweeper._UnitTests", "Swinesweeper._UnitTests\Swinesweeper._UnitTests.csproj", "{9AFEFEA4-FA3A-4281-8787-F3DED5234654}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swinesweeper.GridTools", "Swinesweeper.GridTools\Swinesweeper.GridTools.csproj", "{077DD955-5052-4314-AC22-9598370067BC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swinesweeper.Model", "Swinesweeper.Model\Swinesweeper.Model.csproj", "{B4323D00-1027-441B-AFCE-47B6E3E9B82A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swinesweeper.Utilities", "Swinesweeper.Utilities\Swinesweeper.Utilities.csproj", "{E32DED88-4A41-4341-958A-7B54FF862408}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swinesweeper.GameModeFactory", "Swinesweeper.GameSettingsFactory\Swinesweeper.GameModeFactory.csproj", "{8875C6DB-5E29-4BA8-BB0B-E24F4D5F5BEF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swinesweeper.Presentation", "Swinesweeper.Presentation\Swinesweeper.Presentation.csproj", "{0387F90C-664A-4AEA-A082-00D52DC8ABDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swinesweeper.GridBuilder", "Swinesweeper.GridBuilder\Swinesweeper.GridBuilder.csproj", "{077DD955-5052-4314-AC22-9598370067BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swinesweeper.GamePlay", "Swinesweeper.GamePlay\Swinesweeper.GamePlay.csproj", "{B4323D00-1027-441B-AFCE-47B6E3E9B82A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{EB726FFD-1CDF-4353-B16C-637AD22EA186}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swinesweeper.IntegrationTests", "Swinesweeper.IntegrationTests\Swinesweeper.IntegrationTests.csproj", "{4381BFFF-C37B-49CF-BA9F-7BCC23B9D2B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swinesweeper.UnitTests", "Swinesweeper.UnitTests\Swinesweeper.UnitTests.csproj", "{9AFEFEA4-FA3A-4281-8787-F3DED5234654}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,22 +23,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4381BFFF-C37B-49CF-BA9F-7BCC23B9D2B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4381BFFF-C37B-49CF-BA9F-7BCC23B9D2B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4381BFFF-C37B-49CF-BA9F-7BCC23B9D2B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4381BFFF-C37B-49CF-BA9F-7BCC23B9D2B9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9AFEFEA4-FA3A-4281-8787-F3DED5234654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9AFEFEA4-FA3A-4281-8787-F3DED5234654}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9AFEFEA4-FA3A-4281-8787-F3DED5234654}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9AFEFEA4-FA3A-4281-8787-F3DED5234654}.Release|Any CPU.Build.0 = Release|Any CPU
-		{077DD955-5052-4314-AC22-9598370067BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{077DD955-5052-4314-AC22-9598370067BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{077DD955-5052-4314-AC22-9598370067BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{077DD955-5052-4314-AC22-9598370067BC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B4323D00-1027-441B-AFCE-47B6E3E9B82A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B4323D00-1027-441B-AFCE-47B6E3E9B82A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B4323D00-1027-441B-AFCE-47B6E3E9B82A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B4323D00-1027-441B-AFCE-47B6E3E9B82A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E32DED88-4A41-4341-958A-7B54FF862408}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E32DED88-4A41-4341-958A-7B54FF862408}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E32DED88-4A41-4341-958A-7B54FF862408}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -49,8 +35,28 @@ Global
 		{0387F90C-664A-4AEA-A082-00D52DC8ABDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0387F90C-664A-4AEA-A082-00D52DC8ABDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0387F90C-664A-4AEA-A082-00D52DC8ABDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{077DD955-5052-4314-AC22-9598370067BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{077DD955-5052-4314-AC22-9598370067BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{077DD955-5052-4314-AC22-9598370067BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{077DD955-5052-4314-AC22-9598370067BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4323D00-1027-441B-AFCE-47B6E3E9B82A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4323D00-1027-441B-AFCE-47B6E3E9B82A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4323D00-1027-441B-AFCE-47B6E3E9B82A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4323D00-1027-441B-AFCE-47B6E3E9B82A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4381BFFF-C37B-49CF-BA9F-7BCC23B9D2B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4381BFFF-C37B-49CF-BA9F-7BCC23B9D2B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4381BFFF-C37B-49CF-BA9F-7BCC23B9D2B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4381BFFF-C37B-49CF-BA9F-7BCC23B9D2B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AFEFEA4-FA3A-4281-8787-F3DED5234654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AFEFEA4-FA3A-4281-8787-F3DED5234654}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AFEFEA4-FA3A-4281-8787-F3DED5234654}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AFEFEA4-FA3A-4281-8787-F3DED5234654}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4381BFFF-C37B-49CF-BA9F-7BCC23B9D2B9} = {EB726FFD-1CDF-4353-B16C-637AD22EA186}
+		{9AFEFEA4-FA3A-4281-8787-F3DED5234654} = {EB726FFD-1CDF-4353-B16C-637AD22EA186}
 	EndGlobalSection
 EndGlobal

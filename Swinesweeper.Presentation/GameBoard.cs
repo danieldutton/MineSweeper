@@ -1,8 +1,9 @@
-﻿using System.Drawing;
-using Swinesweeper.GameModeFactory.EventArg;
+﻿using Swinesweeper.GameModeFactory.EventArg;
 using Swinesweeper.GameModeFactory.Interfaces;
-using Swinesweeper.GridTools;
+using Swinesweeper.GamePlay;
+using Swinesweeper.GridBuilder;
 using Swinesweeper.Utilities;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Swinesweeper.Presentation

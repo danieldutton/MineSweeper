@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Swinesweeper.GameModeFactory.EventArg;
+using Swinesweeper.GameModeFactory.Interfaces;
+using Swinesweeper.GameModeFactory.Settings;
+using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using Swinesweeper.GameModeFactory.EventArg;
-using Swinesweeper.GameModeFactory.Interfaces;
-using Swinesweeper.GameModeFactory.Settings;
 
 namespace Swinesweeper.Presentation
 {
