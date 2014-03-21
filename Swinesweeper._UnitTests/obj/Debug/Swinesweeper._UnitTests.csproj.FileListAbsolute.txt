@@ -1,0 +1,1 @@
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper._UnitTests\obj\Debug\Swinesweeper._UnitTests.csprojResolveAssemblyReference.cache

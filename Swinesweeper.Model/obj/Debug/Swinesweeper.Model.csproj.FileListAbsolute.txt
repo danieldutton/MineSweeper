@@ -1,0 +1,6 @@
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.Model\bin\Debug\Swinesweeper.Model.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.Model\bin\Debug\Swinesweeper.Model.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.Model\obj\Debug\Swinesweeper.Model.Properties.Resources.resources
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.Model\obj\Debug\Swinesweeper.Model.csproj.GenerateResource.Cache
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.Model\obj\Debug\Swinesweeper.Model.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.Model\obj\Debug\Swinesweeper.Model.pdb

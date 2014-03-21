@@ -1,0 +1,4 @@
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.Utilities\bin\Debug\Swinesweeper.Utilities.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.Utilities\bin\Debug\Swinesweeper.Utilities.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.Utilities\obj\Debug\Swinesweeper.Utilities.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.Utilities\obj\Debug\Swinesweeper.Utilities.pdb

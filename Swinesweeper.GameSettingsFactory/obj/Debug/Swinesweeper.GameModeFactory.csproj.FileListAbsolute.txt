@@ -1,0 +1,7 @@
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.GameSettingsFactory\bin\Debug\Swinesweeper.GameModeFactory.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.GameSettingsFactory\bin\Debug\Swinesweeper.GameModeFactory.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.GameSettingsFactory\bin\Debug\Swinesweeper.Utilities.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.GameSettingsFactory\bin\Debug\Swinesweeper.Utilities.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.GameSettingsFactory\obj\Debug\Swinesweeper.GameModeFactory.csprojResolveAssemblyReference.cache
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.GameSettingsFactory\obj\Debug\Swinesweeper.GameModeFactory.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.GameSettingsFactory\obj\Debug\Swinesweeper.GameModeFactory.pdb
