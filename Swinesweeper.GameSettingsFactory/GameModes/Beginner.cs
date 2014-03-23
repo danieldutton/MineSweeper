@@ -16,7 +16,7 @@ namespace Swinesweeper.GameModeFactory.GameModes
 
         public Beginner()
         {
-            FormSize = new Point(202, 250);
+            FormSize = new Point(202, 335);
             GridPanelSize = new Point(160, 100);
             DifficultyLevel = DifficultyLevel.Beginner;
             GridSize = GridSize.Beginner;

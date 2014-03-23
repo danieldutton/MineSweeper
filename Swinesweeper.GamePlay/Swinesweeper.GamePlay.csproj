@@ -39,7 +39,6 @@
     <Compile Include="EventArg\GameSummaryArgs.cs" />
     <Compile Include="EventArg\TileClearEventArgs.cs" />
     <Compile Include="Interfaces\IPigCounter.cs" />
-    <Compile Include="Interfaces\ITile.cs" />
     <Compile Include="Interfaces\ITileCascader.cs" />
     <Compile Include="PigCounter.cs" />
     <Compile Include="Properties\Resources.Designer.cs">

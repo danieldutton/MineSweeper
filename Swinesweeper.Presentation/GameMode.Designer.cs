@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameMode));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picBoxHeader = new System.Windows.Forms.PictureBox();
             this._btnConfirm = new System.Windows.Forms.Button();
             this._panelRadioBtns = new System.Windows.Forms.Panel();
             this._radioBtnAdvanced = new System.Windows.Forms.RadioButton();
@@ -38,19 +38,19 @@
             this._lblBeginner = new System.Windows.Forms.Label();
             this._lblNormal = new System.Windows.Forms.Label();
             this._lblAdvanced = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxHeader)).BeginInit();
             this._panelRadioBtns.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // picBoxHeader
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(394, 114);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.picBoxHeader.Image = ((System.Drawing.Image)(resources.GetObject("picBoxHeader.Image")));
+            this.picBoxHeader.Location = new System.Drawing.Point(0, 0);
+            this.picBoxHeader.Name = "picBoxHeader";
+            this.picBoxHeader.Size = new System.Drawing.Size(394, 114);
+            this.picBoxHeader.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picBoxHeader.TabIndex = 9;
+            this.picBoxHeader.TabStop = false;
             // 
             // _btnConfirm
             // 
@@ -152,15 +152,15 @@
             this.Controls.Add(this._lblNormal);
             this.Controls.Add(this._lblBeginner);
             this.Controls.Add(this._panelRadioBtns);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picBoxHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(375, 180);
             this.MinimumSize = new System.Drawing.Size(375, 180);
             this.Name = "GameMode";
-            this.Text = "Options";
+            this.Text = "Game Mode";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameMode_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxHeader)).EndInit();
             this._panelRadioBtns.ResumeLayout(false);
             this._panelRadioBtns.PerformLayout();
             this.ResumeLayout(false);
@@ -170,7 +170,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picBoxHeader;
         private System.Windows.Forms.Button _btnConfirm;
         private System.Windows.Forms.Panel _panelRadioBtns;
         private System.Windows.Forms.RadioButton _radioBtnAdvanced;

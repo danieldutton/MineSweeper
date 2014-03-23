@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace Swinesweeper.GamePlay
 {
-    public class Tile : PictureBox, Interfaces.ITile
+    public class Tile : PictureBox
     {
         public static event EventHandler<MineHitEventArgs> MineHit;
 
@@ -17,19 +17,17 @@ namespace Swinesweeper.GamePlay
 
         public static Tile[,] Grid { get; set; }
 
+        public int GridPositonX { get; set; }
+
+        public int GridPositionY { get; set; }
+
         public bool IsMined { get; set; }
 
         public bool IsFlagged { get; set; }
 
         public bool IsCleared { get; set; }
 
-        public int GridPositonX { get; set; }
-
-        public int GridPositionY { get; set; }
-
         private int _rightClickCount = 1;
-
-        public Label LblMineCount = new Label();
 
         public static int FlagCount { get; set; }
 
@@ -38,6 +36,8 @@ namespace Swinesweeper.GamePlay
         public static int TileCount { get; set; }
 
         public static int CorrectFlagCount { get; set; }
+
+        public Label LblMineCount = new Label();
 
 
         protected override void OnClick(EventArgs e)
@@ -102,7 +102,8 @@ namespace Swinesweeper.GamePlay
                 FlagCount++;
 
                 if(IsMined)
-                CorrectFlagCount--;
+                    CorrectFlagCount--;
+                
                 OnFlagRemoved();
             } 
         }

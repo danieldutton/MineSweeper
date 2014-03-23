@@ -1,8 +1,8 @@
-﻿using System.Drawing;
-using Swinesweeper.GameModeFactory;
+﻿using Swinesweeper.GameModeFactory;
 using Swinesweeper.GameModeFactory.EventArg;
 using Swinesweeper.GameModeFactory.Interfaces;
 using System;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -36,7 +36,6 @@ namespace Swinesweeper.Presentation
 
             BackColor = ColorTranslator.FromHtml(colour);
             _panelRadioBtns.BackColor = ColorTranslator.FromHtml(colour);
-            _radioBtnAdvanced.ForeColor = ColorTranslator.FromHtml(colour);
         }
 
         private void SelectGameMode_Click(object sender, EventArgs e)
@@ -66,15 +65,10 @@ namespace Swinesweeper.Presentation
             if (handler != null) handler(this, e);
         }
 
-        private void GameMode_FormClosing(object sender, FormClosingEventArgs e)
+        protected void GameMode_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (e.CloseReason == CloseReason.UserClosing)
                 Application.Exit();
-        }
-
-        private void ExitApplication_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }             
+        }            
     }
 }

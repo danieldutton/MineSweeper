@@ -25,7 +25,15 @@ namespace Swinesweeper.Presentation
             _tileCascader = tileCascader;
             
             InitializeComponent();
+            ColorForm();
             SubscribeToTileEvents();
+        }
+
+        private void ColorForm()
+        {
+            const string colour = "#f2d78b";
+
+            BackColor = ColorTranslator.FromHtml(colour);
         }
 
         public void SubscribeToGameModeConfirmedEvent(GameMode optionsForm)
