@@ -1,12 +1,28 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace Swinesweeper.Presentation
 {
     public partial class GameResult : Form
     {
-        public GameResult()
+        private readonly bool _hasWon;
+
+        public GameResult(bool hasWon)
         {
+            _hasWon = hasWon;
+            
             InitializeComponent();
+            ColourBackground();
+        }
+
+        private void ColourBackground()
+        {
+            BackColor = ColorTranslator.FromHtml("#f2d78b");
+        }
+
+        private void GameResult_Load(object sender, System.EventArgs e)
+        {
+            _lblResultsText.Text = _hasWon ? "Congratulations you have won" : "Sorry you lose..oink oink";
         }
 
         private void GameResult_FormClosing(object sender, FormClosingEventArgs e)

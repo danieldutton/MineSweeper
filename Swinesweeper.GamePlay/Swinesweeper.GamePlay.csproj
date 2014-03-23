@@ -36,6 +36,7 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EventArg\GameSummaryArgs.cs" />
     <Compile Include="EventArg\TileClearEventArgs.cs" />
     <Compile Include="Interfaces\IPigCounter.cs" />
     <Compile Include="Interfaces\ITile.cs" />

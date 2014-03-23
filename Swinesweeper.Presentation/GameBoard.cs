@@ -5,6 +5,7 @@ using Swinesweeper.GamePlay.EventArg;
 using Swinesweeper.GamePlay.Interfaces;
 using Swinesweeper.GridBuilder;
 using Swinesweeper.Utilities;
+using System;
 using System.Drawing;
 using System.IO;
 using System.Media;
@@ -22,8 +23,15 @@ namespace Swinesweeper.Presentation
         public GameBoard(ITileCascader tileCascader)
         {
             _tileCascader = tileCascader;
+            
             InitializeComponent();
+            ColourBackground();
             SubscribeToTileEvents();
+        }
+
+        private void ColourBackground()
+        {
+            BackColor = ColorTranslator.FromHtml("#f2d78b");
         }
 
         public void SubscribeToGameModeConfirmedEvent(GameMode optionsForm)
@@ -65,21 +73,29 @@ namespace Swinesweeper.Presentation
             Tile.FlagRemoved += Tile_FlagRemoved;           
         }
 
+        private void Tile_TileClear(object sender, TileClearEventArgs e)
+        {
+            _tileCascader.CascadeTile(e.Grid, e.XPos, e.YPos);
+
+            if (Tile.CorrectFlagCount == Tile.MineCount && Tile.TileCount == Tile.MineCount)
+            {
+                var gameResultForm = new GameResult(true);
+                gameResultForm.ShowDialog();
+            }
+        }
+
         private void Tile_FlagRemoved(object sender, System.EventArgs e)
         {
             int flagCount = int.Parse(_lblFlagCount.Text);
+
             flagCount++;
-            _lblFlagCount.Text = flagCount.ToString();    
+            _lblFlagCount.Text = flagCount.ToString();
         }
 
-        private void Tile_TileClear(object sender, TileClearEventArgs e)
-        {
-            _tileCascader.CascadeTile(e.Grid, e.XPos, e.YPos);    
-        }
-
-        private void Tile_FlagPlaced(object sender, System.EventArgs e)
+        private void Tile_FlagPlaced(object sender, EventArgs e)
         {
             int flagCount = int.Parse(_lblFlagCount.Text);
+            
             flagCount--;
             _lblFlagCount.Text = flagCount.ToString();
         }
@@ -90,7 +106,7 @@ namespace Swinesweeper.Presentation
             
             _tileCascader.CascadeAll(e.Grid);
             
-            var gameResultForm = new GameResult();
+            var gameResultForm = new GameResult(false);
             gameResultForm.ShowDialog();
         }
 

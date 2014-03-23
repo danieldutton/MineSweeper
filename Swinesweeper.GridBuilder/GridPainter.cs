@@ -46,7 +46,7 @@ namespace Swinesweeper.GridBuilder
             {
                 for (int j = 0; j < counter; j++)
                 {
-                    minedGrid[i, j].BackColor = Color.Teal;
+                    minedGrid[i, j].BackColor = Color.Crimson;
                     minedGrid[i, j].Width = 17;
                     minedGrid[i, j].Height = 17;
                     minedGrid[i, j].Location = new Point(x, y);

@@ -40,7 +40,6 @@ namespace Swinesweeper.GamePlay
         public static int CorrectFlagCount { get; set; }
 
 
-
         protected override void OnClick(EventArgs e)
         {
             var mouseEvent = e as MouseEventArgs;
@@ -56,10 +55,7 @@ namespace Swinesweeper.GamePlay
                 else if(_rightClickCount == 2 && IsFlagged)
                     RemoveFlag();
             }         
-            base.OnClick(e);
-
-            if (CorrectFlagCount == MineCount && TileCount == MineCount)
-                MessageBox.Show("Game Won");
+            base.OnClick(e);   
         }
 
         public void SelectTile()
