@@ -82,7 +82,7 @@ namespace Swinesweeper.GamePlay
             
             _rightClickCount = 2;
             
-            BackColor = Color.Red;
+            BackColor = Color.YellowGreen;
             IsFlagged = true;
             FlagCount--;
 
@@ -97,7 +97,7 @@ namespace Swinesweeper.GamePlay
             if (IsCleared == false && IsFlagged)
             {
                 _rightClickCount = 1;
-                BackColor = Color.Teal;              
+                BackColor = Color.SaddleBrown;              
                 IsFlagged = false;
                 FlagCount++;
 

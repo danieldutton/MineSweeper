@@ -1,8 +1,8 @@
-﻿using Swinesweeper.GameModeFactory;
+﻿using System.Drawing;
+using Swinesweeper.GameModeFactory;
 using Swinesweeper.GameModeFactory.EventArg;
 using Swinesweeper.GameModeFactory.Interfaces;
 using System;
-using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -18,14 +18,9 @@ namespace Swinesweeper.Presentation
         {
             _gameModeFactory = gameModeFactory;
 
-            InitializeComponent();
-            ColourRadioBox();           
+            InitializeComponent(); 
+            ColourBackground();
             InitGameModes();
-        }
-
-        private void ColourRadioBox()
-        {
-            _panelRadioBtns.BackColor = ColorTranslator.FromHtml("#f2d78b");
         }
 
         private void InitGameModes()
@@ -33,6 +28,15 @@ namespace Swinesweeper.Presentation
             _radioBtnBeginner.Tag = DifficultyLevel.Beginner;
             _radioBtnNormal.Tag = DifficultyLevel.Normal;
             _radioBtnAdvanced.Tag = DifficultyLevel.Advanced;
+        }
+
+        private void ColourBackground()
+        {
+            const string colour = "#f2d78b";
+
+            BackColor = ColorTranslator.FromHtml(colour);
+            _panelRadioBtns.BackColor = ColorTranslator.FromHtml(colour);
+            _radioBtnAdvanced.ForeColor = ColorTranslator.FromHtml(colour);
         }
 
         private void SelectGameMode_Click(object sender, EventArgs e)
@@ -66,6 +70,11 @@ namespace Swinesweeper.Presentation
         {
             if (e.CloseReason == CloseReason.UserClosing)
                 Application.Exit();
+        }
+
+        private void ExitApplication_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }             
     }
 }

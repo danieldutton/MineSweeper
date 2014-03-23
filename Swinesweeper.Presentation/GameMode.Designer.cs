@@ -35,6 +35,9 @@
             this._radioBtnAdvanced = new System.Windows.Forms.RadioButton();
             this._radioBtnNormal = new System.Windows.Forms.RadioButton();
             this._radioBtnBeginner = new System.Windows.Forms.RadioButton();
+            this._lblBeginner = new System.Windows.Forms.Label();
+            this._lblNormal = new System.Windows.Forms.Label();
+            this._lblAdvanced = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this._panelRadioBtns.SuspendLayout();
             this.SuspendLayout();
@@ -44,7 +47,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(394, 233);
+            this.pictureBox1.Size = new System.Drawing.Size(394, 114);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -52,29 +55,31 @@
             // _btnConfirm
             // 
             this._btnConfirm.BackColor = System.Drawing.Color.Transparent;
-            this._btnConfirm.Location = new System.Drawing.Point(118, 205);
+            this._btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._btnConfirm.Location = new System.Drawing.Point(288, 1);
             this._btnConfirm.Name = "_btnConfirm";
             this._btnConfirm.Size = new System.Drawing.Size(68, 23);
             this._btnConfirm.TabIndex = 11;
-            this._btnConfirm.Text = "Ok";
+            this._btnConfirm.Text = "Confirm";
             this._btnConfirm.UseVisualStyleBackColor = false;
             this._btnConfirm.Click += new System.EventHandler(this.SelectGameMode_Click);
             // 
             // _panelRadioBtns
             // 
-            this._panelRadioBtns.BackColor = System.Drawing.Color.Transparent;
+            this._panelRadioBtns.BackColor = System.Drawing.Color.White;
             this._panelRadioBtns.Controls.Add(this._radioBtnAdvanced);
             this._panelRadioBtns.Controls.Add(this._radioBtnNormal);
             this._panelRadioBtns.Controls.Add(this._radioBtnBeginner);
-            this._panelRadioBtns.Location = new System.Drawing.Point(118, 134);
+            this._panelRadioBtns.Controls.Add(this._btnConfirm);
+            this._panelRadioBtns.Location = new System.Drawing.Point(0, 115);
             this._panelRadioBtns.Name = "_panelRadioBtns";
-            this._panelRadioBtns.Size = new System.Drawing.Size(68, 68);
+            this._panelRadioBtns.Size = new System.Drawing.Size(359, 27);
             this._panelRadioBtns.TabIndex = 10;
             // 
             // _radioBtnAdvanced
             // 
             this._radioBtnAdvanced.AutoSize = true;
-            this._radioBtnAdvanced.Location = new System.Drawing.Point(13, 50);
+            this._radioBtnAdvanced.Location = new System.Drawing.Point(255, 7);
             this._radioBtnAdvanced.Name = "_radioBtnAdvanced";
             this._radioBtnAdvanced.Size = new System.Drawing.Size(14, 13);
             this._radioBtnAdvanced.TabIndex = 0;
@@ -85,7 +90,7 @@
             // _radioBtnNormal
             // 
             this._radioBtnNormal.AutoSize = true;
-            this._radioBtnNormal.Location = new System.Drawing.Point(13, 27);
+            this._radioBtnNormal.Location = new System.Drawing.Point(157, 7);
             this._radioBtnNormal.Name = "_radioBtnNormal";
             this._radioBtnNormal.Size = new System.Drawing.Size(14, 13);
             this._radioBtnNormal.TabIndex = 0;
@@ -96,7 +101,7 @@
             // _radioBtnBeginner
             // 
             this._radioBtnBeginner.AutoSize = true;
-            this._radioBtnBeginner.Location = new System.Drawing.Point(13, 1);
+            this._radioBtnBeginner.Location = new System.Drawing.Point(72, 7);
             this._radioBtnBeginner.Name = "_radioBtnBeginner";
             this._radioBtnBeginner.Size = new System.Drawing.Size(14, 13);
             this._radioBtnBeginner.TabIndex = 0;
@@ -104,17 +109,54 @@
             this._radioBtnBeginner.Tag = "Beginner";
             this._radioBtnBeginner.UseVisualStyleBackColor = true;
             // 
+            // _lblBeginner
+            // 
+            this._lblBeginner.AutoSize = true;
+            this._lblBeginner.Font = new System.Drawing.Font("Tw Cen MT Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblBeginner.ForeColor = System.Drawing.Color.SaddleBrown;
+            this._lblBeginner.Location = new System.Drawing.Point(3, 115);
+            this._lblBeginner.Name = "_lblBeginner";
+            this._lblBeginner.Size = new System.Drawing.Size(68, 24);
+            this._lblBeginner.TabIndex = 13;
+            this._lblBeginner.Text = "Beginner";
+            // 
+            // _lblNormal
+            // 
+            this._lblNormal.AutoSize = true;
+            this._lblNormal.Font = new System.Drawing.Font("Tw Cen MT Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblNormal.ForeColor = System.Drawing.Color.SaddleBrown;
+            this._lblNormal.Location = new System.Drawing.Point(98, 115);
+            this._lblNormal.Name = "_lblNormal";
+            this._lblNormal.Size = new System.Drawing.Size(57, 24);
+            this._lblNormal.TabIndex = 13;
+            this._lblNormal.Text = "Normal";
+            // 
+            // _lblAdvanced
+            // 
+            this._lblAdvanced.AutoSize = true;
+            this._lblAdvanced.Font = new System.Drawing.Font("Tw Cen MT Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblAdvanced.ForeColor = System.Drawing.Color.SaddleBrown;
+            this._lblAdvanced.Location = new System.Drawing.Point(181, 115);
+            this._lblAdvanced.Name = "_lblAdvanced";
+            this._lblAdvanced.Size = new System.Drawing.Size(73, 24);
+            this._lblAdvanced.TabIndex = 13;
+            this._lblAdvanced.Text = "Advanced";
+            // 
             // GameMode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(394, 233);
-            this.Controls.Add(this._btnConfirm);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(359, 142);
+            this.Controls.Add(this._lblAdvanced);
+            this.Controls.Add(this._lblNormal);
+            this.Controls.Add(this._lblBeginner);
             this.Controls.Add(this._panelRadioBtns);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(375, 180);
+            this.MinimumSize = new System.Drawing.Size(375, 180);
             this.Name = "GameMode";
             this.Text = "Options";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameMode_FormClosing);
@@ -134,6 +176,9 @@
         private System.Windows.Forms.RadioButton _radioBtnAdvanced;
         private System.Windows.Forms.RadioButton _radioBtnNormal;
         private System.Windows.Forms.RadioButton _radioBtnBeginner;
+        private System.Windows.Forms.Label _lblBeginner;
+        private System.Windows.Forms.Label _lblNormal;
+        private System.Windows.Forms.Label _lblAdvanced;
 
     }
 }

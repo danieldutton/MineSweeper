@@ -25,13 +25,7 @@ namespace Swinesweeper.Presentation
             _tileCascader = tileCascader;
             
             InitializeComponent();
-            ColourBackground();
             SubscribeToTileEvents();
-        }
-
-        private void ColourBackground()
-        {
-            BackColor = ColorTranslator.FromHtml("#f2d78b");
         }
 
         public void SubscribeToGameModeConfirmedEvent(GameMode optionsForm)
@@ -84,7 +78,7 @@ namespace Swinesweeper.Presentation
             }
         }
 
-        private void Tile_FlagRemoved(object sender, System.EventArgs e)
+        private void Tile_FlagRemoved(object sender, EventArgs e)
         {
             int flagCount = int.Parse(_lblFlagCount.Text);
 

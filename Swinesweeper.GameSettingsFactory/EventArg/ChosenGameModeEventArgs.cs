@@ -3,7 +3,7 @@ using System;
 
 namespace Swinesweeper.GameModeFactory.EventArg
 {
-    public class ChosenGameModeEventArgs : EventArgs
+    public sealed class ChosenGameModeEventArgs : EventArgs
     {
         public IGameMode GameMode { get; private set; }
 
