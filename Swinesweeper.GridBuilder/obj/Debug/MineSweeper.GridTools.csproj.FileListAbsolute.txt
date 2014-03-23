@@ -1,9 +1,0 @@
-E:\My Code\MineSweeper\MineSweeper\MineSweeper.GridTools\bin\Debug\MineSweeper.GridTools.dll
-E:\My Code\MineSweeper\MineSweeper\MineSweeper.GridTools\bin\Debug\MineSweeper.GridTools.pdb
-E:\My Code\MineSweeper\MineSweeper\MineSweeper.GridTools\bin\Debug\MineSweeper.Model.dll
-E:\My Code\MineSweeper\MineSweeper\MineSweeper.GridTools\bin\Debug\MineSweeper.Utilities.dll
-E:\My Code\MineSweeper\MineSweeper\MineSweeper.GridTools\bin\Debug\MineSweeper.Model.pdb
-E:\My Code\MineSweeper\MineSweeper\MineSweeper.GridTools\bin\Debug\MineSweeper.Utilities.pdb
-E:\My Code\MineSweeper\MineSweeper\MineSweeper.GridTools\obj\Debug\MineSweeper.GridTools.csprojResolveAssemblyReference.cache
-E:\My Code\MineSweeper\MineSweeper\MineSweeper.GridTools\obj\Debug\MineSweeper.GridTools.dll
-E:\My Code\MineSweeper\MineSweeper\MineSweeper.GridTools\obj\Debug\MineSweeper.GridTools.pdb

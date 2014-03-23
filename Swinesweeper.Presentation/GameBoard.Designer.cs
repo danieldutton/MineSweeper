@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameBoard));
             this._panelGrid = new System.Windows.Forms.Panel();
-            this._lblTime = new System.Windows.Forms.Label();
-            this._lblTimeValue = new System.Windows.Forms.Label();
+            this._lblFlags = new System.Windows.Forms.Label();
+            this._lblFlagCount = new System.Windows.Forms.Label();
             this._panelTimer = new System.Windows.Forms.Panel();
             this._panelTimer.SuspendLayout();
             this.SuspendLayout();
@@ -44,28 +44,28 @@
             this._panelGrid.Size = new System.Drawing.Size(314, 319);
             this._panelGrid.TabIndex = 1;
             // 
-            // _lblTime
+            // _lblFlags
             // 
-            this._lblTime.AutoSize = true;
-            this._lblTime.Location = new System.Drawing.Point(3, 3);
-            this._lblTime.Name = "_lblTime";
-            this._lblTime.Size = new System.Drawing.Size(30, 13);
-            this._lblTime.TabIndex = 2;
-            this._lblTime.Text = "Time";
+            this._lblFlags.AutoSize = true;
+            this._lblFlags.Location = new System.Drawing.Point(3, 3);
+            this._lblFlags.Name = "_lblFlags";
+            this._lblFlags.Size = new System.Drawing.Size(35, 13);
+            this._lblFlags.TabIndex = 2;
+            this._lblFlags.Text = "Flags:";
             // 
-            // _lblTimeValue
+            // _lblFlagCount
             // 
-            this._lblTimeValue.AutoSize = true;
-            this._lblTimeValue.Location = new System.Drawing.Point(40, 3);
-            this._lblTimeValue.Name = "_lblTimeValue";
-            this._lblTimeValue.Size = new System.Drawing.Size(13, 13);
-            this._lblTimeValue.TabIndex = 3;
-            this._lblTimeValue.Text = "0";
+            this._lblFlagCount.AutoSize = true;
+            this._lblFlagCount.Location = new System.Drawing.Point(40, 3);
+            this._lblFlagCount.Name = "_lblFlagCount";
+            this._lblFlagCount.Size = new System.Drawing.Size(13, 13);
+            this._lblFlagCount.TabIndex = 3;
+            this._lblFlagCount.Text = "0";
             // 
             // _panelTimer
             // 
-            this._panelTimer.Controls.Add(this._lblTime);
-            this._panelTimer.Controls.Add(this._lblTimeValue);
+            this._panelTimer.Controls.Add(this._lblFlags);
+            this._panelTimer.Controls.Add(this._lblFlagCount);
             this._panelTimer.Location = new System.Drawing.Point(12, 9);
             this._panelTimer.Name = "_panelTimer";
             this._panelTimer.Size = new System.Drawing.Size(314, 24);
@@ -91,8 +91,8 @@
         #endregion
 
         private System.Windows.Forms.Panel _panelGrid;
-        private System.Windows.Forms.Label _lblTime;
-        private System.Windows.Forms.Label _lblTimeValue;
+        private System.Windows.Forms.Label _lblFlags;
+        private System.Windows.Forms.Label _lblFlagCount;
         private System.Windows.Forms.Panel _panelTimer;
 
     }

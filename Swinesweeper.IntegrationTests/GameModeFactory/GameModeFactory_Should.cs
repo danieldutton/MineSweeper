@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
+using Swinesweeper.GameModeFactory;
 using Swinesweeper.GameModeFactory.GameModes;
 using Swinesweeper.GameModeFactory.Interfaces;
-using Swinesweeper.GameModeFactory.Settings;
 using Swinesweeper.Utilities;
 using Swinesweeper.Utilities.Interfaces;
 

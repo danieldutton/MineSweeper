@@ -1,5 +1,4 @@
-﻿using Swinesweeper.GameModeFactory.Settings;
-using System.Drawing;
+﻿using System.Drawing;
 
 namespace Swinesweeper.GameModeFactory.Interfaces
 {

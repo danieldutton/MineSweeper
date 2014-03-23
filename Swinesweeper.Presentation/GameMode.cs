@@ -1,6 +1,6 @@
-﻿using Swinesweeper.GameModeFactory.EventArg;
+﻿using Swinesweeper.GameModeFactory;
+using Swinesweeper.GameModeFactory.EventArg;
 using Swinesweeper.GameModeFactory.Interfaces;
-using Swinesweeper.GameModeFactory.Settings;
 using System;
 using System.Drawing;
 using System.Linq;

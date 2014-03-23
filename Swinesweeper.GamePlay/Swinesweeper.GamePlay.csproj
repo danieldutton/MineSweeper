@@ -36,19 +36,21 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EventArg\TileClearEventArgs.cs" />
     <Compile Include="Interfaces\IPigCounter.cs" />
+    <Compile Include="Interfaces\ITile.cs" />
+    <Compile Include="Interfaces\ITileCascader.cs" />
     <Compile Include="PigCounter.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="EventArg\MineHitEventArgs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tile.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="EventArg\TileActivityEventArgs.cs" />
-    <Compile Include="Interfaces\ITile.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TileCascader.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -56,9 +58,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Pig_Oinking_Twice.wav" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pig_mine.png" />

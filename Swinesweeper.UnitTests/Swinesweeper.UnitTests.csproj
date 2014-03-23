@@ -44,8 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GameModeFactory\GameModeFactory_Should.cs" />
-    <Compile Include="GridTools\EmptyGridBuilder_Should.cs" />
-    <Compile Include="GridTools\GridPainter_Should.cs" />
+    <Compile Include="GridBuilder\EmptyGridBuilder_Should.cs" />
+    <Compile Include="GridBuilder\GridControlBuilder_Should.cs" />
+    <Compile Include="GridBuilder\GridMiner_Should.cs" />
+    <Compile Include="GridBuilder\GridPainter_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

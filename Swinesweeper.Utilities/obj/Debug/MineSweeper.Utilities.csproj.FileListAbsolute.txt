@@ -1,4 +1,0 @@
-E:\My Code\MineSweeper\MineSweeper\MineSweeper.Utilities\bin\Debug\MineSweeper.Utilities.dll
-E:\My Code\MineSweeper\MineSweeper\MineSweeper.Utilities\bin\Debug\MineSweeper.Utilities.pdb
-E:\My Code\MineSweeper\MineSweeper\MineSweeper.Utilities\obj\Debug\MineSweeper.Utilities.dll
-E:\My Code\MineSweeper\MineSweeper\MineSweeper.Utilities\obj\Debug\MineSweeper.Utilities.pdb

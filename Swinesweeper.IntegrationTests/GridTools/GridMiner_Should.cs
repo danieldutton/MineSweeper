@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using Swinesweeper.GameModeFactory.Settings;
+using Swinesweeper.GameModeFactory;
 using Swinesweeper.GamePlay;
 using Swinesweeper.GridBuilder;
 using Swinesweeper.GridBuilder.Interfaces;
@@ -56,7 +56,7 @@ namespace Swinesweeper.IntegrationTests.GridTools
         }
 
         [Test]
-        public void MineGrid_SeedAnAdvancedGridWith_99_Mines()
+        public void MineGrid_SeedAnAdvancedGridWith_80_Mines()
         {
             Tile[,] grid = _emptyGridBuilder.GetSquaredGrid(GridSize.Advanced, DifficultyLevel.Normal);
 
@@ -64,7 +64,7 @@ namespace Swinesweeper.IntegrationTests.GridTools
 
             List<Tile> flattenedGrid = minedGrid.Cast<Tile>().ToList();
 
-            const int expected = 99;
+            const int expected = 80;
             int actual = flattenedGrid.Count(p => p.IsMined);
 
             Assert.AreEqual(expected, actual);      

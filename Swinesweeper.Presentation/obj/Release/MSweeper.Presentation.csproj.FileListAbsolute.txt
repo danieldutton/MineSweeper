@@ -1,1 +1,0 @@
-C:\Users\Danny\Documents\GitHub\MineSweeper\MineSweeper.Presentation\bin\Release\MSweeper.Presentation.exe.config

@@ -1,22 +1,21 @@
 ﻿using Swinesweeper.GamePlay.EventArg;
-using Swinesweeper.GamePlay.Interfaces;
 using System;
 using System.Drawing;
-using System.IO;
-using System.Media;
 using System.Windows.Forms;
 
 namespace Swinesweeper.GamePlay
 {
-    public class Tile : PictureBox, ITile
+    public class Tile : PictureBox, Interfaces.ITile
     {
-        public event EventHandler<TileActivityEventArgs> TileSelected;
-       
-        public event EventHandler<TileActivityEventArgs> MineHit;
-      
-        public event EventHandler<TileActivityEventArgs> MineFree;
+        public static event EventHandler<MineHitEventArgs> MineHit;
 
-        public Tile[,] Grid { get; set; }
+        public static event EventHandler<TileClearEventArgs> TileClear;
+
+        public static event EventHandler<EventArgs> FlagPlaced;
+
+        public static event EventHandler<EventArgs> FlagRemoved;
+
+        public static Tile[,] Grid { get; set; }
 
         public bool IsMined { get; set; }
 
@@ -41,6 +40,7 @@ namespace Swinesweeper.GamePlay
         public static int CorrectFlagCount { get; set; }
 
 
+
         protected override void OnClick(EventArgs e)
         {
             var mouseEvent = e as MouseEventArgs;
@@ -52,9 +52,9 @@ namespace Swinesweeper.GamePlay
             if (mouseEvent.Button == MouseButtons.Right)
             {              
                 if(_rightClickCount == 1 && !IsFlagged)
-                    AddFlagToTile();
+                    AddFlag();
                 else if(_rightClickCount == 2 && IsFlagged)
-                    RemoveFlagFromTile();
+                    RemoveFlag();
             }         
             base.OnClick(e);
 
@@ -65,7 +65,7 @@ namespace Swinesweeper.GamePlay
         public void SelectTile()
         {
             if (IsMined && !IsFlagged)
-                ConfirmGameOver();    
+                OnMineHit(new MineHitEventArgs(Grid));    
                 
             if (!IsFlagged && !IsCleared)
                 RemoveTile();    
@@ -75,11 +75,11 @@ namespace Swinesweeper.GamePlay
         {
             BackColor = Color.White;
             IsCleared = true;
-            TileCascader.CascadeSelectedTile(Grid, GridPositonX, GridPositionY);
             TileCount--;
+            OnTileClear(new TileClearEventArgs(Grid, GridPositonX, GridPositionY));
         }
 
-        public void AddFlagToTile()
+        public void AddFlag()
         {
             if (IsCleared || IsFlagged) return;
             if (FlagCount == 0) return;
@@ -92,14 +92,11 @@ namespace Swinesweeper.GamePlay
 
             if (IsMined)
                 CorrectFlagCount++;
+
+            OnFlagPlaced();
         }
 
-        public bool IsGameWon()
-        {
-            return true;
-        }
-
-        public void RemoveFlagFromTile()
+        public void RemoveFlag()
         {
             if (IsCleared == false && IsFlagged)
             {
@@ -110,47 +107,32 @@ namespace Swinesweeper.GamePlay
 
                 if(IsMined)
                 CorrectFlagCount--;
-            }  
+                OnFlagRemoved();
+            } 
         }
 
-        private void DsplayResultsForm()
+        protected static void OnMineHit(MineHitEventArgs e)
         {
-            
+            EventHandler<MineHitEventArgs> handler = MineHit;
+            if (handler != null) handler(null, e);
         }
 
-        private void ConfirmGameOver()
+        protected static void OnTileClear(TileClearEventArgs e)
         {
-            PlayOink();            
-            Image = Properties.Resources.pig_mine;
-            TileCascader.CascadeAll(Grid);
-            MessageBox.Show("Game Over");
+            EventHandler<TileClearEventArgs> handler = TileClear;
+            if (handler != null) handler(null, e);
         }
 
-        private void PlayOink()
+        protected static void OnFlagPlaced()
         {
-            Stream str = Properties.Resources.Pig_Oinking_Twice;
-            var snd = new SoundPlayer(str);
-            snd.Play(); 
+            EventHandler<EventArgs> handler = FlagPlaced;
+            if (handler != null) handler(null, EventArgs.Empty);
         }
 
-        protected virtual void OnTileSelected(TileActivityEventArgs e)
+        protected static void OnFlagRemoved()
         {
-            EventHandler<TileActivityEventArgs> handler = TileSelected;
-            if (handler != null) handler(this, e);
-        }
-
-        protected virtual void OnMineHit(TileActivityEventArgs e)
-        {
-            EventHandler<TileActivityEventArgs> handler = MineHit;
-            if (handler != null) handler(this, e);
-        }
-
-        protected virtual void OnMineFree(TileActivityEventArgs e)
-        {
-            EventHandler<TileActivityEventArgs> handler = MineFree;
-            if (handler != null) handler(this, e);
+            EventHandler<EventArgs> handler = FlagRemoved;
+            if (handler != null) handler(null, EventArgs.Empty);
         }
     }
-
-    
 }

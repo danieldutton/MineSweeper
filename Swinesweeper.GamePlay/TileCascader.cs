@@ -1,10 +1,11 @@
 ﻿using System.Drawing;
+using Swinesweeper.GamePlay.Interfaces;
 
 namespace Swinesweeper.GamePlay
 {
-    public class TileCascader
+    public class TileCascader : ITileCascader 
     {
-        public static void CascadeSelectedTile(Tile[,] grid, int x, int y)
+        public void CascadeTile(Tile[,] grid, int x, int y)
         {
             Tile cell = grid[x, y];
             cell.IsCleared = true;
@@ -27,13 +28,13 @@ namespace Swinesweeper.GamePlay
                     if (!neighbour.IsCleared)
                     {
                         DisplayMineCount(grid,i, j);
-                        CascadeSelectedTile(grid, i, j);
+                        CascadeTile(grid, i, j);
                         Tile.TileCount--;
                     }
                 }
         }
 
-        public static void CascadeAll(Tile[,] grid)
+        public void CascadeAll(Tile[,] grid)
         {
             for (int i = 0; i < grid.GetLength(0); i++)
             {
@@ -46,7 +47,7 @@ namespace Swinesweeper.GamePlay
             }
         }
 
-        public static void DisplayMineCount(Tile[,] grid, int x, int y)
+        private void DisplayMineCount(Tile[,] grid, int x, int y)
         {
             grid[x, y].BackColor = Color.Gray;
             grid[x, y].LblMineCount.Location = new Point(2, 2);

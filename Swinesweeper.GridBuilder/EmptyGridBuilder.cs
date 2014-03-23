@@ -1,4 +1,5 @@
-﻿using Swinesweeper.GameModeFactory.Settings;
+﻿using System.Windows.Forms;
+using Swinesweeper.GameModeFactory;
 using Swinesweeper.GamePlay;
 using Swinesweeper.GridBuilder.Interfaces;
 using System;
@@ -20,13 +21,14 @@ namespace Swinesweeper.GridBuilder
 
             int counter = tileGrid.Length / (int)gridSize;
 
+            Tile.Grid = tileGrid;
+
             for (int i = 0; i < counter; i++)
             {
                 for (int j = 0; j < counter; j++)
                 {
                     var tile = new Tile
                         {
-                            Grid = tileGrid,    //stop this bloat make it static
                             GridPositonX = i,
                             GridPositionY = j,
                         };

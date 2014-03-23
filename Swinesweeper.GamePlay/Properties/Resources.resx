@@ -121,7 +121,4 @@
   <data name="pig_mine" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pig_mine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Pig_Oinking_Twice" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pig_Oinking_Twice.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
 </root>

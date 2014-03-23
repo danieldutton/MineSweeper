@@ -59,5 +59,14 @@ namespace Swinesweeper.Presentation.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Pig_Oinking_Twice {
+            get {
+                return ResourceManager.GetStream("Pig_Oinking_Twice", resourceCulture);
+            }
+        }
     }
 }

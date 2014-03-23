@@ -9,7 +9,9 @@
         int GridPositionY { get; set; }
 
         void SelectTile();
-        void AddFlagToTile();
-        void RemoveFlagFromTile();
+        void AddFlag();
+        void RemoveFlag();
+
+        //add final methods to this interface
     }
 }

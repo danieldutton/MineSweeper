@@ -1,7 +1,8 @@
-﻿using Swinesweeper.GameModeFactory.Settings;
+﻿using Swinesweeper.GameModeFactory;
 using Swinesweeper.GamePlay;
 using Swinesweeper.GridBuilder.Interfaces;
 using Swinesweeper.Utilities.Interfaces;
+using System;
 
 namespace Swinesweeper.GridBuilder
 {
@@ -15,9 +16,11 @@ namespace Swinesweeper.GridBuilder
             _randomNumberGenerator = randomNumberGenerator;
         }
 
-        public Tile[,] MineTheGrid(Tile[,] grid, DifficultyLevel gameMode, GridSize gridSize)
+        public Tile[,] MineTheGrid(Tile[,] grid, DifficultyLevel difficultyLevel, GridSize gridSize)
         {
-            for (int i = 0; i < (int) gameMode; i++)
+            if(grid == null) throw new ArgumentNullException("grid");
+
+            for (int i = 0; i < (int) difficultyLevel; i++)
                 ExtractAMineFreeTile(grid, gridSize);
 
             return grid;

@@ -1,4 +1,4 @@
-﻿using Swinesweeper.GameModeFactory.Settings;
+﻿using Swinesweeper.GameModeFactory;
 using System.Windows.Forms;
 
 namespace Swinesweeper.GridBuilder.Interfaces
