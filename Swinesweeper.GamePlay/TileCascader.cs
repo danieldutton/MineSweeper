@@ -3,7 +3,7 @@ using Swinesweeper.GamePlay.Interfaces;
 
 namespace Swinesweeper.GamePlay
 {
-    public class TileCascader : ITileCascader 
+    public class TileCascader : ITileCascader
     {
         public void CascadeTile(Tile[,] grid, int x, int y)
         {
@@ -49,7 +49,7 @@ namespace Swinesweeper.GamePlay
 
         private void DisplayMineCount(Tile[,] grid, int x, int y)
         {
-            grid[x, y].BackColor = Color.Gray;
+            grid[x, y].BackColor = Color.SlateGray;
             grid[x, y].LblMineCount.Location = new Point(2, 2);
             grid[x, y].LblMineCount.Visible = true;
             grid[x, y].LblMineCount.ForeColor = Color.White;

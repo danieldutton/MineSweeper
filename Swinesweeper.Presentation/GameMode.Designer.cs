@@ -112,33 +112,33 @@
             // _lblBeginner
             // 
             this._lblBeginner.AutoSize = true;
-            this._lblBeginner.Font = new System.Drawing.Font("Tw Cen MT Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblBeginner.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblBeginner.ForeColor = System.Drawing.Color.SaddleBrown;
-            this._lblBeginner.Location = new System.Drawing.Point(3, 115);
+            this._lblBeginner.Location = new System.Drawing.Point(3, 119);
             this._lblBeginner.Name = "_lblBeginner";
-            this._lblBeginner.Size = new System.Drawing.Size(68, 24);
+            this._lblBeginner.Size = new System.Drawing.Size(63, 18);
             this._lblBeginner.TabIndex = 13;
             this._lblBeginner.Text = "Beginner";
             // 
             // _lblNormal
             // 
             this._lblNormal.AutoSize = true;
-            this._lblNormal.Font = new System.Drawing.Font("Tw Cen MT Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblNormal.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblNormal.ForeColor = System.Drawing.Color.SaddleBrown;
-            this._lblNormal.Location = new System.Drawing.Point(98, 115);
+            this._lblNormal.Location = new System.Drawing.Point(98, 119);
             this._lblNormal.Name = "_lblNormal";
-            this._lblNormal.Size = new System.Drawing.Size(57, 24);
+            this._lblNormal.Size = new System.Drawing.Size(52, 18);
             this._lblNormal.TabIndex = 13;
             this._lblNormal.Text = "Normal";
             // 
             // _lblAdvanced
             // 
             this._lblAdvanced.AutoSize = true;
-            this._lblAdvanced.Font = new System.Drawing.Font("Tw Cen MT Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblAdvanced.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblAdvanced.ForeColor = System.Drawing.Color.SaddleBrown;
-            this._lblAdvanced.Location = new System.Drawing.Point(181, 115);
+            this._lblAdvanced.Location = new System.Drawing.Point(181, 119);
             this._lblAdvanced.Name = "_lblAdvanced";
-            this._lblAdvanced.Size = new System.Drawing.Size(73, 24);
+            this._lblAdvanced.Size = new System.Drawing.Size(68, 18);
             this._lblAdvanced.TabIndex = 13;
             this._lblAdvanced.Text = "Advanced";
             // 

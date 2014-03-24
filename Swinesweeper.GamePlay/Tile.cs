@@ -69,7 +69,6 @@ namespace Swinesweeper.GamePlay
 
         public void RemoveTile()
         {
-            BackColor = Color.White;
             IsCleared = true;
             TileCount--;
             OnTileClear(new TileClearEventArgs(Grid, GridPositonX, GridPositionY));

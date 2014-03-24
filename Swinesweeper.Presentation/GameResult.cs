@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace Swinesweeper.Presentation
 {
@@ -8,9 +9,16 @@ namespace Swinesweeper.Presentation
 
         public GameResult(bool hasWon)
         {
-            _hasWon = hasWon;
-            
+            _hasWon = hasWon;           
             InitializeComponent();
+            ColourFormBackground();
+        }
+
+        private void ColourFormBackground()
+        {
+            const string colour = "#f2d78b";
+
+            BackColor = ColorTranslator.FromHtml(colour);
         }
 
         private void GameResult_Load(object sender, System.EventArgs e)

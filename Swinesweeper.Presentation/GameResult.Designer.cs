@@ -57,9 +57,11 @@
             // _lblResultsText
             // 
             this._lblResultsText.AutoSize = true;
+            this._lblResultsText.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblResultsText.ForeColor = System.Drawing.Color.Maroon;
             this._lblResultsText.Location = new System.Drawing.Point(12, 13);
             this._lblResultsText.Name = "_lblResultsText";
-            this._lblResultsText.Size = new System.Drawing.Size(10, 13);
+            this._lblResultsText.Size = new System.Drawing.Size(11, 13);
             this._lblResultsText.TabIndex = 2;
             this._lblResultsText.Text = "-";
             // 

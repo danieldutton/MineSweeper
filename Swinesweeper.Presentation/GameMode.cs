@@ -19,7 +19,7 @@ namespace Swinesweeper.Presentation
             _gameModeFactory = gameModeFactory;
 
             InitializeComponent(); 
-            ColourBackground();
+            ColourFormBackground();
             InitGameModes();
         }
 
@@ -30,7 +30,7 @@ namespace Swinesweeper.Presentation
             _radioBtnAdvanced.Tag = DifficultyLevel.Advanced;
         }
 
-        private void ColourBackground()
+        private void ColourFormBackground()
         {
             const string colour = "#f2d78b";
 

@@ -67,22 +67,22 @@
             // _lblFlags
             // 
             this._lblFlags.AutoSize = true;
-            this._lblFlags.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblFlags.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblFlags.ForeColor = System.Drawing.Color.Maroon;
             this._lblFlags.Location = new System.Drawing.Point(-1, 3);
             this._lblFlags.Name = "_lblFlags";
-            this._lblFlags.Size = new System.Drawing.Size(41, 16);
+            this._lblFlags.Size = new System.Drawing.Size(43, 16);
             this._lblFlags.TabIndex = 2;
             this._lblFlags.Text = "Flags:";
             // 
             // _lblFlagCount
             // 
             this._lblFlagCount.AutoSize = true;
-            this._lblFlagCount.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblFlagCount.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblFlagCount.ForeColor = System.Drawing.Color.Maroon;
-            this._lblFlagCount.Location = new System.Drawing.Point(36, 3);
+            this._lblFlagCount.Location = new System.Drawing.Point(41, 3);
             this._lblFlagCount.Name = "_lblFlagCount";
-            this._lblFlagCount.Size = new System.Drawing.Size(14, 16);
+            this._lblFlagCount.Size = new System.Drawing.Size(15, 16);
             this._lblFlagCount.TabIndex = 3;
             this._lblFlagCount.Text = "0";
             // 
