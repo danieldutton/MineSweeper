@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace Swinesweeper.UnitTests.GridBuilder
+namespace Swinesweeper.IntegrationTests.GridBuilder
 {
     [TestFixture]
     public class GridControlBuilder_Should

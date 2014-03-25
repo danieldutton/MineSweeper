@@ -25,11 +25,11 @@ namespace Swinesweeper.Presentation
             _tileCascader = tileCascader;
             
             InitializeComponent();
-            ColourFormBackground();
+            ColourBackground();
             SubscribeToTileEvents();
         }
 
-        private void ColourFormBackground()
+        private void ColourBackground()
         {
             const string colour = "#f2d78b";
 

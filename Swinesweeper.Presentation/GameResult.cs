@@ -11,10 +11,10 @@ namespace Swinesweeper.Presentation
         {
             _hasWon = hasWon;           
             InitializeComponent();
-            ColourFormBackground();
+            ColourBackground();
         }
 
-        private void ColourFormBackground()
+        private void ColourBackground()
         {
             const string colour = "#f2d78b";
 

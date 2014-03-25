@@ -7,7 +7,7 @@ using Swinesweeper.Utilities;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Swinesweeper.IntegrationTests.GridTools
+namespace Swinesweeper.IntegrationTests.GridBuilder
 {
     [TestFixture]
     public class GridMiner_Should
@@ -15,7 +15,6 @@ namespace Swinesweeper.IntegrationTests.GridTools
         private IGridMiner _gridMiner;
 
         private EmptyGridBuilder _emptyGridBuilder;
-
 
         [SetUp]
         public void Init()
