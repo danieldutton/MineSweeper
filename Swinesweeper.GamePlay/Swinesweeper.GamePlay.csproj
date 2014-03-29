@@ -40,6 +40,7 @@
     <Compile Include="EventArg\TileClearEventArgs.cs" />
     <Compile Include="Interfaces\IPigCounter.cs" />
     <Compile Include="Interfaces\ITileCascader.cs" />
+    <Compile Include="Interfaces\ITilePainter.cs" />
     <Compile Include="PigCounter.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -52,6 +53,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="TileCascader.cs" />
+    <Compile Include="TilePainter.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">

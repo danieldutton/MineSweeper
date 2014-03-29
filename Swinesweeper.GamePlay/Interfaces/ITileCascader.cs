@@ -4,6 +4,6 @@
     {
         void CascadeTile(Tile[,] grid, int x, int y);
 
-        void CascadeAll(Tile[,] grid);
+        Tile[,] CascadeAll(Tile[,] grid);
     }
 }

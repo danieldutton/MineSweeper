@@ -23,7 +23,8 @@ namespace Swinesweeper.Presentation
             ITypeCreator typeCreator = new TypeCreator();
             IGameModeFactory gameModeFactory = new GameModeFactory.GameModeFactory(typeCreator);
             
-            ITileCascader tileCascader = new TileCascader();
+            ITilePainter tilePainter = new TilePainter();
+            ITileCascader tileCascader = new TileCascader(tilePainter);
 
             //gameboards
             var gameBoard = new GameBoard(tileCascader);

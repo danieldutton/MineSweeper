@@ -31,7 +31,7 @@ namespace Swinesweeper.IntegrationTests.GridBuilder
             _emptyGridBuilder = new EmptyGridBuilder();
             _gridControlBuilder = new GridControlBuilder();
             _pigCounter = new PigCounter();
-            _gridPainter = new GridPainter(_emptyGridBuilder, _gridControlBuilder, _gridMiner, pigCounter:);
+            _gridPainter = new GridPainter(_emptyGridBuilder, _gridControlBuilder, _gridMiner, _pigCounter);
         }
 
         [Test]

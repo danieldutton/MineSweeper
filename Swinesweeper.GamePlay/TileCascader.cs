@@ -1,15 +1,25 @@
-﻿using System.Drawing;
-using Swinesweeper.GamePlay.Interfaces;
+﻿using Swinesweeper.GamePlay.Interfaces;
 
 namespace Swinesweeper.GamePlay
 {
     public class TileCascader : ITileCascader
     {
+        private readonly ITilePainter _tilePainter;
+
+        public TileCascader()
+        {
+        }
+
+        public TileCascader(ITilePainter tilePainter)
+        {
+            _tilePainter = tilePainter;
+        }
+
         public void CascadeTile(Tile[,] grid, int x, int y)
         {
             Tile cell = grid[x, y];
             cell.IsCleared = true;
-            DisplayMineCount(grid, x, y);
+            _tilePainter.DisplayMineCount(grid, x, y);
 
             if (cell.IsMined)
                 return;
@@ -27,14 +37,14 @@ namespace Swinesweeper.GamePlay
                     Tile neighbour = grid[i, j];
                     if (!neighbour.IsCleared)
                     {
-                        DisplayMineCount(grid,i, j);
+                        _tilePainter.DisplayMineCount(grid,i, j);
                         CascadeTile(grid, i, j);
                         Tile.TileCount--;
                     }
                 }
         }
 
-        public void CascadeAll(Tile[,] grid)
+        public Tile[,] CascadeAll(Tile[,] grid)
         {
             for (int i = 0; i < grid.GetLength(0); i++)
             {
@@ -42,19 +52,11 @@ namespace Swinesweeper.GamePlay
                 {
                     if (grid[i, j].IsMined)
                         grid[i, j].Image = Properties.Resources.pig_mine;
-                    DisplayMineCount(grid, i, j);
+                    
+                    _tilePainter.DisplayMineCount(grid, i, j);
                 }
             }
-        }
-
-        private void DisplayMineCount(Tile[,] grid, int x, int y)
-        {
-            grid[x, y].BackColor = Color.SlateGray;
-            grid[x, y].LblMineCount.Location = new Point(2, 2);
-            grid[x, y].LblMineCount.Visible = true;
-            grid[x, y].LblMineCount.ForeColor = Color.White;
-            grid[x, y].LblMineCount.BackColor = Color.Transparent;
-            grid[x, y].Controls.Add(grid[x, y].LblMineCount);
-        }
+            return grid;
+        }        
     }
 }

@@ -51,6 +51,7 @@
     <Compile Include="GridBuilder\GridControlBuilder_Should.cs" />
     <Compile Include="GridBuilder\GridMiner_Should.cs" />
     <Compile Include="GridBuilder\GridPainter_Should.cs" />
+    <Compile Include="Mother.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

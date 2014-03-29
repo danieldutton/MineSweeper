@@ -10,6 +10,7 @@ namespace Swinesweeper.Presentation
         public GameResult(bool hasWon)
         {
             _hasWon = hasWon;           
+            
             InitializeComponent();
             ColourBackground();
         }

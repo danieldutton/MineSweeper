@@ -58,7 +58,7 @@ namespace Swinesweeper.GamePlay
             base.OnClick(e);   
         }
 
-        public void SelectTile()
+        private void SelectTile()
         {
             if (IsMined && !IsFlagged)
                 OnMineHit(new MineHitEventArgs(Grid));    
@@ -67,31 +67,34 @@ namespace Swinesweeper.GamePlay
                 RemoveTile();    
         }
 
-        public void RemoveTile()
+        private void RemoveTile()
         {
             IsCleared = true;
             TileCount--;
             OnTileClear(new TileClearEventArgs(Grid, GridPositonX, GridPositionY));
         }
 
-        public void AddFlag()
+        private void AddFlag()
         {
-            if (IsCleared || IsFlagged) return;
-            if (FlagCount == 0) return;
-            
-            _rightClickCount = 2;
-            
-            BackColor = Color.YellowGreen;
-            IsFlagged = true;
-            FlagCount--;
+            if (!IsCleared && !IsFlagged)
+            {
+                if (FlagCount != 0)
+                {
+                    _rightClickCount = 2;
 
-            if (IsMined)
-                CorrectFlagCount++;
+                    BackColor = Color.YellowGreen;
+                    IsFlagged = true;
+                    FlagCount--;
 
-            OnFlagPlaced();
+                    if (IsMined)
+                        CorrectFlagCount++;
+
+                    OnFlagPlaced();
+                }
+            }
         }
 
-        public void RemoveFlag()
+        private void RemoveFlag()
         {
             if (IsCleared == false && IsFlagged)
             {
