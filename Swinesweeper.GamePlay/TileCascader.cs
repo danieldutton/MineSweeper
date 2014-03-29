@@ -59,7 +59,7 @@ namespace Swinesweeper.GamePlay
                     if (grid[i, j].IsMined)
                         _tilePainter.PaintMine(grid, i, j);
 
-                    _tilePainter.PaintMine(grid, i, j);
+                    _tilePainter.PaintMineCount(grid, i, j);
                 }
             }
             return grid;
