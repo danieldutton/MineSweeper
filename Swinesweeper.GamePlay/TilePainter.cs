@@ -5,7 +5,12 @@ namespace Swinesweeper.GamePlay
 {
     public class TilePainter : ITilePainter
     {
-        public void DisplayMineCount(Tile[,] grid, int x, int y)
+        public void PaintMine(Tile[,] grid, int x, int y)
+        {
+            grid[x, y].Image = Properties.Resources.pig_mine;
+        }
+
+        public void PaintMineCount(Tile[,] grid, int x, int y)
         {
             grid[x, y].BackColor = Color.SlateGray;
             grid[x, y].IsCleared = true;

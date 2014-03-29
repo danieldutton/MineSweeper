@@ -2,6 +2,8 @@
 {
     public interface ITilePainter
     {
-        void DisplayMineCount(Tile[,] grid, int x, int y);
+        void PaintMine(Tile[,] grid, int x, int y);
+
+        void PaintMineCount(Tile[,] grid, int x, int y);
     }
 }
