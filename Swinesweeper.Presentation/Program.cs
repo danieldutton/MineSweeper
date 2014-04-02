@@ -14,7 +14,7 @@ namespace Swinesweeper.Presentation
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        public static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -27,15 +27,14 @@ namespace Swinesweeper.Presentation
             ITileCascader tileCascader = new TileCascader(tilePainter);
 
             //gameboards
-            var gameBoard = new GameBoard(tileCascader);
-            var optionsForm = new GameMode(gameModeFactory);
+            var gameBoardForm = new GameBoard(tileCascader);
+            var gameModeForm = new GameMode(gameModeFactory);
             
-            gameBoard.SubscribeToGameModeConfirmedEvent(optionsForm);
+            gameBoardForm.SubscribeToGameModeConfirmedEvent(gameModeForm);
 
-            optionsForm.ShowDialog();
+            gameModeForm.ShowDialog();
             
-            Application.Run(gameBoard);
+            Application.Run(gameBoardForm);
         }
-
     }
 }

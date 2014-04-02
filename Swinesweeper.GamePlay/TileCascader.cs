@@ -7,10 +7,6 @@ namespace Swinesweeper.GamePlay
     {
         private readonly ITilePainter _tilePainter;
 
-        public TileCascader()
-        {
-        }
-
         public TileCascader(ITilePainter tilePainter)
         {
             _tilePainter = tilePainter;
@@ -40,8 +36,8 @@ namespace Swinesweeper.GamePlay
                         if (!neighbour.IsCleared)
                         {
                             _tilePainter.PaintMineCount(grid, i, j);
-                            CascadeTile(grid, i, j);
                             Tile.TileCount--;
+                            CascadeTile(grid, i, j);                            
                         }
                     }
                 }

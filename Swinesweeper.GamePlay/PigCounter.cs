@@ -1,4 +1,5 @@
 ﻿using Swinesweeper.GamePlay.Interfaces;
+using System;
 
 namespace Swinesweeper.GamePlay
 {
@@ -6,6 +7,8 @@ namespace Swinesweeper.GamePlay
     {
         public void CountPigs(Tile[,] grid)
         {
+            if(grid == null) throw new ArgumentNullException("grid");
+
             for (int i = 0; i < grid.GetLength(0); i++)
             {
                 for (int j = 0; j < grid.GetLength(1); j++)

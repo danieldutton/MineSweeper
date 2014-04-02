@@ -99,6 +99,7 @@ namespace Swinesweeper.GamePlay
             if (IsCleared == false && IsFlagged)
             {
                 _rightClickCount = 1;
+
                 BackColor = Color.SaddleBrown;              
                 IsFlagged = false;
                 FlagCount++;

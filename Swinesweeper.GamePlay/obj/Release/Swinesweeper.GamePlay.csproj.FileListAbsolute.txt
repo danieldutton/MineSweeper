@@ -1,0 +1,7 @@
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.GamePlay\bin\Release\Swinesweeper.GamePlay.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.GamePlay\bin\Release\Swinesweeper.GamePlay.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.GamePlay\obj\Release\Swinesweeper.GamePlay.Properties.Resources.resources
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.GamePlay\obj\Release\Swinesweeper.GamePlay.csproj.GenerateResource.Cache
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.GamePlay\obj\Release\Swinesweeper.GamePlay.dll
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.GamePlay\obj\Release\Swinesweeper.GamePlay.pdb
+C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.GamePlay\obj\Release\Swinesweeper.GamePlay.csprojResolveAssemblyReference.cache

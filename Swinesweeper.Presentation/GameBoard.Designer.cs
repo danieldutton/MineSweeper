@@ -32,6 +32,8 @@
             this._panelGrid = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this._panelTimer = new System.Windows.Forms.Panel();
+            this._lblTimeValue = new System.Windows.Forms.Label();
+            this._lblTimer = new System.Windows.Forms.Label();
             this._lblFlags = new System.Windows.Forms.Label();
             this._lblFlagCount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,6 +59,8 @@
             // 
             // _panelTimer
             // 
+            this._panelTimer.Controls.Add(this._lblTimeValue);
+            this._panelTimer.Controls.Add(this._lblTimer);
             this._panelTimer.Controls.Add(this._lblFlags);
             this._panelTimer.Controls.Add(this._lblFlagCount);
             this._panelTimer.Location = new System.Drawing.Point(12, 91);
@@ -64,12 +68,34 @@
             this._panelTimer.Size = new System.Drawing.Size(314, 24);
             this._panelTimer.TabIndex = 8;
             // 
+            // _lblTimeValue
+            // 
+            this._lblTimeValue.AutoSize = true;
+            this._lblTimeValue.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblTimeValue.ForeColor = System.Drawing.Color.Maroon;
+            this._lblTimeValue.Location = new System.Drawing.Point(281, 3);
+            this._lblTimeValue.Name = "_lblTimeValue";
+            this._lblTimeValue.Size = new System.Drawing.Size(14, 14);
+            this._lblTimeValue.TabIndex = 5;
+            this._lblTimeValue.Text = "0";
+            // 
+            // _lblTimer
+            // 
+            this._lblTimer.AutoSize = true;
+            this._lblTimer.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblTimer.ForeColor = System.Drawing.Color.Maroon;
+            this._lblTimer.Location = new System.Drawing.Point(237, 3);
+            this._lblTimer.Name = "_lblTimer";
+            this._lblTimer.Size = new System.Drawing.Size(38, 14);
+            this._lblTimer.TabIndex = 4;
+            this._lblTimer.Text = "Time:";
+            // 
             // _lblFlags
             // 
             this._lblFlags.AutoSize = true;
             this._lblFlags.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblFlags.ForeColor = System.Drawing.Color.Maroon;
-            this._lblFlags.Location = new System.Drawing.Point(-1, 3);
+            this._lblFlags.Location = new System.Drawing.Point(0, 3);
             this._lblFlags.Name = "_lblFlags";
             this._lblFlags.Size = new System.Drawing.Size(43, 16);
             this._lblFlags.TabIndex = 2;
@@ -113,6 +139,8 @@
         private System.Windows.Forms.Panel _panelTimer;
         private System.Windows.Forms.Label _lblFlags;
         private System.Windows.Forms.Label _lblFlagCount;
+        private System.Windows.Forms.Label _lblTimeValue;
+        private System.Windows.Forms.Label _lblTimer;
 
     }
 }
