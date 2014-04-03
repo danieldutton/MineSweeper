@@ -4,33 +4,18 @@ namespace Swinesweeper.UnitTests
 {
     public static class Mother
     {
-        public static Tile[,] GetTiledGrid_10_by_10_NoMines()
+        public static Tile[,] GetTestGrid(int xDim, int yDim)
         {
-            var grid = new Tile[10,10];
+            var grid = new Tile[xDim, yDim];
 
-            for (int i = 0; i < grid.GetLength(0); i++)
+            for (int i = 0; i < xDim; i++)
             {
-                for (int j = 0; j < grid.GetLength(1); j++)
+                for (int j = 0; j < yDim; j++)
                 {
-                    grid[i, j] = new Tile();    
+                    var tile = new Tile();
+
+                    grid[i, j] = tile;
                 }
-            }
-            return grid;
-        }
-
-        public static Tile[,] GetTiledGrid_10_by_10_With_5_Mines()
-        {
-            var grid = new Tile[10, 10];
-
-            for (int i = 0; i < grid.GetLength(0); i++)
-            {
-                for (int j = 0; j < grid.GetLength(1); j++)
-                {
-                    grid[i, j] = new Tile();
-
-                    if (i%2 == 0)
-                        grid[i, j].IsMined = true;
-                }//errors in here.  Only ten tiles are being populated
             }
             return grid;
         }

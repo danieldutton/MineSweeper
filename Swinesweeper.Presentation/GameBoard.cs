@@ -146,14 +146,18 @@ namespace Swinesweeper.Presentation
             
             _tileCascader.CascadeAll(e.Grid);
             
-            var gameResultForm = new GameResult(hasWon: false,secondsTaken: _secondsPassed);
+            var gameResultForm = new GameResult(hasWon: false, secondsTaken: _secondsPassed);
             gameResultForm.ShowDialog();
         }
 
         private void Timer_Tick(object sender, EventArgs e)
         {
+            const int maxTimeDisplayValue = 1000;
+
             _secondsPassed++;
-            _lblTimeValue.Text = _secondsPassed.ToString();
+
+            if(_secondsPassed < maxTimeDisplayValue)
+                _lblTimeValue.Text = _secondsPassed.ToString();
         }
 
         private void HasWon()

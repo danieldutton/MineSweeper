@@ -1,0 +1,39 @@
+﻿Unit Testing Notes
+------------------
+
+PigCounter.cs
+-------------
+There are too many possible mine count combinations to test for.
+The following testing strategies were therefore adopted on a 5x5 size grid:-
+
+X = Mine
+* = Tile to be tested
+
+1.  Each Corner and all tiles touching
+-------------------------------------- 
+
+[X][*][ ][*][X]
+[*][*][ ][*][*]
+[ ][ ][ ][ ][ ]
+[*][*][ ][*][*]
+[X][*][ ][*][X]
+ 
+2. Mine counts from 1 - 8 where 8 is the maximum possible mine count
+---------------------------------------------------------
+
+Touching 1			Touching 2			Touching 3			Touching 4			
+
+[X][*][ ][ ][ ]		[X][X][ ][ ][ ]		[X][X][X][ ][ ]		[X][X][X][ ][ ]		
+[*][*][ ][ ][ ]		[*][*][ ][ ][ ]		[ ][*][ ][ ][ ]		[X][*][ ][ ][ ]
+[ ][ ][ ][ ][ ]		[ ][ ][ ][ ][ ]		[ ][ ][ ][ ][ ]		[ ][ ][ ][ ][ ]
+[ ][ ][ ][ ][ ]		[ ][ ][ ][ ][ ]		[ ][ ][ ][ ][ ]		[ ][ ][ ][ ][ ]
+[ ][ ][ ][ ][ ]		[ ][ ][ ][ ][ ]		[ ][ ][ ][ ][ ]		[ ][ ][ ][ ][ ]
+
+Touching 5			Touching 6			Touching 7			Touching 8			
+
+[X][X][X][ ][ ]		[X][X][X][ ][ ]		[X][X][X][ ][ ]		[X][X][X][ ][ ]		
+[X][*][ ][ ][ ]		[X][*][ ][ ][ ]		[X][*][ ][ ][ ]		[X][*][X][ ][ ]
+[X][ ][ ][ ][ ]		[X][X][ ][ ][ ]		[X][X][X][ ][ ]		[X][X][X][ ][ ]
+[ ][ ][ ][ ][ ]		[ ][ ][ ][ ][ ]		[ ][ ][ ][ ][ ]		[ ][ ][ ][ ][ ]
+[ ][ ][ ][ ][ ]		[ ][ ][ ][ ][ ]		[ ][ ][ ][ ][ ]		[ ][ ][ ][ ][ ]
+
