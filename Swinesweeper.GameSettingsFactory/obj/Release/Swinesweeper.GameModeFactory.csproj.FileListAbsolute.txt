@@ -5,3 +5,10 @@ C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.GameSettingsFactory\bin
 C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.GameSettingsFactory\obj\Release\Swinesweeper.GameModeFactory.csprojResolveAssemblyReference.cache
 C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.GameSettingsFactory\obj\Release\Swinesweeper.GameModeFactory.dll
 C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.GameSettingsFactory\obj\Release\Swinesweeper.GameModeFactory.pdb
+C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GameSettingsFactory\bin\Release\Swinesweeper.GameModeFactory.dll
+C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GameSettingsFactory\bin\Release\Swinesweeper.GameModeFactory.pdb
+C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GameSettingsFactory\bin\Release\Swinesweeper.Utilities.dll
+C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GameSettingsFactory\bin\Release\Swinesweeper.Utilities.pdb
+C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GameSettingsFactory\obj\Release\Swinesweeper.GameModeFactory.csprojResolveAssemblyReference.cache
+C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GameSettingsFactory\obj\Release\Swinesweeper.GameModeFactory.dll
+C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GameSettingsFactory\obj\Release\Swinesweeper.GameModeFactory.pdb

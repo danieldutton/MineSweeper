@@ -11,3 +11,16 @@ C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.GridBuilder\obj\Release
 C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.GridBuilder\obj\Release\Swinesweeper.GridBuilder.csproj.GenerateResource.Cache
 C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.GridBuilder\obj\Release\Swinesweeper.GridBuilder.dll
 C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.GridBuilder\obj\Release\Swinesweeper.GridBuilder.pdb
+C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GridBuilder\bin\Release\Swinesweeper.GridBuilder.dll
+C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GridBuilder\bin\Release\Swinesweeper.GridBuilder.pdb
+C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GridBuilder\bin\Release\Swinesweeper.GameModeFactory.dll
+C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GridBuilder\bin\Release\Swinesweeper.GamePlay.dll
+C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GridBuilder\bin\Release\Swinesweeper.Utilities.dll
+C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GridBuilder\bin\Release\Swinesweeper.GamePlay.pdb
+C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GridBuilder\bin\Release\Swinesweeper.GameModeFactory.pdb
+C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GridBuilder\bin\Release\Swinesweeper.Utilities.pdb
+C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GridBuilder\obj\Release\Swinesweeper.GridBuilder.csprojResolveAssemblyReference.cache
+C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GridBuilder\obj\Release\Swinesweeper.GridBuilder.Properties.Resources.resources
+C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GridBuilder\obj\Release\Swinesweeper.GridBuilder.csproj.GenerateResource.Cache
+C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GridBuilder\obj\Release\Swinesweeper.GridBuilder.dll
+C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GridBuilder\obj\Release\Swinesweeper.GridBuilder.pdb

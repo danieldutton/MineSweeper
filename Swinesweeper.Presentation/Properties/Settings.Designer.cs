@@ -22,5 +22,45 @@ namespace Swinesweeper.Presentation.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("999999")]
+        public int Beginner {
+            get {
+                return ((int)(this["Beginner"]));
+            }
+            set {
+                this["Beginner"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("999999")]
+        public int Normal {
+            get {
+                return ((int)(this["Normal"]));
+            }
+            set {
+                this["Normal"] = value;
+            }
+        }
+        
+        /// <summary>
+        /// Records the fastest game times for each game mode
+        /// </summary>
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsDescriptionAttribute("Records the fastest game times for each game mode")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("999999")]
+        public int Advanced {
+            get {
+                return ((int)(this["Advanced"]));
+            }
+            set {
+                this["Advanced"] = value;
+            }
+        }
     }
 }

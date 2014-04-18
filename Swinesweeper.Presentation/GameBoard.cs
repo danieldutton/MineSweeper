@@ -100,14 +100,14 @@ namespace Swinesweeper.Presentation
 
             if (ChosenGameMode.GridSize == GridSize.Normal)
             {
-                _lblTimer.Location = new Point(Width - 125, lblHeight);
-                _lblTimeValue.Location = new Point(Width - 90, lblHeight);
+                _lblTimer.Location = new Point(Width - 105, lblHeight);
+                _lblTimeValue.Location = new Point(Width - 70, lblHeight);
             }
 
             if (ChosenGameMode.GridSize == GridSize.Advanced)
             {
-                _lblTimer.Location = new Point(Width - 145, lblHeight);
-                _lblTimeValue.Location = new Point(Width - 110, lblHeight);
+                _lblTimer.Location = new Point(Width - 117, lblHeight);
+                _lblTimeValue.Location = new Point(Width - 82, lblHeight);
             }
         }
 
@@ -146,7 +146,7 @@ namespace Swinesweeper.Presentation
             
             _tileCascader.CascadeAll(e.Grid);
             
-            var gameResultForm = new GameResult(hasWon: false, secondsTaken: _secondsPassed);
+            var gameResultForm = new GameResult(hasWon: false, secondsTaken: _secondsPassed,difficultyLevel: ChosenGameMode.DifficultyLevel);
             gameResultForm.ShowDialog();
         }
 
@@ -166,7 +166,7 @@ namespace Swinesweeper.Presentation
             {
                 _timer.Stop();
 
-                var gameResultForm = new GameResult(hasWon: true, secondsTaken: _secondsPassed);
+                var gameResultForm = new GameResult(hasWon: true, secondsTaken: _secondsPassed, difficultyLevel: ChosenGameMode.DifficultyLevel);
                 gameResultForm.ShowDialog();
             }    
         }

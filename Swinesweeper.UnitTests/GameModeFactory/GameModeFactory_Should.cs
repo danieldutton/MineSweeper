@@ -48,7 +48,8 @@ namespace Swinesweeper.UnitTests.GameModeFactory
         {
             _sut.CreateInstance("Beginner");
 
-            _faketypeCreator.Verify(x => x.GetTypeInstance(It.IsAny<Type>()), Times.Once());
+            _faketypeCreator.Verify(x => x.GetTypeInstance(It.IsAny<Type>()), 
+                Times.Once());
         }
 
         [TearDown]

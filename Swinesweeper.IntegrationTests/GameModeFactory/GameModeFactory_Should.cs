@@ -51,8 +51,8 @@ namespace Swinesweeper.IntegrationTests.GameModeFactory
         {
             IGameMode result = _sut.CreateInstance(Beginner);
 
-            Assert.AreEqual(183, result.FormSize.X);
-            Assert.AreEqual(225, result.FormSize.Y);
+            Assert.AreEqual(202, result.FormSize.X);
+            Assert.AreEqual(335, result.FormSize.Y);
         }
 
         [Test]
@@ -60,7 +60,7 @@ namespace Swinesweeper.IntegrationTests.GameModeFactory
         {
             IGameMode result = _sut.CreateInstance(Beginner);
 
-            Assert.AreEqual(140, result.GridPanelSize.X);
+            Assert.AreEqual(160, result.GridPanelSize.X);
             Assert.AreEqual(100, result.GridPanelSize.Y);
         }
 
@@ -93,8 +93,8 @@ namespace Swinesweeper.IntegrationTests.GameModeFactory
         {
             IGameMode result = _sut.CreateInstance(Normal);
 
-            Assert.AreEqual(295, result.FormSize.X);
-            Assert.AreEqual(340, result.FormSize.Y);
+            Assert.AreEqual(327, result.FormSize.X);
+            Assert.AreEqual(469, result.FormSize.Y);
         }
 
         [Test]
@@ -102,7 +102,7 @@ namespace Swinesweeper.IntegrationTests.GameModeFactory
         {
             IGameMode result = _sut.CreateInstance(Normal);
 
-            Assert.AreEqual(240, result.GridPanelSize.X);
+            Assert.AreEqual(275, result.GridPanelSize.X);
             Assert.AreEqual(100, result.GridPanelSize.Y);
         }
 
@@ -135,8 +135,8 @@ namespace Swinesweeper.IntegrationTests.GameModeFactory
         {
             IGameMode result = _sut.CreateInstance(Advanced);
 
-            Assert.AreEqual(359, result.FormSize.X);
-            Assert.AreEqual(436, result.FormSize.Y);
+            Assert.AreEqual(399, result.FormSize.X);
+            Assert.AreEqual(530, result.FormSize.Y);
         }
 
         [Test]
@@ -144,7 +144,7 @@ namespace Swinesweeper.IntegrationTests.GameModeFactory
         {
             IGameMode result = _sut.CreateInstance(Advanced);
 
-            Assert.AreEqual(314, result.GridPanelSize.X);
+            Assert.AreEqual(350, result.GridPanelSize.X);
             Assert.AreEqual(329, result.GridPanelSize.Y);
         }
 

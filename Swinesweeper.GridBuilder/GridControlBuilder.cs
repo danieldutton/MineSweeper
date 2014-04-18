@@ -7,10 +7,14 @@ namespace Swinesweeper.GridBuilder
 {
     public class GridControlBuilder : IGridControlBuilder
     {
-        public Control AddControlsToGrid<T>(T[,] controlsToAdd, Control control, GridSize gridSize) 
+        public Control AddControlsToGrid<T>(T[,] controlsToAdd, Control controlToPopulate, GridSize gridSize) 
             where T: Control
         {
-            gridSize = SetGridSizeBeginnerIfGridSizeUndefined(gridSize);
+            if(controlsToAdd == null) throw new ArgumentNullException("controlsToAdd");
+            if(controlToPopulate == null) throw new ArgumentNullException("controlToPopulate");
+
+            if (!Enum.IsDefined(typeof(GridSize), gridSize))
+                gridSize = GridSize.Beginner;
 
             int counter = (int) gridSize;
 
@@ -19,18 +23,10 @@ namespace Swinesweeper.GridBuilder
                 for (int j = 0; j < counter; j++)
                 {
                     if(controlsToAdd[i, j] != null)
-                        control.Controls.Add(controlsToAdd[i, j]);
+                        controlToPopulate.Controls.Add(controlsToAdd[i, j]);
                 }
             }
-            return control;
-        }
-
-        private GridSize SetGridSizeBeginnerIfGridSizeUndefined(GridSize gridSize)
-        {
-            if (!Enum.IsDefined(typeof(GridSize), gridSize))
-                gridSize = GridSize.Beginner;
-
-            return gridSize;
+            return controlToPopulate;
         }
     }
 }

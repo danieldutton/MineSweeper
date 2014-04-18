@@ -17,7 +17,7 @@ namespace Swinesweeper.UnitTests.GamePlay
         public void Init()
         {
             _sut = new PigCounter();
-            _testGrid = Mother.GetTestGrid(5, 5);
+            _testGrid = Mother.GetCustomTestGrid(5, 5);
         }
 
         [Test]
@@ -33,6 +33,7 @@ namespace Swinesweeper.UnitTests.GamePlay
         public void CountPigs_CountCorrectly_OneMine_TopLeftCorner_0_0()
         {
             _testGrid[0, 0] = new Tile { IsMined = true };
+            
             const string expected = "1";
                        
             _sut.CountPigs(_testGrid);
@@ -46,6 +47,7 @@ namespace Swinesweeper.UnitTests.GamePlay
         public void CountPigs_CountCorrectly_OneMine_TopRightCorner_0_4()
         {
             _testGrid[0, 4] = new Tile { IsMined = true };
+            
             const string expected = "1";
 
             _sut.CountPigs(_testGrid);
@@ -59,6 +61,7 @@ namespace Swinesweeper.UnitTests.GamePlay
         public void CountPigs_CountCorrectly_OneMine_BottomLeft_4_0()
         {
             _testGrid[4, 0] = new Tile { IsMined = true };
+            
             const string expected = "1";
 
             _sut.CountPigs(_testGrid);
@@ -72,6 +75,7 @@ namespace Swinesweeper.UnitTests.GamePlay
         public void CountPigs_CountCorrectly_OneMine_BottomRight_4_4()
         {
             _testGrid[4, 4] = new Tile { IsMined = true };
+           
             const string expected = "1";
 
             _sut.CountPigs(_testGrid);
@@ -83,13 +87,13 @@ namespace Swinesweeper.UnitTests.GamePlay
 
         #endregion
 
-
         #region Count Upwards
 
         [Test]
         public void CountPigs_CountCorrectly_1_Mine()
         {
             _testGrid[0, 0] = new Tile { IsMined = true };
+            
             const string expected = "1";
 
             _sut.CountPigs(_testGrid);

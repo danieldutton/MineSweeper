@@ -44,11 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GameModeFactory\GameModeFactory_Should.cs" />
-    <Compile Include="GamePlay\PigCounter_Should.cs" />
     <Compile Include="GamePlay\TileCascader_Should.cs" />
-    <Compile Include="GamePlay\Tile_Should.cs" />
-    <Compile Include="GridBuilder\EmptyGridBuilder_Should.cs" />
-    <Compile Include="GridBuilder\GridControlBuilder_Should.cs" />
     <Compile Include="GridBuilder\GridMiner_Should.cs" />
     <Compile Include="GridBuilder\GridPainter_Should.cs" />
     <Compile Include="Mother.cs" />
@@ -75,7 +71,10 @@
       <Name>Swinesweeper.Utilities</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -5,7 +5,7 @@ namespace Swinesweeper.GridBuilder.Interfaces
 {
     public interface IGridControlBuilder
     {
-        Control AddControlsToGrid<T>(T[,] controlsToAdd, Control control, GridSize gridSize)
+        Control AddControlsToGrid<T>(T[,] controlsToAdd, Control controlToPopulate, GridSize gridSize)
             where T : Control;
     }
 }

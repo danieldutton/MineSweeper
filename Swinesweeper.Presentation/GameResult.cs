@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Swinesweeper.GameModeFactory;
+using Swinesweeper.Presentation.Properties;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -10,6 +12,8 @@ namespace Swinesweeper.Presentation
 
         private readonly int _secondsTaken;
 
+        private readonly DifficultyLevel _difficultyLevel;
+
         public GameResult(bool hasWon)
         {
             _hasWon = hasWon;           
@@ -18,9 +22,11 @@ namespace Swinesweeper.Presentation
             ColourBackground();
         }
 
-        public GameResult(bool hasWon, int secondsTaken)
+        public GameResult(bool hasWon, int secondsTaken, 
+            DifficultyLevel difficultyLevel)
             :this(hasWon)
         {
+            _difficultyLevel = difficultyLevel;
             _secondsTaken = secondsTaken;
         }
 
@@ -35,7 +41,31 @@ namespace Swinesweeper.Presentation
         {
             _lblResultsText.Text = _hasWon ? "Congratulations you have won!" : "Sorry you lose..oink oink!";
 
-            _lblTimeTakenValue.Text = _hasWon ? _secondsTaken.ToString() + " Seconds" : "--";
+            _lblTimeTakenValue.Text = _hasWon ? _secondsTaken + " Seconds" : "--";
+
+            if (_hasWon)
+            {
+                SavePlayTime();
+                DisplayBestTime();
+            }         
+        }
+
+        private void SavePlayTime()
+        {
+            int fastestTime = (int)Settings.Default[_difficultyLevel.ToString()];
+
+            if (_secondsTaken < fastestTime)
+            {
+                Settings.Default[_difficultyLevel.ToString()] = _secondsTaken;
+                Settings.Default.Save();
+            }                
+        }
+
+        private void DisplayBestTime()
+        {
+            int bestTime = (int)Settings.Default[_difficultyLevel.ToString()];
+
+            _lblBestTimeValue.Text = bestTime + " Seconds";    
         }
 
         private void ExitGame_Click(object sender, EventArgs e)

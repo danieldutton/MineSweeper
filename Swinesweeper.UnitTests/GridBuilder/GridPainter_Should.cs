@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using Swinesweeper.GameModeFactory;
 using Swinesweeper.GameModeFactory.GameModes;
-using Swinesweeper.GameModeFactory.Interfaces;
+using Swinesweeper.GamePlay;
 using Swinesweeper.GamePlay.Interfaces;
 using Swinesweeper.GridBuilder;
 using Swinesweeper.GridBuilder.Interfaces;
@@ -45,56 +45,29 @@ namespace Swinesweeper.UnitTests.GridBuilder
         }
 
         [Test]
-        public void PaintGrid_CallMethod_GetSquaredGrid_ExactlyOnce()
+        public void PaintGrid_CallGetSquaredGrid_ExactlyOnce()
         {
-            IGameMode gameMode = new Beginner();
-            var control = new Control();
+            var beginnerStub = new Beginner();
+            _sut.PaintGrid(beginnerStub, new Control());
 
-            _sut.PaintGrid(gameMode, control);
-            _fakeGridBuilder.Verify(x => x.GetSquaredGrid(It.IsAny<GridSize>(),
-                It.IsAny<DifficultyLevel>()),
+            _fakeGridBuilder.Verify(x => x.GetSquaredGrid(It.IsAny<GridSize>(), 
+                It.IsAny<DifficultyLevel>()), 
                 Times.Exactly(2));
         }
 
         [Test]
-        public void PaintGrid_CallMethod_GetSquaredGrid_WithCorrectData()
+        public void PaintGrid_CallGetSquaredGrid_WithCorrectData()
         {
-            _sut.PaintGrid(It.IsAny<IGameMode>(), It.IsAny<Control>()); //both of these params are passing as null
-            _fakeGridBuilder.Verify(x => x.GetSquaredGrid(It.IsAny<GridSize>(),
-                It.IsAny<DifficultyLevel>()),
-                Times.Exactly(2));
+            var beginnerStub = new Beginner();
+            _sut.PaintGrid(beginnerStub, new Control());
+            _fakeGridBuilder.Setup(x => x.GetSquaredGrid(It.IsAny<GridSize>(), It.IsAny<DifficultyLevel>()))
+                .Returns(It.IsAny<Tile[,]>);
+
+            _fakeGridBuilder.Verify(x => x.GetSquaredGrid(It.Is<GridSize>(y => y == GridSize.Beginner),
+                It.Is<DifficultyLevel>(y => y == DifficultyLevel.Beginner)),
+                Times.Exactly(2));   
         }
 
-        [Test]
-        public void PaintGrid_CallMethod_MineTheGrid_ExactlyOnce()
-        {
-        }
-
-        [Test]
-        public void PaintGrid_CallMethod_MineTheGrid_WithCorrectData()
-        {
-        }
-
-        [Test]
-        public void PaintGrid_CallMethod_AddControlsToGrid_ExactlyOnce()
-        {
-            
-        }
-
-        [Test]
-        public void PaintGrid_CallMethod_AddControlsToGrid_WithCorrectData()
-        {
-        }
-
-        [Test]
-        public void PaintGrid_CallMethod_CountPigs_ExactlyOnce()
-        {
-        }
-
-        [Test]
-        public void PaintGrid_CallMethod_CountPigs_WithCorrectData()
-        {
-        }
 
         [TearDown]
         public void TearDown()

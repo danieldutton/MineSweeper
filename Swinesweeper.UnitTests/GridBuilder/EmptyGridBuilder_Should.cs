@@ -18,18 +18,136 @@ namespace Swinesweeper.UnitTests.GridBuilder
         }
 
         [Test]
-        public void GetSquaredGrid_ReturnAGridWithNineRowsForGameModeBeginner()
+        public void GetSquaredGrid_ReturnABeginnerGrid_IfGridSizeParamIsUndefined()
         {
-            Tile[,] grid = _sut.GetSquaredGrid(GridSize.Beginner, DifficultyLevel.Beginner);
-            
-            const int expected = 9;
-            int actual = grid.GetLength(0);
-            
+            Tile[,] grid = _sut.GetSquaredGrid(new GridSize(), DifficultyLevel.Beginner);
+
+            const int expectedTileCount = 81;
+            long actualTileCount = grid.LongLength;
+
+            Assert.AreEqual(expectedTileCount, actualTileCount);
+        }
+
+        [Test]
+        public void GetSquaredGrid_SetTileProperty_FlagCount_ToDifficultyLevelBeginner()
+        {
+            _sut.GetSquaredGrid(GridSize.Beginner, DifficultyLevel.Beginner);
+
+            const int expected = 10;
+            int actual = Tile.FlagCount;
+
+            Assert.AreEqual(expected, actual);           
+        }
+
+        [Test]
+        public void GetSquaredGrid_SetTileProperty_FlagCount_ToDifficultyLevelNormal()
+        {
+            _sut.GetSquaredGrid(GridSize.Normal, DifficultyLevel.Normal);
+
+            const int expected = 40;
+            int actual = Tile.FlagCount;
+
             Assert.AreEqual(expected, actual);
         }
 
         [Test]
-        public void GetSquaredGrid_ReturnAGridWithSixteenRowsForGameModeNormal()
+        public void GetSquaredGrid_SetTileProperty_FlagCount_ToDifficultyLevelAdvanced()
+        {
+            _sut.GetSquaredGrid(GridSize.Advanced, DifficultyLevel.Advanced);
+
+            const int expected = 80;
+            int actual = Tile.FlagCount;
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void GetSquaredGrid_SetTileProperty_MineCount_ToDifficultyLevelBeginner()
+        {
+            _sut.GetSquaredGrid(GridSize.Beginner, DifficultyLevel.Beginner);
+
+            const int expected = 10;
+            int actual = Tile.MineCount;
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void GetSquaredGrid_SetTileProperty_MineCount_ToDifficultyLevelNormal()
+        {
+            _sut.GetSquaredGrid(GridSize.Normal, DifficultyLevel.Normal);
+
+            const int expected = 40;
+            int actual = Tile.MineCount;
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void GetSquaredGrid_SetTileProperty_MineCount_ToDifficultyLevelAdvanced()
+        {
+            _sut.GetSquaredGrid(GridSize.Advanced, DifficultyLevel.Advanced);
+
+            const int expected = 80;
+            int actual = Tile.MineCount;
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void GetSquaredGrid_SetTileProperty_TileCount_ToBeginnerGridSizeSquared()
+        {
+            _sut.GetSquaredGrid(GridSize.Beginner, DifficultyLevel.Beginner);
+
+            const int expected = 81;
+            int actual = Tile.TileCount;
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void GetSquaredGrid_SetTileProperty_TileCount_ToNormalGridSize_Squared()
+        {
+            _sut.GetSquaredGrid(GridSize.Normal, DifficultyLevel.Normal);
+
+            const int expected = 256;
+            int actual = Tile.TileCount;
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void GetSquaredGrid_SetTileProperty_Grid_ToReturnedGrid()
+        {
+            Tile[,] grid = _sut.GetSquaredGrid(GridSize.Advanced, DifficultyLevel.Advanced);
+
+            Assert.AreEqual(grid, Tile.Grid);
+        }
+
+        [Test]
+        public void GetSquaredGrid_SetTileProperty_TileCount_ToAdvancedGridSize_Squared()
+        {
+            _sut.GetSquaredGrid(GridSize.Advanced, DifficultyLevel.Advanced);
+
+            const int expected = 400;
+            int actual = Tile.TileCount;
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void GetSquaredGrid_ReturnAGridWith_NineRows_ForGameModeBeginner()
+        {
+            Tile[,] grid = _sut.GetSquaredGrid(GridSize.Beginner, DifficultyLevel.Beginner);
+
+            const int expected = 9;
+            int actual = grid.GetLength(0);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void GetSquaredGrid_ReturnAGridWith_SixteenRows_ForGameModeNormal()
         {
             Tile[,] grid = _sut.GetSquaredGrid(GridSize.Normal, DifficultyLevel.Normal);
 
@@ -40,7 +158,7 @@ namespace Swinesweeper.UnitTests.GridBuilder
         }
 
         [Test]
-        public void GetSquaredGrid_ReturnAGridWithTwentyRowsForGameModeAdvanced()
+        public void GetSquaredGrid_ReturnAGridWith_TwentyRows_ForGameModeAdvanced()
         {
             Tile[,] grid = _sut.GetSquaredGrid(GridSize.Advanced, DifficultyLevel.Advanced);
 
@@ -51,7 +169,7 @@ namespace Swinesweeper.UnitTests.GridBuilder
         }
 
         [Test]
-        public void GetSquaredGrid_ReturnAGridWithNineColumnsForGameModeBeginner()
+        public void GetSquaredGrid_ReturnAGridWith_NineColumns_ForGameModeBeginner()
         {
             Tile[,] grid = _sut.GetSquaredGrid(GridSize.Beginner, DifficultyLevel.Beginner);
 
@@ -62,7 +180,7 @@ namespace Swinesweeper.UnitTests.GridBuilder
         }
 
         [Test]
-        public void GetSquaredGrid_ReturnAGridWithSixteenColumnsForGameModeNormal()
+        public void GetSquaredGrid_ReturnAGridWith_SixteenColumns_ForGameModeNormal()
         {
             Tile[,] grid = _sut.GetSquaredGrid(GridSize.Normal, DifficultyLevel.Normal);
 
@@ -73,7 +191,7 @@ namespace Swinesweeper.UnitTests.GridBuilder
         }
 
         [Test]
-        public void GetSquaredGrid_ReturnAGridWithTwentyColumnsForGameModeAdvanced()
+        public void GetSquaredGrid_ReturnAGridWith_TwentyColumns_ForGameModeAdvanced()
         {
             Tile[,] grid = _sut.GetSquaredGrid(GridSize.Advanced, DifficultyLevel.Advanced);
 
@@ -81,34 +199,10 @@ namespace Swinesweeper.UnitTests.GridBuilder
             int actual = grid.GetLength(1);
 
             Assert.AreEqual(expected, actual);
-        }
-
-        [Test]
-        public void GetSquaredGrid_ReturnAGridContainingAFullSetOfTilesForGameModeBeginner()
-        {
-            Tile[,] grid = _sut.GetSquaredGrid(GridSize.Beginner, DifficultyLevel.Beginner);
-
-            CollectionAssert.AllItemsAreInstancesOfType(grid, typeof (Tile));
-        }
-
-        [Test]
-        public void GetSquaredGrid_ReturnAGridContainingAFullSetOfTilesForGameModeNormal()
-        {
-            Tile[,] grid = _sut.GetSquaredGrid(GridSize.Normal, DifficultyLevel.Normal);
-
-            CollectionAssert.AllItemsAreInstancesOfType(grid, typeof(Tile));
-        }
-
-        [Test]
-        public void GetSquaredGrid_ReturnAGridContainingAFullSetOfTilesForGameModeAdvanced()
-        {
-            Tile[,] grid = _sut.GetSquaredGrid(GridSize.Advanced, DifficultyLevel.Advanced);
-
-            CollectionAssert.AllItemsAreInstancesOfType(grid, typeof(Tile));
         }
        
         [Test]
-        public void GetSquaredGrid_ReturnAGridWithTheCorrectNumberOfTilesForGameModeBeginner()
+        public void GetSquaredGrid_ReturnAGridWith_81Tiles_ForGameModeBeginner()
         {
             Tile[,] grid = _sut.GetSquaredGrid(GridSize.Beginner, DifficultyLevel.Beginner);
 
@@ -116,10 +210,11 @@ namespace Swinesweeper.UnitTests.GridBuilder
             long actual = grid.LongLength;
 
             Assert.AreEqual(expected, actual);
+            CollectionAssert.AllItemsAreInstancesOfType(grid, typeof(Tile));
         }
 
         [Test]
-        public void GetSquaredGrid_ReturnAGridWithTheCorrectNumberOfTilesForGameModeNormal()
+        public void GetSquaredGrid_ReturnAGridWith_256Tiles_ForGameModeNormal()
         {
             Tile[,] grid = _sut.GetSquaredGrid(GridSize.Normal, DifficultyLevel.Normal);
 
@@ -127,10 +222,11 @@ namespace Swinesweeper.UnitTests.GridBuilder
             long actual = grid.LongLength;
 
             Assert.AreEqual(expected, actual);
+            CollectionAssert.AllItemsAreInstancesOfType(grid, typeof(Tile));
         }
 
         [Test]
-        public void GetSquaredGrid_ReturnAGridWithTheCorrectNumberOfTilesForGameModeAdvanced()
+        public void GetSquaredGrid_ReturnAGridWith_400Tiles_ForGameModeAdvanced()
         {
             Tile[,] grid = _sut.GetSquaredGrid(GridSize.Advanced, DifficultyLevel.Advanced);
 
@@ -138,18 +234,9 @@ namespace Swinesweeper.UnitTests.GridBuilder
             long actual = grid.LongLength;
 
             Assert.AreEqual(expected, actual);
+            CollectionAssert.AllItemsAreInstancesOfType(grid, typeof(Tile));
         }
 
-        [Test]
-        public void GetSquaredGrid_DefaultTheGridCreatedToGameModeBeginnerIfGridSizeParameterIsUndefined()
-        {
-            Tile[,] grid = _sut.GetSquaredGrid(new GridSize(), DifficultyLevel.Beginner);
-
-            const int expected = 81;
-            long actual = grid.LongLength;
-
-            Assert.AreEqual(expected, actual);
-        }
 
         [TearDown]
         public void TearDown()

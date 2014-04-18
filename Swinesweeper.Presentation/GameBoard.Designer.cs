@@ -65,7 +65,7 @@
             this._panelTimer.Controls.Add(this._lblFlagCount);
             this._panelTimer.Location = new System.Drawing.Point(12, 91);
             this._panelTimer.Name = "_panelTimer";
-            this._panelTimer.Size = new System.Drawing.Size(314, 24);
+            this._panelTimer.Size = new System.Drawing.Size(341, 24);
             this._panelTimer.TabIndex = 8;
             // 
             // _lblTimeValue
