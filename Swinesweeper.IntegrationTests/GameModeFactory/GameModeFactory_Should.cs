@@ -73,7 +73,7 @@ namespace Swinesweeper.IntegrationTests.GameModeFactory
         }
 
         [Test]
-        public void CreateInstance_ReturnCorrectGridSizeFor_BeginnerType()
+        public void CreateInstance_ReturnCorrectGridSizeFor_ForBeginnerType()
         {
             IGameMode result = _sut.CreateInstance(Beginner);
 

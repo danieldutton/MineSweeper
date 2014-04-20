@@ -5,7 +5,6 @@ using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using Swinesweeper.Presentation.Properties;
 
 namespace Swinesweeper.Presentation
 {
@@ -14,6 +13,7 @@ namespace Swinesweeper.Presentation
         public event EventHandler<ChosenGameModeEventArgs> GameModeConfirmed;
 
         private readonly IGameModeFactory _gameModeFactory;
+
 
         public GameMode(IGameModeFactory gameModeFactory)
         {

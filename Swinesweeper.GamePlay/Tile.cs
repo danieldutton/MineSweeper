@@ -7,6 +7,8 @@ namespace Swinesweeper.GamePlay
 {
     public class Tile : PictureBox
     {
+        #region Events
+
         public static event EventHandler<MineHitEventArgs> MineHit;
 
         public static event EventHandler<TileClearEventArgs> TileClear;
@@ -15,11 +17,13 @@ namespace Swinesweeper.GamePlay
 
         public static event EventHandler<EventArgs> FlagRemoved;
 
-        public static Tile[,] Grid { get; set; }
+        #endregion
 
-        public int GridPositonX { get; set; }
+        public static Tile[,] ParentGrid { get; set; }
 
-        public int GridPositionY { get; set; }
+        public int XPos { get; set; }
+
+        public int YPos { get; set; }
 
         public bool IsMined { get; set; }
 
@@ -42,36 +46,39 @@ namespace Swinesweeper.GamePlay
 
         protected override void OnClick(EventArgs e)
         {
-            var mouseEvent = e as MouseEventArgs;
+            var mouseEvent = e as MouseEventArgs;            
             if (mouseEvent == null) return;
 
             if (mouseEvent.Button == MouseButtons.Left)
                 SelectTile();
-            
+
             if (mouseEvent.Button == MouseButtons.Right)
-            {              
-                if(_rightClickCount == 1 && !IsFlagged)
-                    AddFlag();
-                else if(_rightClickCount == 2 && IsFlagged)
-                    RemoveFlag();
-            }         
-            base.OnClick(e);   
+            {
+                if (_rightClickCount == 1 && !IsFlagged)
+                    AddFlag();    
+                   
+                else if (_rightClickCount == 2 && IsFlagged)
+                    RemoveFlag();                       
+            }
+
+            base.OnClick(e);
         }
 
         private void SelectTile()
         {
             if (IsMined && !IsFlagged)
-                OnMineHit(new MineHitEventArgs(Grid));    
-                
+                OnMineHit(new MineHitEventArgs(ParentGrid));    
+
             if (!IsFlagged && !IsCleared)
                 RemoveTile();    
+              
         }
 
         private void RemoveTile()
         {
             IsCleared = true;
             TileCount--;
-            OnTileClear(new TileClearEventArgs(Grid, GridPositonX, GridPositionY));
+            OnTileClear(new TileClearEventArgs(ParentGrid, XPos, YPos));
         }
 
         private void AddFlag()
@@ -100,16 +107,20 @@ namespace Swinesweeper.GamePlay
             {
                 _rightClickCount = 1;
 
-                BackColor = Color.SaddleBrown;              
+                BackColor = Color.SaddleBrown;
                 IsFlagged = false;
                 FlagCount++;
 
-                if(IsMined)
-                    CorrectFlagCount--;
-                
+                if (IsMined)
+                {
+                    CorrectFlagCount--;    
+                }
+
                 OnFlagRemoved();
-            } 
+            }
         }
+
+        #region Event Invocators
 
         protected static void OnMineHit(MineHitEventArgs e)
         {
@@ -134,5 +145,7 @@ namespace Swinesweeper.GamePlay
             EventHandler<EventArgs> handler = FlagRemoved;
             if (handler != null) handler(null, EventArgs.Empty);
         }
+
+        #endregion
     }
 }

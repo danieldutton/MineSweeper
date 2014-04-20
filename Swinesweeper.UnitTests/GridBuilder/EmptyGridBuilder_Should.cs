@@ -121,7 +121,7 @@ namespace Swinesweeper.UnitTests.GridBuilder
         {
             Tile[,] grid = _sut.GetSquaredGrid(GridSize.Advanced, DifficultyLevel.Advanced);
 
-            Assert.AreEqual(grid, Tile.Grid);
+            Assert.AreEqual(grid, Tile.ParentGrid);
         }
 
         [Test]

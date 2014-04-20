@@ -20,7 +20,7 @@ namespace Swinesweeper.GridBuilder
 
             int counter = tileGrid.Length / (int)gridSize;
 
-            Tile.Grid = tileGrid;
+            Tile.ParentGrid = tileGrid;
 
             for (int i = 0; i < counter; i++)
             {
@@ -28,8 +28,8 @@ namespace Swinesweeper.GridBuilder
                 {
                     var tile = new Tile
                         {
-                            GridPositonX = i,
-                            GridPositionY = j,
+                            XPos = i,
+                            YPos = j,
                         };
                     tileGrid[i, j] = tile;
                 }

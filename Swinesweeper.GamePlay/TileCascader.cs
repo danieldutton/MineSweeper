@@ -7,6 +7,7 @@ namespace Swinesweeper.GamePlay
     {
         private readonly ITilePainter _tilePainter;
 
+
         public TileCascader(ITilePainter tilePainter)
         {
             _tilePainter = tilePainter;
