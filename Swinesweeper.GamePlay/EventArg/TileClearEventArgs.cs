@@ -1,6 +1,8 @@
-﻿namespace Swinesweeper.GamePlay.EventArg
+﻿using System;
+
+namespace Swinesweeper.GamePlay.EventArg
 {
-    public sealed class TileClearEventArgs
+    public sealed class TileClearEventArgs : EventArgs
     {
         public Tile[,] Grid { get; private set; }
 

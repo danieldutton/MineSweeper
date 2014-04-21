@@ -1,5 +1,5 @@
-﻿using System;
-using Swinesweeper.GamePlay.Interfaces;
+﻿using Swinesweeper.GamePlay.Interfaces;
+using System;
 
 namespace Swinesweeper.GamePlay
 {

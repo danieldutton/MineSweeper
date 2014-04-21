@@ -56,8 +56,6 @@ E:\SwineSweeper\Swinesweeper.Presentation\obj\Debug\Swinesweeper.Presentation.Ga
 E:\SwineSweeper\Swinesweeper.Presentation\obj\Debug\Swinesweeper.Presentation.Properties.Resources.resources
 E:\SwineSweeper\Swinesweeper.Presentation\obj\Debug\Swinesweeper.Presentation.csproj.GenerateResource.Cache
 C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.Presentation\bin\Debug\Swinesweeper.Presentation.exe.config
-C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.Presentation\obj\Debug\Swinesweeper.Presentation.exe
-C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.Presentation\obj\Debug\Swinesweeper.Presentation.pdb
 C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.Presentation\bin\Debug\Swinesweeper.Presentation.exe
 C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.Presentation\bin\Debug\Swinesweeper.Presentation.pdb
 C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.Presentation\bin\Debug\Swinesweeper.GameModeFactory.dll
@@ -74,3 +72,5 @@ C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.Presentation\obj\Debug\S
 C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.Presentation\obj\Debug\Swinesweeper.Presentation.GameResult.resources
 C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.Presentation\obj\Debug\Swinesweeper.Presentation.Properties.Resources.resources
 C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.Presentation\obj\Debug\Swinesweeper.Presentation.csproj.GenerateResource.Cache
+C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.Presentation\obj\Debug\Swinesweeper.Presentation.exe
+C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.Presentation\obj\Debug\Swinesweeper.Presentation.pdb

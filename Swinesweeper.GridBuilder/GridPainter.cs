@@ -28,7 +28,7 @@ namespace Swinesweeper.GridBuilder
             _pigCounter = pigCounter;
         }
 
-        public void PaintGrid(IGameMode gameMode, Control control)
+        public Tile[,] PaintGrid(IGameMode gameMode, Control control)
         {
             if (control == null) throw new ArgumentNullException("control");
 
@@ -62,6 +62,7 @@ namespace Swinesweeper.GridBuilder
                 }
             }
             _pigCounter.CountPigs(grid);
+            return minedGrid;
         }
     }
 }
