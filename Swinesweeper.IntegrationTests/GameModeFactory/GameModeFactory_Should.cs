@@ -10,7 +10,7 @@ namespace Swinesweeper.IntegrationTests.GameModeFactory
     [TestFixture]
     public class GameModeFactory_Should
     {
-        private ITypeCreator _typeCreator;
+        private ITypeInstanceCreator _typeInstanceCreator;
 
         private Swinesweeper.GameModeFactory.GameModeFactory _sut;
 
@@ -24,8 +24,8 @@ namespace Swinesweeper.IntegrationTests.GameModeFactory
         [SetUp]
         public void Init()
         {
-            _typeCreator = new TypeCreator();
-            _sut = new Swinesweeper.GameModeFactory.GameModeFactory(_typeCreator);
+            _typeInstanceCreator = new TypeInstanceCreator();
+            _sut = new Swinesweeper.GameModeFactory.GameModeFactory(_typeInstanceCreator);
         }
 
         [Test]
@@ -167,7 +167,7 @@ namespace Swinesweeper.IntegrationTests.GameModeFactory
         [TearDown]
         public void TearDown()
         {
-            _typeCreator = null;
+            _typeInstanceCreator = null;
             _sut = null;
         }
     }

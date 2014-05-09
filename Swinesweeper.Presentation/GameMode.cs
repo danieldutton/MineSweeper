@@ -29,6 +29,8 @@ namespace Swinesweeper.Presentation
             _radioBtnBeginner.Tag = DifficultyLevel.Beginner;
             _radioBtnNormal.Tag = DifficultyLevel.Normal;
             _radioBtnAdvanced.Tag = DifficultyLevel.Advanced;
+
+            _radioBtnNormal.Checked = true;
         }
 
         private void ColourBackground()

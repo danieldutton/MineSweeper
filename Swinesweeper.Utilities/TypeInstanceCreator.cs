@@ -3,7 +3,7 @@ using System;
 
 namespace Swinesweeper.Utilities
 {
-    public class TypeCreator : ITypeCreator
+    public class TypeInstanceCreator : ITypeInstanceCreator
     {
         public object GetTypeInstance(Type typeToCreate)
         {

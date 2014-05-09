@@ -2,7 +2,7 @@
 
 namespace Swinesweeper.Utilities.Interfaces
 {
-    public interface ITypeCreator
+    public interface ITypeInstanceCreator
     {
         object GetTypeInstance(Type typeToCreate);
     }

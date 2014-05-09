@@ -10,14 +10,14 @@ namespace Swinesweeper.UnitTests.GameModeFactory
     [TestFixture]
     public class GameModeFactory_Should
     {
-        private Mock<ITypeCreator> _faketypeCreator;
+        private Mock<ITypeInstanceCreator> _faketypeCreator;
 
         private Swinesweeper.GameModeFactory.GameModeFactory _sut;
 
         [SetUp]
         public void Init()
         {
-            _faketypeCreator = new Mock<ITypeCreator>();
+            _faketypeCreator = new Mock<ITypeInstanceCreator>();
             _sut = new Swinesweeper.GameModeFactory.GameModeFactory(_faketypeCreator.Object);
         }
 

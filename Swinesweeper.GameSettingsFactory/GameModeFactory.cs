@@ -9,14 +9,14 @@ namespace Swinesweeper.GameModeFactory
 {
     public class GameModeFactory : IGameModeFactory
     {
-        private readonly ITypeCreator _typeCreator;
+        private readonly ITypeInstanceCreator _typeInstanceCreator;
         
         private Dictionary<string, Type> _gameModes;
 
         
-        public GameModeFactory(ITypeCreator typeCreator)
+        public GameModeFactory(ITypeInstanceCreator typeInstanceCreator)
         {
-            _typeCreator = typeCreator;
+            _typeInstanceCreator = typeInstanceCreator;
             
             LoadTypesICanReturn();
         }
@@ -30,7 +30,7 @@ namespace Swinesweeper.GameModeFactory
             if(type == null)
                 return new Null();
 
-            return _typeCreator.GetTypeInstance(type) as IGameMode;
+            return _typeInstanceCreator.GetTypeInstance(type) as IGameMode;
         }
 
         private Type GetTypeToCreate(string gameModeName)

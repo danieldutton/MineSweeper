@@ -20,8 +20,8 @@ namespace Swinesweeper.Presentation
             Application.SetCompatibleTextRenderingDefault(false);
             
             //game settings
-            ITypeCreator typeCreator = new TypeCreator();
-            IGameModeFactory gameModeFactory = new GameModeFactory.GameModeFactory(typeCreator);
+            ITypeInstanceCreator typeInstanceCreator = new TypeInstanceCreator();
+            IGameModeFactory gameModeFactory = new GameModeFactory.GameModeFactory(typeInstanceCreator);
             
             ITilePainter tilePainter = new TilePainter();
             ITileCascader tileCascader = new TileCascader(tilePainter);
