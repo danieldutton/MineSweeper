@@ -1,8 +1,8 @@
 ﻿using Swinesweeper.GameModeFactory;
 using Swinesweeper.GameModeFactory.EventArg;
 using Swinesweeper.GameModeFactory.Interfaces;
+using Swinesweeper.Utilities;
 using System;
-using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -20,30 +20,32 @@ namespace Swinesweeper.Presentation
             _gameModeFactory = gameModeFactory;
 
             InitializeComponent(); 
-            ColourBackground();
-            InitGameModes();
+            AddAdditionalStyling();
+            InitialiseRadioButtonTagProperties();
+            SetDefaultGameMode();
         }
 
-        private void InitGameModes()
+        private void AddAdditionalStyling()
+        {
+            ControlStyler.ColourBackground(this);
+            ControlStyler.ColourBackground(_panelRadioBtns);    
+        }
+
+        private void InitialiseRadioButtonTagProperties()
         {
             _radioBtnBeginner.Tag = DifficultyLevel.Beginner;
             _radioBtnNormal.Tag = DifficultyLevel.Normal;
-            _radioBtnAdvanced.Tag = DifficultyLevel.Advanced;
-
-            _radioBtnNormal.Checked = true;
+            _radioBtnAdvanced.Tag = DifficultyLevel.Advanced;            
         }
 
-        private void ColourBackground()
+        private void SetDefaultGameMode()
         {
-            const string colour = "#f2d78b";
-
-            BackColor = ColorTranslator.FromHtml(colour);
-            _panelRadioBtns.BackColor = ColorTranslator.FromHtml(colour);
+            _radioBtnNormal.Checked = true;    
         }
 
         private void SelectGameMode_Click(object sender, EventArgs e)
         {
-            string gameModeName = FetchChosenGameMode();
+            string gameModeName = GetChosenGameMode_StringValue();
 
             IGameMode gameMode = _gameModeFactory.CreateInstance(gameModeName);
 
@@ -52,10 +54,11 @@ namespace Swinesweeper.Presentation
             Dispose();
         }   
 
-        private string FetchChosenGameMode()
+        private string GetChosenGameMode_StringValue()
         {
             RadioButton checkedButton = _panelRadioBtns.Controls
-            .OfType<RadioButton>().FirstOrDefault(cBox => cBox.Checked);
+                .OfType<RadioButton>()
+                .FirstOrDefault(cBox => cBox.Checked);
 
             var gameMode = (DifficultyLevel) checkedButton.Tag;
 

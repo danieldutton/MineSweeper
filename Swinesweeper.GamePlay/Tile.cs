@@ -19,6 +19,8 @@ namespace Swinesweeper.GamePlay
 
         #endregion
 
+        #region Instance Var(s)
+
         public static Tile[,] ParentGrid { get; set; }
 
         public int XPos { get; set; }
@@ -43,10 +45,11 @@ namespace Swinesweeper.GamePlay
 
         public Label LblMineCount = new Label();
 
+        #endregion
 
         protected override void OnClick(EventArgs e)
         {
-            var mouseEvent = e as MouseEventArgs;            
+            var mouseEvent = e as MouseEventArgs;
             if (mouseEvent == null) return;
 
             if (mouseEvent.Button == MouseButtons.Left)
@@ -54,11 +57,11 @@ namespace Swinesweeper.GamePlay
 
             if (mouseEvent.Button == MouseButtons.Right)
             {
-                if (_rightClickCount == 1 && !IsFlagged)
-                    AddFlag();    
-                   
-                else if (_rightClickCount == 2 && IsFlagged)
-                    RemoveFlag();                       
+                if (ClickCountOneAndNotFlagged())
+                    FlagTile();
+
+                else if (ClickCountTwoAndIsFlagged())
+                    UnFlagTile();
             }
 
             base.OnClick(e);
@@ -66,12 +69,11 @@ namespace Swinesweeper.GamePlay
 
         private void SelectTile()
         {
-            if (IsMined && !IsFlagged)
-                OnMineHit(new MineHitEventArgs(ParentGrid));    
+            if (MinedAndNotFlagged())
+                OnMineHit(new MineHitEventArgs(ParentGrid));
 
-            if (!IsFlagged && !IsCleared)
-                RemoveTile();    
-              
+            if (NotClearedAndNotFlagged())
+                RemoveTile();
         }
 
         private void RemoveTile()
@@ -81,11 +83,11 @@ namespace Swinesweeper.GamePlay
             OnTileClear(new TileClearEventArgs(ParentGrid, XPos, YPos));
         }
 
-        private void AddFlag()
+        private void FlagTile()
         {
-            if (!IsCleared && !IsFlagged)
+            if (NotClearedAndNotFlagged())
             {
-                if (FlagCount != 0)
+                if (SpareFlagsRemain())
                 {
                     _rightClickCount = 2;
 
@@ -101,9 +103,9 @@ namespace Swinesweeper.GamePlay
             }
         }
 
-        private void RemoveFlag()
+        private void UnFlagTile()
         {
-            if (IsCleared == false && IsFlagged)
+            if (NotClearedAndIsFlagged())
             {
                 _rightClickCount = 1;
 
@@ -112,12 +114,40 @@ namespace Swinesweeper.GamePlay
                 FlagCount++;
 
                 if (IsMined)
-                {
-                    CorrectFlagCount--;    
-                }
+                    CorrectFlagCount--;
 
                 OnFlagRemoved();
             }
+        }
+
+        private bool ClickCountOneAndNotFlagged()
+        {
+            return _rightClickCount == 1 && !IsFlagged;
+        }
+
+        private bool ClickCountTwoAndIsFlagged()
+        {
+            return _rightClickCount == 2 && IsFlagged;
+        }
+
+        private bool NotClearedAndIsFlagged()
+        {
+            return IsCleared == false && IsFlagged;
+        }
+
+        private bool NotClearedAndNotFlagged()
+        {
+            return !IsCleared && !IsFlagged;
+        }
+
+        private bool MinedAndNotFlagged()
+        {
+            return IsMined && !IsFlagged;
+        }
+
+        private bool SpareFlagsRemain()
+        {
+            return FlagCount != 0;
         }
 
         #region Event Invocators

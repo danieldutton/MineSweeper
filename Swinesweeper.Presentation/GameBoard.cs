@@ -16,6 +16,8 @@ namespace Swinesweeper.Presentation
 {
     public partial class GameBoard : Form
     {
+        private readonly GridPainter _gridPainter;
+
         private Timer _timer;
 
         private int _secondsPassed;
@@ -25,27 +27,20 @@ namespace Swinesweeper.Presentation
         private readonly ITileCascader _tileCascader;
 
 
-        public GameBoard(ITileCascader tileCascader)
+        public GameBoard(GridPainter gridPainter, ITileCascader tileCascader)
         {
-            _tileCascader = tileCascader; 
-            
+            _gridPainter = gridPainter;
+            _tileCascader = tileCascader;
+
             InitializeComponent();
             InitTimer();
-            ColourBackground();
             SubscribeToTileEvents();
         }
 
         private void InitTimer()
         {
-            _timer = new Timer { Interval = 1000 };
-            _timer.Tick += Timer_Tick;               
-        }
-
-        private void ColourBackground()
-        {
-            const string colour = "#f2d78b";
-
-            BackColor = ColorTranslator.FromHtml(colour);
+            _timer = new Timer {Interval = 1000};
+            _timer.Tick += Timer_Tick;
         }
 
         private void SubscribeToTileEvents()
@@ -56,58 +51,63 @@ namespace Swinesweeper.Presentation
             Tile.FlagRemoved += Tile_FlagRemoved;
         }
 
-        public void SubscribeToGameModeConfirmedEvent(GameMode optionsForm)
+        private void DrawGameBoard()
         {
-            optionsForm.GameModeConfirmed += GameModeConfirmed_Click;
+            SetFormSize();
+            SetFormConstraints();
+            SetGridSize();
+            SetFlagCountLabel();
+            PositionTimerLabels();
+
+            _gridPainter.PaintGrid(ChosenGameMode, _panelGrid);
+
+            ControlStyler.ColourBackground(this);
         }
 
-        public void GameModeConfirmed_Click(object sender, ChosenGameModeEventArgs e)
-        {
-            ChosenGameMode = e.GameMode;
-            DrawGrid();
-        }
-
-        private void DrawGrid()
+        private void SetFormSize()
         {
             Height = ChosenGameMode.FormSize.Y;
             Width = ChosenGameMode.FormSize.X;
-
-            MaximumSize = new Size(Width, Height);
-            MinimumSize = new Size(Width, Height);
-
-            var painter = new GridPainter(new EmptyGridBuilder(), new GridControlBuilder(),
-                                          new GridMiner(new RandomNumberGenerator()), new PigCounter());
-
-            _panelGrid.Width = ChosenGameMode.GridPanelSize.X;
-            _panelGrid.Height = ChosenGameMode.GridPanelSize.Y;
-
-            var pigCount = (int) ChosenGameMode.DifficultyLevel;
-            _lblFlagCount.Text = pigCount.ToString();
-            
-            PlaceTimerLabels();
-            painter.PaintGrid(ChosenGameMode, _panelGrid);
         }
 
-        private void PlaceTimerLabels()
+        private void SetFormConstraints()
         {
-            const int lblHeight = 4;
+            MaximumSize = new Size(Width, Height);
+            MinimumSize = new Size(Width, Height);
+        }
 
-            if (ChosenGameMode.GridSize == GridSize.Beginner)
-            {
-                _lblTimer.Location = new Point(Width - 100, lblHeight);
-                _lblTimeValue.Location = new Point(Width - 65, lblHeight);        
-            }
+        private void SetGridSize()
+        {
+            _panelGrid.Width = ChosenGameMode.GridPanelSize.X;
+            _panelGrid.Height = ChosenGameMode.GridPanelSize.Y;
+        }
 
-            if (ChosenGameMode.GridSize == GridSize.Normal)
-            {
-                _lblTimer.Location = new Point(Width - 105, lblHeight);
-                _lblTimeValue.Location = new Point(Width - 70, lblHeight);
-            }
+        private void SetFlagCountLabel()
+        {
+            var flagCount = (int) ChosenGameMode.DifficultyLevel;
+            _lblFlagCount.Text = flagCount.ToString();
+        }
 
-            if (ChosenGameMode.GridSize == GridSize.Advanced)
+        private void PositionTimerLabels()
+        {
+            const int lblYPos = 4;
+
+            switch (ChosenGameMode.GridSize)
             {
-                _lblTimer.Location = new Point(Width - 117, lblHeight);
-                _lblTimeValue.Location = new Point(Width - 82, lblHeight);
+                case GridSize.Beginner:
+                    _lblTimer.Location = new Point(Width - 100, lblYPos);
+                    _lblTimeValue.Location = new Point(Width - 65, lblYPos);
+                    break;
+
+                case GridSize.Normal:
+                    _lblTimer.Location = new Point(Width - 105, lblYPos);
+                    _lblTimeValue.Location = new Point(Width - 70, lblYPos);
+                    break;
+
+                case GridSize.Advanced:
+                    _lblTimer.Location = new Point(Width - 117, lblYPos);
+                    _lblTimeValue.Location = new Point(Width - 82, lblYPos);
+                    break;
             }
         }
 
@@ -117,7 +117,7 @@ namespace Swinesweeper.Presentation
 
             _tileCascader.CascadeTile(e.Grid, e.XPos, e.YPos);
 
-            HasWon();
+            CheckForWin();
         }
 
         private void Tile_FlagRemoved(object sender, EventArgs e)
@@ -131,23 +131,20 @@ namespace Swinesweeper.Presentation
         private void Tile_FlagPlaced(object sender, EventArgs e)
         {
             int flagCount = int.Parse(_lblFlagCount.Text);
-            
+
             flagCount--;
             _lblFlagCount.Text = flagCount.ToString();
 
-            HasWon();
+            CheckForWin();
         }
 
         private void Tile_MineHit(object sender, MineHitEventArgs e)
         {
             _timer.Stop();
+            _tileCascader.CascadeAll(e.Grid);
 
             PlayOinkWav();
-            
-            _tileCascader.CascadeAll(e.Grid);
-            
-            var gameResultForm = new GameResult(hasWon: false, secondsTaken: _secondsPassed,difficultyLevel: ChosenGameMode.DifficultyLevel);
-            gameResultForm.ShowDialog();
+            DisplayGameResults(false);
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -156,26 +153,49 @@ namespace Swinesweeper.Presentation
 
             _secondsPassed++;
 
-            if(_secondsPassed < maxTimeDisplayValue)
+            if (_secondsPassed < maxTimeDisplayValue)
                 _lblTimeValue.Text = _secondsPassed.ToString();
         }
 
-        private void HasWon()
+        private void CheckForWin()
         {
-            if (Tile.CorrectFlagCount == Tile.MineCount && Tile.TileCount == Tile.MineCount)
+            if (GridIsCompletelyClear())
             {
                 _timer.Stop();
+                DisplayGameResults(true);
+            }
+        }
 
-                var gameResultForm = new GameResult(hasWon: true, secondsTaken: _secondsPassed, difficultyLevel: ChosenGameMode.DifficultyLevel);
-                gameResultForm.ShowDialog();
-            }    
+        private void DisplayGameResults(bool hasWon)
+        {
+            var gameResultForm = new GameResult(hasWon, _secondsPassed, ChosenGameMode.DifficultyLevel);
+
+            gameResultForm.ShowDialog();
+        }
+
+        private bool GridIsCompletelyClear()
+        {
+            return Tile.CorrectFlagCount == Tile.MineCount && Tile.TileCount == Tile.MineCount;
         }
 
         private void PlayOinkWav()
         {
-            Stream stream = Properties.Resources.Pig_Oinking_Twice;
-            var snd = new SoundPlayer(stream);
-            snd.Play();
+            using (Stream stream = Properties.Resources.Pig_Oinking_Twice)
+            {
+                var snd = new SoundPlayer(stream);
+                snd.Play();
+            }
+        }
+
+        public void SubscribeToGameModeConfirmedEvent(GameMode optionsForm)
+        {
+            optionsForm.GameModeConfirmed += GameModeConfirmed_Click;
+        }
+
+        public void GameModeConfirmed_Click(object sender, ChosenGameModeEventArgs e)
+        {
+            ChosenGameMode = e.GameMode;
+            DrawGameBoard();
         }
     }
 }

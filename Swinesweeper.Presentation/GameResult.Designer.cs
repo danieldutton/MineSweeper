@@ -129,7 +129,6 @@
             this.Name = "GameResult";
             this.Text = "Results";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameResult_FormClosing);
-            this.Load += new System.EventHandler(this.GameResult_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,7 +1,7 @@
 ﻿using Swinesweeper.GameModeFactory;
 using Swinesweeper.Presentation.Properties;
+using Swinesweeper.Utilities;
 using System;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace Swinesweeper.Presentation
@@ -14,54 +14,60 @@ namespace Swinesweeper.Presentation
 
         private readonly DifficultyLevel _difficultyLevel;
 
-        public GameResult(bool hasWon)
-        {
-            _hasWon = hasWon;           
-            
-            InitializeComponent();
-            ColourBackground();
-        }
 
         public GameResult(bool hasWon, int secondsTaken, 
             DifficultyLevel difficultyLevel)
-            :this(hasWon)
         {
+            _hasWon = hasWon;
             _difficultyLevel = difficultyLevel;
             _secondsTaken = secondsTaken;
-        }
 
-        private void ColourBackground()
-        {
-            const string colour = "#f2d78b";
-
-            BackColor = ColorTranslator.FromHtml(colour);
-        }
-
-        private void GameResult_Load(object sender, EventArgs e)
-        {
-            _lblResultsText.Text = _hasWon ? "Congratulations you have won!" : "Sorry you lose..oink oink!";
-
-            _lblTimeTakenValue.Text = _hasWon ? _secondsTaken + " Seconds" : "--";
-
+            InitializeComponent();
+            AddAdditionalStyling();
+            DisplayGameStatus();
+            DisplayTimeTaken();
+            DisplayBestGameTime();
+            
             if (_hasWon)
-            {
-                SavePlayTime();
-                DisplayBestTime();
-            }         
+                SaveTimeIfFastest();
+
         }
 
-        private void SavePlayTime()
-        {
-            int fastestTime = (int)Settings.Default[_difficultyLevel.ToString()];
 
-            if (_secondsTaken < fastestTime)
+        private void AddAdditionalStyling()
+        {
+            ControlStyler.ColourBackground(this);    
+        }
+
+        private void DisplayGameStatus()
+        {
+            _lblResultsText.Text = _hasWon 
+                ? "Congratulations you have won!" : "Sorry you lose..oink oink!";    
+        }
+
+        private void DisplayTimeTaken()
+        {
+            _lblTimeTakenValue.Text = _hasWon 
+                ? _secondsTaken + " Seconds" : "--";    
+        }
+
+        private void SaveTimeIfFastest()
+        {
+            if (IsFastestTime())
             {
                 Settings.Default[_difficultyLevel.ToString()] = _secondsTaken;
                 Settings.Default.Save();
             }                
         }
 
-        private void DisplayBestTime()
+        private bool IsFastestTime()
+        {
+            int fastestTime = (int)Settings.Default[_difficultyLevel.ToString()];
+
+            return _secondsTaken < fastestTime;
+        }
+
+        private void DisplayBestGameTime()
         {
             int bestTime = (int)Settings.Default[_difficultyLevel.ToString()];
 
