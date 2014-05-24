@@ -17,8 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swinesweeper.IntegrationTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swinesweeper.UnitTests", "Swinesweeper.UnitTests\Swinesweeper.UnitTests.csproj", "{9AFEFEA4-FA3A-4281-8787-F3DED5234654}"
 EndProject
-Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "Swinesweeper.Installer", "Swinesweeper.Installer\Swinesweeper.Installer.isproj", "{AA83C19F-374D-47BF-BC0D-8A35F3533EA8}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CD_ROM|Any CPU = CD_ROM|Any CPU
@@ -98,16 +96,6 @@ Global
 		{9AFEFEA4-FA3A-4281-8787-F3DED5234654}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9AFEFEA4-FA3A-4281-8787-F3DED5234654}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
 		{9AFEFEA4-FA3A-4281-8787-F3DED5234654}.SingleImage|Any CPU.Build.0 = Release|Any CPU
-		{AA83C19F-374D-47BF-BC0D-8A35F3533EA8}.CD_ROM|Any CPU.ActiveCfg = CD_ROM
-		{AA83C19F-374D-47BF-BC0D-8A35F3533EA8}.CD_ROM|Any CPU.Build.0 = CD_ROM
-		{AA83C19F-374D-47BF-BC0D-8A35F3533EA8}.Debug|Any CPU.ActiveCfg = DVD-5
-		{AA83C19F-374D-47BF-BC0D-8A35F3533EA8}.Debug|Any CPU.Build.0 = DVD-5
-		{AA83C19F-374D-47BF-BC0D-8A35F3533EA8}.DVD-5|Any CPU.ActiveCfg = DVD-5
-		{AA83C19F-374D-47BF-BC0D-8A35F3533EA8}.DVD-5|Any CPU.Build.0 = DVD-5
-		{AA83C19F-374D-47BF-BC0D-8A35F3533EA8}.Release|Any CPU.ActiveCfg = SingleImage
-		{AA83C19F-374D-47BF-BC0D-8A35F3533EA8}.Release|Any CPU.Build.0 = SingleImage
-		{AA83C19F-374D-47BF-BC0D-8A35F3533EA8}.SingleImage|Any CPU.ActiveCfg = SingleImage
-		{AA83C19F-374D-47BF-BC0D-8A35F3533EA8}.SingleImage|Any CPU.Build.0 = SingleImage
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
