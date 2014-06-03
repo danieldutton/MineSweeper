@@ -1,9 +1,0 @@
-C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.Utilities\bin\Release\Swinesweeper.Utilities.dll
-C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.Utilities\bin\Release\Swinesweeper.Utilities.pdb
-C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.Utilities\obj\Release\Swinesweeper.Utilities.dll
-C:\Users\Danny\Documents\GitHub\MineSweeper\Swinesweeper.Utilities\obj\Release\Swinesweeper.Utilities.pdb
-C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.Utilities\bin\Release\Swinesweeper.Utilities.dll
-C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.Utilities\bin\Release\Swinesweeper.Utilities.pdb
-C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.Utilities\obj\Release\Swinesweeper.Utilities.csprojResolveAssemblyReference.cache
-C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.Utilities\obj\Release\Swinesweeper.Utilities.dll
-C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.Utilities\obj\Release\Swinesweeper.Utilities.pdb
