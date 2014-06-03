@@ -1,5 +1,0 @@
-C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.Utilities\bin\Debug\Swinesweeper.Utilities.dll
-C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.Utilities\bin\Debug\Swinesweeper.Utilities.pdb
-C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.Utilities\obj\Debug\Swinesweeper.Utilities.csprojResolveAssemblyReference.cache
-C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.Utilities\obj\Debug\Swinesweeper.Utilities.dll
-C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.Utilities\obj\Debug\Swinesweeper.Utilities.pdb

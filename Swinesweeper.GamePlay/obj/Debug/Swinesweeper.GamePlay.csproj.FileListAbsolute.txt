@@ -1,7 +1,0 @@
-C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GamePlay\bin\Debug\Swinesweeper.GamePlay.dll
-C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GamePlay\bin\Debug\Swinesweeper.GamePlay.pdb
-C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GamePlay\obj\Debug\Swinesweeper.GamePlay.csprojResolveAssemblyReference.cache
-C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GamePlay\obj\Debug\Swinesweeper.GamePlay.Properties.Resources.resources
-C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GamePlay\obj\Debug\Swinesweeper.GamePlay.csproj.GenerateResource.Cache
-C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GamePlay\obj\Debug\Swinesweeper.GamePlay.dll
-C:\Users\Dan\Documents\GitHub\SwineSweeper\Swinesweeper.GamePlay\obj\Debug\Swinesweeper.GamePlay.pdb
