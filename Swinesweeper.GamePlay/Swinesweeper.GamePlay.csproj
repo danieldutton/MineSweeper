@@ -37,7 +37,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EventArg\TileClearEventArgs.cs" />
-    <Compile Include="Interfaces\IPigCounter.cs" />
+    <Compile Include="Interfaces\ITileCounter.cs" />
     <Compile Include="Interfaces\ITileCascader.cs" />
     <Compile Include="Interfaces\ITilePainter.cs" />
     <Compile Include="PigCounter.cs" />

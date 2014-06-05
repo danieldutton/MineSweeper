@@ -16,11 +16,11 @@ namespace Swinesweeper.GridBuilder
 
         private readonly IGridMiner _gridMiner;
 
-        private readonly IPigCounter _pigCounter;
+        private readonly ITileCounter _pigCounter;
 
 
         public GridPainter(IGridBuilder emptyGridBuilder, IGridControlBuilder gridControlBuilder,
-                           IGridMiner gridMiner, IPigCounter pigCounter)
+                           IGridMiner gridMiner, ITileCounter pigCounter)
         {
             _emptyGridBuilder = emptyGridBuilder;
             _gridControlBuilder = gridControlBuilder;
@@ -61,7 +61,7 @@ namespace Swinesweeper.GridBuilder
                     minedGrid[i, j] = grid[i, j];
                 }
             }
-            _pigCounter.CountPigs(grid);
+            _pigCounter.Count(grid);
             return minedGrid;
         }
     }

@@ -21,12 +21,12 @@ namespace Swinesweeper.GridBuilder
             if(grid == null) throw new ArgumentNullException("grid");
 
             for (int i = 0; i < (int) difficultyLevel; i++)
-                ExtractAMineFreeTile(grid, gridSize);
+                MineEmptyTile(grid, gridSize);
 
             return grid;
         }
 
-        private void ExtractAMineFreeTile(Tile[,] grid, GridSize gridSize)
+        private void MineEmptyTile(Tile[,] grid, GridSize gridSize)
         {
             int xIndex = _randomNumberGenerator.GetRandomNumber(0, (int) gridSize);
             int yIndex = _randomNumberGenerator.GetRandomNumber(0, (int) gridSize);
@@ -34,7 +34,7 @@ namespace Swinesweeper.GridBuilder
             Tile tile = grid[xIndex, yIndex];
 
             if (tile.IsMined)
-                ExtractAMineFreeTile(grid, gridSize);
+                MineEmptyTile(grid, gridSize);
 
             else
                 tile.IsMined = true;

@@ -22,7 +22,7 @@ namespace Swinesweeper.UnitTests.GridBuilder
 
         private Mock<IGridMiner> _fakeGridMiner;
 
-        private Mock<IPigCounter> _fakePigCounter;
+        private Mock<ITileCounter> _fakePigCounter;
 
         private GridPainter _sut;
 
@@ -32,7 +32,7 @@ namespace Swinesweeper.UnitTests.GridBuilder
             _fakeGridBuilder = new Mock<IGridBuilder>();
             _fakeGridControlBuilder = new Mock<IGridControlBuilder>();
             _fakeGridMiner = new Mock<IGridMiner>();
-            _fakePigCounter = new Mock<IPigCounter>();
+            _fakePigCounter = new Mock<ITileCounter>();
 
             _sut = new GridPainter(_fakeGridBuilder.Object, _fakeGridControlBuilder.Object,
                                    _fakeGridMiner.Object, _fakePigCounter.Object);
@@ -187,7 +187,7 @@ namespace Swinesweeper.UnitTests.GridBuilder
         }
 
         [Test]
-        public void PaintGrid_CallCountPigs_ExactlyOnce()
+        public void PaintGrid_CallCount_ExactlyOnce()
         {
             var beginnerStub = new Beginner();
             Tile[,] beginnerGrid = Mother.GetTestGrid(GridSize.Beginner);
@@ -204,12 +204,12 @@ namespace Swinesweeper.UnitTests.GridBuilder
 
             _sut.PaintGrid(beginnerStub, new Tile());
 
-           _fakePigCounter.Verify(x => x.CountPigs(It.IsAny<Tile[,]>()), 
+           _fakePigCounter.Verify(x => x.Count(It.IsAny<Tile[,]>()), 
                Times.Once());
         }
 
         [Test]
-        public void PaintGrid_CallCountPigs_WithCorrectData()
+        public void PaintGrid_CallCount_WithCorrectData()
         {
             var beginnerStub = new Beginner();
             Tile[,] beginnerGrid = Mother.GetTestGrid(GridSize.Beginner);
@@ -226,7 +226,7 @@ namespace Swinesweeper.UnitTests.GridBuilder
 
             _sut.PaintGrid(beginnerStub, new Tile());
 
-            _fakePigCounter.Verify(x => x.CountPigs(It.Is<Tile[,]>(y => y == beginnerGrid)));
+            _fakePigCounter.Verify(x => x.Count(It.Is<Tile[,]>(y => y == beginnerGrid)));
         }
 
         [Test]

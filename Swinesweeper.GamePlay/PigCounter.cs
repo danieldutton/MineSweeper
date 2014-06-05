@@ -3,9 +3,9 @@ using System;
 
 namespace Swinesweeper.GamePlay
 {
-    public class PigCounter : IPigCounter
+    public class PigCounter : ITileCounter
     {
-        public void CountPigs(Tile[,] grid)
+        public void Count(Tile[,] grid)
         {
             if(grid == null) throw new ArgumentNullException("grid");
 

@@ -22,21 +22,21 @@ namespace Swinesweeper.UnitTests.GamePlay
 
         [Test]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void CountPigs_ThrowAnArgumentNullExceptionIf_GridIsNull()
+        public void Count_ThrowAnArgumentNullExceptionIf_GridIsNull()
         {
-            _sut.CountPigs(null);
+            _sut.Count(null);
         }
 
         #region Corners
 
         [Test]
-        public void CountPigs_CountCorrectly_OneMine_TopLeftCorner_0_0()
+        public void Count_CountCorrectly_OneMine_TopLeftCorner_0_0()
         {
             _testGrid[0, 0] = new Tile { IsMined = true };
             
             const string expected = "1";
                        
-            _sut.CountPigs(_testGrid);
+            _sut.Count(_testGrid);
 
             Assert.AreEqual(expected, _testGrid[0, 1].LblMineCount.Text);
             Assert.AreEqual(expected, _testGrid[1, 0].LblMineCount.Text);
@@ -44,13 +44,13 @@ namespace Swinesweeper.UnitTests.GamePlay
         }
 
         [Test]
-        public void CountPigs_CountCorrectly_OneMine_TopRightCorner_0_4()
+        public void Count_CountCorrectly_OneMine_TopRightCorner_0_4()
         {
             _testGrid[0, 4] = new Tile { IsMined = true };
             
             const string expected = "1";
 
-            _sut.CountPigs(_testGrid);
+            _sut.Count(_testGrid);
 
             Assert.AreEqual(expected, _testGrid[0, 3].LblMineCount.Text);
             Assert.AreEqual(expected, _testGrid[1, 3].LblMineCount.Text);
@@ -58,13 +58,13 @@ namespace Swinesweeper.UnitTests.GamePlay
         }
 
         [Test]
-        public void CountPigs_CountCorrectly_OneMine_BottomLeft_4_0()
+        public void Count_CountCorrectly_OneMine_BottomLeft_4_0()
         {
             _testGrid[4, 0] = new Tile { IsMined = true };
             
             const string expected = "1";
 
-            _sut.CountPigs(_testGrid);
+            _sut.Count(_testGrid);
 
             Assert.AreEqual(expected, _testGrid[3, 0].LblMineCount.Text);
             Assert.AreEqual(expected, _testGrid[3, 1].LblMineCount.Text);
@@ -72,13 +72,13 @@ namespace Swinesweeper.UnitTests.GamePlay
         }
 
         [Test]
-        public void CountPigs_CountCorrectly_OneMine_BottomRight_4_4()
+        public void Count_CountCorrectly_OneMine_BottomRight_4_4()
         {
             _testGrid[4, 4] = new Tile { IsMined = true };
            
             const string expected = "1";
 
-            _sut.CountPigs(_testGrid);
+            _sut.Count(_testGrid);
 
             Assert.AreEqual(expected, _testGrid[3, 3].LblMineCount.Text);
             Assert.AreEqual(expected, _testGrid[3, 4].LblMineCount.Text);
@@ -90,13 +90,13 @@ namespace Swinesweeper.UnitTests.GamePlay
         #region Count Upwards
 
         [Test]
-        public void CountPigs_CountCorrectly_1_Mine()
+        public void Count_CountCorrectly_1_Mine()
         {
             _testGrid[0, 0] = new Tile { IsMined = true };
             
             const string expected = "1";
 
-            _sut.CountPigs(_testGrid);
+            _sut.Count(_testGrid);
 
             Assert.AreEqual(expected, _testGrid[0, 1].LblMineCount.Text);
             Assert.AreEqual(expected, _testGrid[1, 0].LblMineCount.Text);
@@ -104,21 +104,21 @@ namespace Swinesweeper.UnitTests.GamePlay
         }
 
         [Test]
-        public void CountPigs_CountCorrectly_2_Mines()
+        public void Count_CountCorrectly_2_Mines()
         {
             _testGrid[0, 0] = new Tile { IsMined = true };
             _testGrid[0, 1] = new Tile { IsMined = true };
 
             const string expected = "2";
 
-            _sut.CountPigs(_testGrid);
+            _sut.Count(_testGrid);
 
             Assert.AreEqual(expected, _testGrid[1, 0].LblMineCount.Text);
             Assert.AreEqual(expected, _testGrid[1, 1].LblMineCount.Text);
         }
 
         [Test]
-        public void CountPigs_CountCorrectly_3_Mines()
+        public void Count_CountCorrectly_3_Mines()
         {
             _testGrid[0, 0] = new Tile { IsMined = true };
             _testGrid[0, 1] = new Tile { IsMined = true };
@@ -126,13 +126,13 @@ namespace Swinesweeper.UnitTests.GamePlay
 
             const string expected = "3";
 
-            _sut.CountPigs(_testGrid);
+            _sut.Count(_testGrid);
 
             Assert.AreEqual(expected, _testGrid[1, 1].LblMineCount.Text);
         }
 
         [Test]
-        public void CountPigs_CountCorrectly_4_Mines()
+        public void Count_CountCorrectly_4_Mines()
         {
             _testGrid[0, 0] = new Tile { IsMined = true };
             _testGrid[0, 1] = new Tile { IsMined = true };
@@ -141,13 +141,13 @@ namespace Swinesweeper.UnitTests.GamePlay
 
             const string expected = "4";
 
-            _sut.CountPigs(_testGrid);
+            _sut.Count(_testGrid);
 
             Assert.AreEqual(expected, _testGrid[1, 1].LblMineCount.Text);
         }
 
         [Test]
-        public void CountPigs_CountCorrectly_5_Mines()
+        public void Count_CountCorrectly_5_Mines()
         {
             _testGrid[0, 0] = new Tile { IsMined = true };
             _testGrid[0, 1] = new Tile { IsMined = true };
@@ -157,13 +157,13 @@ namespace Swinesweeper.UnitTests.GamePlay
 
             const string expected = "5";
 
-            _sut.CountPigs(_testGrid);
+            _sut.Count(_testGrid);
 
             Assert.AreEqual(expected, _testGrid[1, 1].LblMineCount.Text);
         }
 
         [Test]
-        public void CountPigs_CountCorrectly_6_Mines()
+        public void Count_CountCorrectly_6_Mines()
         {
             _testGrid[0, 0] = new Tile { IsMined = true };
             _testGrid[0, 1] = new Tile { IsMined = true };
@@ -174,13 +174,13 @@ namespace Swinesweeper.UnitTests.GamePlay
 
             const string expected = "6";
 
-            _sut.CountPigs(_testGrid);
+            _sut.Count(_testGrid);
 
             Assert.AreEqual(expected, _testGrid[1, 1].LblMineCount.Text);
         }
 
         [Test]
-        public void CountPigs_CountCorrectly_7_Mines()
+        public void Count_CountCorrectly_7_Mines()
         {
             _testGrid[0, 0] = new Tile { IsMined = true };
             _testGrid[0, 1] = new Tile { IsMined = true };
@@ -192,13 +192,13 @@ namespace Swinesweeper.UnitTests.GamePlay
 
             const string expected = "7";
 
-            _sut.CountPigs(_testGrid);
+            _sut.Count(_testGrid);
 
             Assert.AreEqual(expected, _testGrid[1, 1].LblMineCount.Text);
         }
 
         [Test]
-        public void CountPigs_CountCorrectly_8_Mines()
+        public void Count_CountCorrectly_8_Mines()
         {
             _testGrid[0, 0] = new Tile { IsMined = true };
             _testGrid[0, 1] = new Tile { IsMined = true };
@@ -211,7 +211,7 @@ namespace Swinesweeper.UnitTests.GamePlay
 
             const string expected = "8";
 
-            _sut.CountPigs(_testGrid);
+            _sut.Count(_testGrid);
 
             Assert.AreEqual(expected, _testGrid[1, 1].LblMineCount.Text);
         }

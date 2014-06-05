@@ -21,7 +21,7 @@ namespace Swinesweeper.IntegrationTests.GridBuilder
 
         private IGridControlBuilder _gridControlBuilder;
 
-        private IPigCounter _pigCounter;
+        private ITileCounter _pigCounter;
 
         private GridPainter _sut;
 
