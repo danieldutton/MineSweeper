@@ -7,8 +7,6 @@ namespace Swinesweeper.GamePlay
 {
     public class Tile : PictureBox
     {
-        #region Events
-
         public static event EventHandler<MineHitEventArgs> MineHit;
 
         public static event EventHandler<TileClearEventArgs> TileClear;
@@ -16,10 +14,6 @@ namespace Swinesweeper.GamePlay
         public static event EventHandler<EventArgs> FlagPlaced;
 
         public static event EventHandler<EventArgs> FlagRemoved;
-
-        #endregion
-
-        #region Instance Var(s)
 
         public static Tile[,] ParentGrid { get; set; }
 
@@ -45,7 +39,6 @@ namespace Swinesweeper.GamePlay
 
         public Label LblMineCount = new Label();
 
-        #endregion
 
         protected override void OnClick(EventArgs e)
         {
@@ -150,8 +143,6 @@ namespace Swinesweeper.GamePlay
             return FlagCount != 0;
         }
 
-        #region Event Invocators
-
         protected static void OnMineHit(MineHitEventArgs e)
         {
             EventHandler<MineHitEventArgs> handler = MineHit;
@@ -175,7 +166,5 @@ namespace Swinesweeper.GamePlay
             EventHandler<EventArgs> handler = FlagRemoved;
             if (handler != null) handler(null, EventArgs.Empty);
         }
-
-        #endregion
     }
 }

@@ -61,11 +61,29 @@ namespace Swinesweeper.Presentation.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sorry you lose..oink oink!.
+        /// </summary>
+        internal static string losingMessage {
+            get {
+                return ResourceManager.GetString("losingMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream Pig_Oinking_Twice {
             get {
                 return ResourceManager.GetStream("Pig_Oinking_Twice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Congratulations you have won!.
+        /// </summary>
+        internal static string winningMessage {
+            get {
+                return ResourceManager.GetString("winningMessage", resourceCulture);
             }
         }
     }

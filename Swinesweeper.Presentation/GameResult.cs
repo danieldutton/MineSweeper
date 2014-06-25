@@ -42,7 +42,7 @@ namespace Swinesweeper.Presentation
         private void DisplayGameStatus()
         {
             _lblResultsText.Text = _hasWon 
-                ? "Congratulations you have won!" : "Sorry you lose..oink oink!";    
+                ? Resources.winningMessage : Resources.losingMessage;    
         }
 
         private void DisplayTimeTaken()

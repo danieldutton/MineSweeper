@@ -125,6 +125,7 @@ namespace Swinesweeper.Presentation
             int flagCount = int.Parse(_lblFlagCount.Text);
 
             flagCount++;
+            
             _lblFlagCount.Text = flagCount.ToString();
         }
 
@@ -133,8 +134,8 @@ namespace Swinesweeper.Presentation
             int flagCount = int.Parse(_lblFlagCount.Text);
 
             flagCount--;
+            
             _lblFlagCount.Text = flagCount.ToString();
-
             CheckForWin();
         }
 

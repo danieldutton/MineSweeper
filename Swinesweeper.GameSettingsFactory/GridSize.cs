@@ -2,7 +2,7 @@
 {
     public enum GridSize
     {
-        Beginner = 9, //grid tile size squared  
+        Beginner = 9, //tiles squared per grid  
         Normal = 16,
         Advanced = 20
     }
