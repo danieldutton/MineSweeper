@@ -12,14 +12,14 @@ namespace Swinesweeper.UnitTests.GridBuilder
     [TestFixture]
     public class GridMiner_Should
     {
-        private Mock<IRandomNumberGenerator> _fakeNumberGenerator;
+        private Mock<IRangedNumberGenerator> _fakeNumberGenerator;
 
         private GridMiner _sut;
             
         [SetUp]
         public void Init()
         {
-            _fakeNumberGenerator = new Mock<IRandomNumberGenerator>();
+            _fakeNumberGenerator = new Mock<IRangedNumberGenerator>();
             _sut = new GridMiner(_fakeNumberGenerator.Object);
         }
 
@@ -39,7 +39,7 @@ namespace Swinesweeper.UnitTests.GridBuilder
 
             int[] testCoordinates = Mother.GetTestCoordinates(GridSize.Beginner);
 
-            _fakeNumberGenerator.Setup(x => x.GetRandomNumber(It.IsAny<int>(), It.IsAny<int>()))
+            _fakeNumberGenerator.Setup(x => x.GetNumber(It.IsAny<int>(), It.IsAny<int>()))
                 .Returns(() => testCoordinates[counter])
                 .Callback(() => counter++);
 
@@ -58,7 +58,7 @@ namespace Swinesweeper.UnitTests.GridBuilder
 
             int[] testCoordinates = Mother.GetTestCoordinates(GridSize.Normal);
 
-            _fakeNumberGenerator.Setup(x => x.GetRandomNumber(It.IsAny<int>(), It.IsAny<int>()))
+            _fakeNumberGenerator.Setup(x => x.GetNumber(It.IsAny<int>(), It.IsAny<int>()))
                 .Returns(() => testCoordinates[counter])
                 .Callback(() => counter++);
 
@@ -77,7 +77,7 @@ namespace Swinesweeper.UnitTests.GridBuilder
 
             int[] testCoordinates = Mother.GetTestCoordinates(GridSize.Advanced);
 
-            _fakeNumberGenerator.Setup(x => x.GetRandomNumber(It.IsAny<int>(), It.IsAny<int>()))
+            _fakeNumberGenerator.Setup(x => x.GetNumber(It.IsAny<int>(), It.IsAny<int>()))
                 .Returns(() => testCoordinates[counter])
                 .Callback(() => counter++);
 

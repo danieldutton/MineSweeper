@@ -6,7 +6,7 @@ namespace Swinesweeper.GamePlay.EventArg
     {
         public Tile[,] Grid { get; private set; }
 
-        public MineHitEventArgs(Tile[,] grid)
+        public MineHitEventArgs(Tile[,] grid) //what we would expect is grid co-ordinates
         {
             Grid = grid;
         }

@@ -115,7 +115,7 @@ namespace Swinesweeper.Presentation
         {
             _timer.Start();
 
-            _tileCascader.CascadeTile(e.Grid, e.XPos, e.YPos);
+            _tileCascader.CascadeSingle(e.Grid, e.XPos, e.YPos);
 
             CheckForWin();
         }

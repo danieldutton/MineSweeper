@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swinesweeper.Utilities", "Swinesweeper.Utilities\Swinesweeper.Utilities.csproj", "{E32DED88-4A41-4341-958A-7B54FF862408}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swinesweeper.GameModeFactory", "Swinesweeper.GameSettingsFactory\Swinesweeper.GameModeFactory.csproj", "{8875C6DB-5E29-4BA8-BB0B-E24F4D5F5BEF}"

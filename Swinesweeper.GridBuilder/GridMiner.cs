@@ -8,10 +8,10 @@ namespace Swinesweeper.GridBuilder
 {
     public class GridMiner : IGridMiner
     {
-        private readonly IRandomNumberGenerator _randomNumberGenerator;
+        private readonly IRangedNumberGenerator _randomNumberGenerator;
 
 
-        public GridMiner(IRandomNumberGenerator randomNumberGenerator)
+        public GridMiner(IRangedNumberGenerator randomNumberGenerator)
         {
             _randomNumberGenerator = randomNumberGenerator;
         }
@@ -28,8 +28,8 @@ namespace Swinesweeper.GridBuilder
 
         private void MineEmptyTile(Tile[,] grid, GridSize gridSize)
         {
-            int xIndex = _randomNumberGenerator.GetRandomNumber(0, (int) gridSize);
-            int yIndex = _randomNumberGenerator.GetRandomNumber(0, (int) gridSize);
+            int xIndex = _randomNumberGenerator.GetNumber(0, (int) gridSize);
+            int yIndex = _randomNumberGenerator.GetNumber(0, (int) gridSize);
 
             Tile tile = grid[xIndex, yIndex];
 

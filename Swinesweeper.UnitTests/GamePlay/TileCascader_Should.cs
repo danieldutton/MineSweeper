@@ -31,37 +31,37 @@ namespace Swinesweeper.UnitTests.GamePlay
 
         [Test]
         [ExpectedException(typeof (ArgumentNullException))]
-        public void CascadeTile_ThrowArgumentNullException_IfGridIsNull()
+        public void CascadeSingle_ThrowArgumentNullException_IfGridIsNull()
         {
-            _sut.CascadeTile(null, 0, 0);
+            _sut.CascadeSingle(null, 0, 0);
         }
 
         [Test]
-        public void CascadeTile_IfTheCellIsMined_LeaveCellIsClearedPropertyTo_False()
+        public void CascadeSingle_IfTheCellIsMined_LeaveCellIsClearedPropertyTo_False()
         {
             _grid1By1[0, 0] = new Tile {IsMined = true};
 
-            Tile[,] result = _sut.CascadeTile(_grid1By1, 0, 0);
+            Tile[,] result = _sut.CascadeSingle(_grid1By1, 0, 0);
 
             Assert.IsFalse(result[0, 0].IsCleared);
         }
 
         [Test]
-        public void CascadeTile_IfTheCellIsNotMined_SetIsClearedPropertyToTrue()
+        public void CascadeSingle_IfTheCellIsNotMined_SetIsClearedPropertyToTrue()
         {
             _grid1By1[0, 0] = new Tile {IsMined = false};
 
-            Tile[,] result = _sut.CascadeTile(_grid1By1, 0, 0);
+            Tile[,] result = _sut.CascadeSingle(_grid1By1, 0, 0);
 
             Assert.IsTrue(result[0, 0].IsCleared);
         }
 
         [Test]
-        public void CascadeTile_CallDisplayMineCount_ExactlyOnce()
+        public void CascadeSingle_CallDisplayMineCount_ExactlyOnce()
         {
             _grid1By1[0, 0] = new Tile {IsMined = false};
 
-            _sut.CascadeTile(_grid1By1, 0, 0);
+            _sut.CascadeSingle(_grid1By1, 0, 0);
 
             _fakeTilePainter.Verify(x => x.PaintMineCount(It.IsAny<Tile[,]>(), 
                 It.IsAny<int>(), 
@@ -70,11 +70,11 @@ namespace Swinesweeper.UnitTests.GamePlay
         }
 
         [Test]
-        public void CascadeTile_CallDisplayMineCount_WithTheCorrectData()
+        public void CascadeSingle_CallDisplayMineCount_WithTheCorrectData()
         {
             _grid1By1[0, 0] = new Tile {IsMined = false};
 
-            _sut.CascadeTile(_grid1By1, 0, 0);
+            _sut.CascadeSingle(_grid1By1, 0, 0);
 
             _fakeTilePainter.Verify(
                 x => x.PaintMineCount(It.Is<Tile[,]>(y => y == _grid1By1), 

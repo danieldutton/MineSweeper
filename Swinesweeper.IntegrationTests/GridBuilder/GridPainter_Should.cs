@@ -15,7 +15,7 @@ namespace Swinesweeper.IntegrationTests.GridBuilder
     {
         private IGridMiner _gridMiner;
 
-        private IRandomNumberGenerator _randomNumberGenerator;
+        private IRangedNumberGenerator _randomNumberGenerator;
 
         private IGridBuilder _emptyGridBuilder;
 

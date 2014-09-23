@@ -30,7 +30,6 @@ namespace Swinesweeper.Presentation
             
             if (_hasWon)
                 SaveTimeIfFastest();
-
         }
 
 

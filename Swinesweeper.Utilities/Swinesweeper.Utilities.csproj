@@ -40,7 +40,7 @@
     <Compile Include="Interfaces\ITypeInstanceCreator.cs" />
     <Compile Include="TypeInstanceCreator.cs" />
     <Compile Include="RandomNumberGenerator.cs" />
-    <Compile Include="Interfaces\IRandomNumberGenerator.cs" />
+    <Compile Include="Interfaces\IRangedNumberGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

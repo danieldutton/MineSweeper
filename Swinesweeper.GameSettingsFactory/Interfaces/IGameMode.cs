@@ -6,10 +6,10 @@ namespace Swinesweeper.GameModeFactory.Interfaces
     {
         Point FormSize { get; }
 
+        GridSize GridSize { get; }
+
         Point GridPanelSize { get; }
 
-        DifficultyLevel DifficultyLevel { get; }
-
-        GridSize GridSize { get; }
+        DifficultyLevel DifficultyLevel { get; }        
     }
 }

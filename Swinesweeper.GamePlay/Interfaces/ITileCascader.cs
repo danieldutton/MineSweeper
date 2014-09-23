@@ -2,7 +2,7 @@
 {
     public interface ITileCascader
     {
-        Tile[,] CascadeTile(Tile[,] grid, int x, int y);
+        Tile[,] CascadeSingle(Tile[,] grid, int x, int y);
 
         Tile[,] CascadeAll(Tile[,] grid);
     }

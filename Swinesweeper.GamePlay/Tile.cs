@@ -17,6 +17,8 @@ namespace Swinesweeper.GamePlay
 
         public static Tile[,] ParentGrid { get; set; }
 
+        //primitive obsession possibly
+
         public int XPos { get; set; }
 
         public int YPos { get; set; }
@@ -60,6 +62,7 @@ namespace Swinesweeper.GamePlay
             base.OnClick(e);
         }
 
+        //type in name code smell
         private void SelectTile()
         {
             if (MinedAndNotFlagged())

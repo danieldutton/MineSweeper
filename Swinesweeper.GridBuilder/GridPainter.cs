@@ -62,6 +62,7 @@ namespace Swinesweeper.GridBuilder
                 }
             }
             _pigCounter.Count(grid);
+            
             return minedGrid;
         }
     }

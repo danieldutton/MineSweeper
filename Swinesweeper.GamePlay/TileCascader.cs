@@ -13,7 +13,7 @@ namespace Swinesweeper.GamePlay
             _tilePainter = tilePainter;
         }
 
-        public Tile[,] CascadeTile(Tile[,] grid, int x, int y)
+        public Tile[,] CascadeSingle(Tile[,] grid, int x, int y)
         {
             if (grid == null) throw new ArgumentNullException();
 
@@ -38,7 +38,7 @@ namespace Swinesweeper.GamePlay
                         {
                             _tilePainter.PaintMineCount(grid, i, j);
                             Tile.TileCount--;
-                            CascadeTile(grid, i, j);                            
+                            CascadeSingle(grid, i, j);                            
                         }
                     }
                 }

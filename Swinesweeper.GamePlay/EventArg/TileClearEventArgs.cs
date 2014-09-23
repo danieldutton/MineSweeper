@@ -10,7 +10,7 @@ namespace Swinesweeper.GamePlay.EventArg
 
         public int YPos { get; private set; }
 
-        public TileClearEventArgs(Tile[,] grid, int xPos, int yPos)
+        public TileClearEventArgs(Tile[,] grid, int xPos, int yPos) //what we would expect is just grid co-ordinates
         {
             Grid = grid;
             XPos = xPos;
